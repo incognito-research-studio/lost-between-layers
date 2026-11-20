@@ -1,0 +1,32 @@
+id: NEG-SUPPLIER-CANDIDATE-MODEL-REFUSED
+title: Suspension notice read by a declared, unpromoted model, then by the pinned one
+model: supplier_mix
+interpreter_version: "fixture:procurement-notices@1"
+source_priority: {"email:procurement": 1}
+world:
+  period: 42
+  demand: 700
+  penalty: 100
+  erp_source_id: "erp:vendor-master"
+  suppliers:
+    S1: {capacity: 400, cost: 10, suspended: 0}
+    S2: {capacity: 500, cost: 8, suspended: 0}
+    S3: {capacity: 400, cost: 12, suspended: 0}
+  truth: {S2: {suspended: 1}}
+  master_stale: false
+times: {erp_load: 1}
+events:
+  - {id: msg-suspend, t: 2, kind: message, source: "email:procurement",
+     text: "Supplier S2 is suspended effective immediately pending a quality audit.",
+     fixture: fixtures/candidate.json}
+  - {id: msg-suspend-retry, t: 2.5, kind: message, source: "email:procurement",
+     text: "Supplier S2 is suspended effective immediately pending a quality audit.",
+     fixture: fixtures/pinned.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: ["fixture:procurement-notices@3-candidate"]
+  system_of_record: {}

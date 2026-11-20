@@ -1,0 +1,23 @@
+id: EP-portal-capacity-declaration
+title: Supplier portal declares capacity alongside the ERP master value
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {"portal:supplier": 2}
+world:
+  plant: P5
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 900
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-p5-declaration, t: 2, kind: message, source: "portal:supplier-p5",
+     text: "Capacity declaration, plant P5, weeks 42-44: 750 units per week.",
+     fixture: fixtures/declaration.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

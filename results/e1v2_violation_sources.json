@@ -1,0 +1,124 @@
+{
+ "fresh_model_calls": 0,
+ "gate": "stated box",
+ "models": {
+  "llama3.1:8b": {
+   "case_repeats": 176,
+   "classes": {
+    "contract": {
+     "case_repeats": 3,
+     "violated": 3
+    },
+    "covered": {
+     "case_repeats": 9,
+     "violated": 0
+    },
+    "entity": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "error": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "lost": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "model": {
+     "case_repeats": 136,
+     "violated": 133
+    },
+    "scope": {
+     "case_repeats": 14,
+     "violated": 10
+    },
+    "value": {
+     "case_repeats": 14,
+     "violated": 4
+    }
+   },
+   "violated": 150,
+   "violated_after_abstention": 136
+  },
+  "phi4:latest": {
+   "case_repeats": 176,
+   "classes": {
+    "contract": {
+     "case_repeats": 5,
+     "violated": 5
+    },
+    "covered": {
+     "case_repeats": 38,
+     "violated": 0
+    },
+    "entity": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "error": {
+     "case_repeats": 6,
+     "violated": 0
+    },
+    "lost": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "model": {
+     "case_repeats": 116,
+     "violated": 111
+    },
+    "scope": {
+     "case_repeats": 1,
+     "violated": 0
+    },
+    "value": {
+     "case_repeats": 10,
+     "violated": 10
+    }
+   },
+   "violated": 126,
+   "violated_after_abstention": 116
+  },
+  "qwen2.5:7b-instruct": {
+   "case_repeats": 176,
+   "classes": {
+    "contract": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "covered": {
+     "case_repeats": 4,
+     "violated": 0
+    },
+    "entity": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "error": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "lost": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "model": {
+     "case_repeats": 172,
+     "violated": 172
+    },
+    "scope": {
+     "case_repeats": 0,
+     "violated": 0
+    },
+    "value": {
+     "case_repeats": 0,
+     "violated": 0
+    }
+   },
+   "violated": 172,
+   "violated_after_abstention": 172
+  }
+ },
+ "post_hoc": true
+}

@@ -1,0 +1,338 @@
+{
+ "faults": {
+  "01-quartz.patch": {
+   "family": "stale_approval",
+   "layer": "L2",
+   "intended_effect": "admit_action matches approval events by kind only, not by variable, so an approval for one lot admits a threshold release of another; on approval-for-other-lot the first decision is admitted instead of queued."
+  },
+  "02-lantern.patch": {
+   "family": "unit_calendar",
+   "layer": "L1",
+   "intended_effect": "the interpreter's valid_to is read as an inclusive last week and extended by one, so every interpreted change also covers the following week; capacity episodes plan one extra reduced (or changed) week."
+  },
+  "03-heron.patch": {
+   "family": "audit_restart",
+   "layer": "L6",
+   "intended_effect": "the saved audit log omits dispositions whose outcome is abstained, so after reload the ingest evidence differs; on alias-model-update same_ingests becomes false."
+  },
+  "04-mosaic.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "read-time ranking puts authentication before source priority, so the authenticated ERP master outranks a higher-priority source asserting alongside it; on portal-capacity-declaration weeks 42-44 plan at the master value instead of the portal's 750."
+  },
+  "05-thimble.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L5",
+   "intended_effect": "the state-vertex gate builds corners from the point value and the upper bound, dropping the lower half of the reported interval; on vertex-plan-reduced-week the gate passes 720 instead of resolving to 680."
+  },
+  "06-orchid.patch": {
+   "family": "dropped_week_entity",
+   "layer": "L3",
+   "intended_effect": "when a supersede closes a longer fact, the right-hand remainder starts one week early and overlaps the last superseded week, where the authenticated old value then wins for unranked sources; the last week of a reduction reverts to the master value."
+  },
+  "07-pylon.patch": {
+   "family": "replay_observations",
+   "layer": "pipeline",
+   "intended_effect": "replay uses the recorded recheck observations only when replaying from the store; replay from the logged state re-reads the live system of record; on recheck-master-revision the first decision's replay changes after the master is revised."
+  },
+  "08-saffron.patch": {
+   "family": "other",
+   "layer": "pipeline",
+   "intended_effect": "the pinned-interpreter check compares only the model name before '@', so an answer from a different interpreter version is accepted; on alias-model-update the message is committed instead of abstained and the plan changes."
+  },
+  "09-tundra.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "an authenticated record clears a blocked conflict only if its valid time equals the blocked range exactly, so weekly ERP buckets never settle it; on blocked-dispute-weekly-erp the second decision stays deferred."
+  },
+  "10-gable.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L1",
+   "intended_effect": "interval bounds are parsed with a truthiness test, so a lower bound of 0 is dropped and the interval narrows to [point, hi]; on compressor-failure-week43 the box gate releases 250 in week 43 instead of 0."
+  },
+  "11-ferrule.patch": {
+   "family": "stale_approval",
+   "layer": "L2",
+   "intended_effect": "approval expiry is checked against the approval's issue time instead of the decision time, so expired approvals stay valid; on approval-lapsed-before-replan the decision after expiry is admitted instead of queued."
+  },
+  "12-wicket.patch": {
+   "family": "dropped_week_entity",
+   "layer": "L1",
+   "intended_effect": "parsed operations are keyed by (subject, predicate), so of two operations on the same fact over different weeks only the last survives; on furnace-relining-moved the correction's week-42 restore is dropped."
+  },
+  "13-cinder.patch": {
+   "family": "audit_restart",
+   "layer": "L6",
+   "intended_effect": "the saved audit log keeps only decided records and drops deferred or error records; reload then fails the hash chain or loses records on the blocked episodes."
+  },
+  "14-marlin.patch": {
+   "family": "unit_calendar",
+   "layer": "types",
+   "intended_effect": "valid-time overlap uses closed intervals, so adjacent week ranges count as overlapping; on adjacent-week-notices the lower-priority notice for weeks 44-45 is overridden as a contradiction."
+  },
+  "15-basalt.patch": {
+   "family": "replay_observations",
+   "layer": "L5",
+   "intended_effect": "when the recheck gate repairs a candidate, its detail keeps only the repair detail and drops the re-read observations; replay of that decision on recheck-master-revision raises instead of reproducing the release."
+  },
+  "16-juniper.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "under the priority policy a newer claim must outrank the existing one strictly, so a newer claim from an equally ranked source never displaces the older one; on twin-plant-inboxes the plan keeps 700 instead of 600."
+  },
+  "17-kestrel.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L4",
+   "intended_effect": "the capacity row's robust right-hand side takes the point value instead of the interval's lower bound; under the box gate weeks with an interval release the point (700, 250, 700) instead of the lower bound."
+  },
+  "18-nimbus.patch": {
+   "family": "stale_approval",
+   "layer": "L2",
+   "intended_effect": "the admission records the quantity it takes under the rule's variable instead of the approval id, so consumption is never found and an uncapped approval admits a second action; on approval-second-release the re-plan is admitted instead of queued."
+  },
+  "19-pewter.patch": {
+   "family": "unit_calendar",
+   "layer": "L3",
+   "intended_effect": "the blocked-conflict horizon test excludes the first week of the blocked valid time, so a block on a single week does not defer decisions; on stocktake-week-dispute the first decision is decided instead of deferred."
+  },
+  "20-almond.patch": {
+   "family": "dropped_week_entity",
+   "layer": "L3",
+   "intended_effect": "contradiction detection ignores the subject, so claims about two different entities with the same predicate are treated as rivals; on cycle-count-two-lots the lower-priority update to lot L2 is overridden."
+  },
+  "21-velour.patch": {
+   "family": "audit_restart",
+   "layer": "L6",
+   "intended_effect": "reloading the audit log skips approval events that were not authenticated, so they vanish after a restart; on relayed-approval-email same_approvals becomes false."
+  },
+  "22-sorrel.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "the authenticated-latest supersession rule is compared against a misspelled name and never fires, so a newer master correction is ignored; on master-correction-after-notice the second plan keeps 700 instead of 650."
+  },
+  "23-dynamo.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L3",
+   "intended_effect": "span resolution takes the larger of the two lower bounds, narrowing the spanned interval; on span-planner-and-portal the box gate releases 650 instead of 600 in weeks 42-44."
+  },
+  "24-ripple.patch": {
+   "family": "stale_approval",
+   "layer": "L2",
+   "intended_effect": "approver authorization compares only the role prefix before the dot, so any 'qa.*' approver satisfies a rule reserved for qa.manager; on inspector-signoff the inspector's approval admits the first decision."
+  },
+  "25-ochre.patch": {
+   "family": "replay_observations",
+   "layer": "pipeline",
+   "intended_effect": "replay from the store reads the store as of its latest transaction time instead of the record's as-of time; replay_from_store of earlier decisions returns the later plan in episodes with a change after the first decision."
+  },
+  "26-tamarack.patch": {
+   "family": "other",
+   "layer": "L2",
+   "intended_effect": "a restriction value is treated as restrictive when its interval top is 1, so an unauthenticated hedged reading with point 0 is admitted and lifts the suspension; on supplier-may-resume the notice is committed and supplier S2 is ordered from."
+  }
+ },
+ "episodes": {
+  "adjacent-week-notices": {
+   "exercises": [
+    "02-lantern.patch",
+    "14-marlin.patch"
+   ],
+   "description": "A portal and a planner report capacity for adjacent, non-overlapping week ranges under the priority policy."
+  },
+  "alias-model-update": {
+   "exercises": [
+    "03-heron.patch",
+    "08-saffron.patch"
+   ],
+   "description": "The interpreter alias answers a capacity notice with a newer model version than the pinned one."
+  },
+  "approval-for-other-lot": {
+   "exercises": [
+    "01-quartz.patch"
+   ],
+   "description": "Both lots need release approval but only lot L2's arrives before the first plan; lot L1's arrives later."
+  },
+  "approval-lapsed-before-replan": {
+   "exercises": [
+    "11-ferrule.patch",
+    "25-ochre.patch"
+   ],
+   "description": "A lot release approval expires before the plan is re-run after a recount."
+  },
+  "approval-second-release": {
+   "exercises": [
+    "18-nimbus.patch",
+    "25-ochre.patch"
+   ],
+   "description": "A single uncapped lot release approval admits one release, then the plan is re-run after a recount."
+  },
+  "blocked-dispute-weekly-erp": {
+   "exercises": [
+    "02-lantern.patch",
+    "06-orchid.patch",
+    "09-tundra.patch",
+    "13-cinder.patch"
+   ],
+   "description": "Contradictory notices block the plan until the ERP posts confirmed capacity as weekly buckets, then the plan is re-run."
+  },
+  "compressor-failure-week43": {
+   "exercises": [
+    "02-lantern.patch",
+    "10-gable.patch",
+    "17-kestrel.patch"
+   ],
+   "description": "A compressor failure leaves week 43 output between 0 and 400 units, planned under the box-robust gate."
+  },
+  "cycle-count-two-lots": {
+   "exercises": [
+    "20-almond.patch"
+   ],
+   "description": "A warehouse portal and the QA inbox report new quantities for two different lots under the priority policy."
+  },
+  "furnace-relining-moved": {
+   "exercises": [
+    "02-lantern.patch",
+    "06-orchid.patch",
+    "12-wicket.patch",
+    "25-ochre.patch"
+   ],
+   "description": "A relining notice for weeks 42-43 is corrected after release to weeks 43-44 with week 42 back at full capacity, and the plan is re-run."
+  },
+  "inspector-signoff": {
+   "exercises": [
+    "24-ripple.patch"
+   ],
+   "description": "A QA inspector approves a lot release reserved for the QA manager, whose approval follows later."
+  },
+  "master-correction-after-notice": {
+   "exercises": [
+    "02-lantern.patch",
+    "22-sorrel.patch",
+    "25-ochre.patch"
+   ],
+   "description": "A planner notice sets reduced capacity and the capacity master later posts a corrected value under authenticated-latest supersession."
+  },
+  "portal-capacity-declaration": {
+   "exercises": [
+    "02-lantern.patch",
+    "04-mosaic.patch"
+   ],
+   "description": "A higher-ranked supplier portal asserts a capacity next to the ERP master value without superseding it."
+  },
+  "press-line-maintenance": {
+   "exercises": [
+    "02-lantern.patch",
+    "06-orchid.patch"
+   ],
+   "description": "A plant operations inbox reports reduced capacity for weeks 42-44 during line maintenance, followed by one plan."
+  },
+  "recheck-master-revision": {
+   "exercises": [
+    "02-lantern.patch",
+    "07-pylon.patch",
+    "15-basalt.patch"
+   ],
+   "description": "Plans are released through the execution-time recheck while the capacity master is revised between two decisions."
+  },
+  "relayed-approval-email": {
+   "exercises": [
+    "21-velour.patch"
+   ],
+   "description": "An approval relayed through the mail gateway arrives unauthenticated before the approval service issues the real one."
+  },
+  "robust-plan-reduced-week": {
+   "exercises": [
+    "02-lantern.patch",
+    "17-kestrel.patch"
+   ],
+   "description": "An approximate 30% capacity cut for weeks 42-44 is planned under the box-robust gate."
+  },
+  "span-planner-and-portal": {
+   "exercises": [
+    "02-lantern.patch",
+    "17-kestrel.patch",
+    "23-dynamo.patch"
+   ],
+   "description": "A supplier portal and a higher-ranked planner report different capacities for the same weeks, resolved by the span policy under the box gate."
+  },
+  "stocktake-week-dispute": {
+   "exercises": [
+    "02-lantern.patch",
+    "06-orchid.patch",
+    "13-cinder.patch",
+    "19-pewter.patch"
+   ],
+   "description": "Two sources disagree about a single stocktake week, blocking the plan until the ERP posts that week's capacity."
+  },
+  "supplier-may-resume": {
+   "exercises": [
+    "26-tamarack.patch"
+   ],
+   "description": "A procurement e-mail says a supplier suspended in the vendor master may resume, without confirmation."
+  },
+  "twin-plant-inboxes": {
+   "exercises": [
+    "02-lantern.patch",
+    "16-juniper.patch"
+   ],
+   "description": "Two equally ranked plant inboxes report capacity for the same weeks, the later one confirming a lower figure, under the priority policy."
+  },
+  "vertex-plan-reduced-week": {
+   "exercises": [
+    "02-lantern.patch",
+    "05-thimble.patch"
+   ],
+   "description": "An approximate capacity cut for weeks 43-44 is planned under the state-vertex gate."
+  }
+ },
+ "negatives": {
+  "candidate-model-refused-capacity": {
+   "kind": "deliberate_version_rejection",
+   "description": "A release-candidate interpreter version answers a capacity notice; the deployment pins the promoted version and has declared the candidate, so the reading is refused and the plan stays on master data."
+  },
+  "candidate-model-refused-supplier": {
+   "kind": "deliberate_version_rejection",
+   "description": "A shadow-mode candidate interpreter reads a supplier suspension; its version is declared and refused by the pinned deployment."
+  },
+  "exact-value-replaces-interval": {
+   "kind": "boundary_interval",
+   "description": "An approximate reduction with an interval is replaced by an exact figure from the same inbox under the box gate."
+  },
+  "first-horizon-week-change": {
+   "kind": "boundary_calendar",
+   "description": "A one-week reduction applies only to week 41, the first week of the planning horizon."
+  },
+  "full-hold-from-email": {
+   "kind": "restrictive_notice",
+   "description": "An unauthenticated QA e-mail places lot L2 on full hold, which any source may impose, before the allocation is decided."
+  },
+  "full-suspension-from-email": {
+   "kind": "restrictive_notice",
+   "description": "An unauthenticated procurement e-mail suspends supplier S1 in full before the order mix is decided."
+  },
+  "interval-touching-zero": {
+   "kind": "boundary_interval",
+   "description": "A flood warning reports week 44 output from 0 up to the nominal 500 units, an interval touching both zero and the nominal value, under the box gate."
+  },
+  "last-horizon-week-change": {
+   "kind": "boundary_calendar",
+   "description": "A reduction applies only to week 45, the last week of the planning horizon."
+  },
+  "late-correction-lot-recount": {
+   "kind": "valid_late_correction",
+   "description": "A lot count is corrected by a recount after the allocation was released, and the allocation is re-run."
+  },
+  "late-correction-single-week": {
+   "kind": "valid_late_correction",
+   "description": "A two-week reduction is narrowed to one week after the plan was released; the system re-plans and the first decision still replays."
+  },
+  "master-override-capacity": {
+   "kind": "authorized_master_override",
+   "description": "A planner notice reduces capacity and the capacity master later asserts a confirmed value. The deployment declares that newer authenticated records supersede notices, so the second plan uses the master value."
+  },
+  "master-override-lot-count": {
+   "kind": "authorized_master_override",
+   "description": "A warehouse e-mail count for lot L2 is later corrected by an authenticated inventory record under authenticated-latest supersession."
+  }
+ }
+}

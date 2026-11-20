@@ -1,0 +1,33 @@
+# S6 (Table IV): the vendor updates the model behind an alias.
+# fixtures/v1.json is the pinned interpreter; fixtures/v2_silent.json is the same
+# message answered by an updated model that misreads the week range.
+id: S6
+title: Vendor updates the model behind an alias
+status: implemented
+model: capacity_plan
+interpreter_version: "fixture:s6@1"
+
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 650, 43: 650, 44: 650}
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-s6, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44.",
+     fixture: fixtures/v1.json}
+  - {t: 3, kind: decide}
+
+# Scenario-level expectation used as a regression check on promotion.
+expected:
+  nominal_release: {42: 700, 43: 700, 44: 700}
+
+required_response: "Detect and gate"
+analytic_measure: "nu_I pinned; Inv regression before promotion"
+depends_on: [Registry, P2, R5]
+risk: "Vendor opacity"

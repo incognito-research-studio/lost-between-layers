@@ -1,0 +1,14 @@
+diff --git a/src/dsoi/layers/l6_audit.py b/src/dsoi/layers/l6_audit.py
+index 2473044..e4ed030 100644
+--- a/src/dsoi/layers/l6_audit.py
++++ b/src/dsoi/layers/l6_audit.py
+@@ -230,7 +230,8 @@ class AuditLog:
+             elif "ingest" in item:
+                 log.ingests.append(IngestRecord(**item["ingest"]))
+             elif "approval" in item:
+-                log.approvals.append(item["approval"])
++                if item["approval"].get("authenticated"):
++                    log.approvals.append(item["approval"])
+             else:
+                 raise ValueError(f"{path}: unknown audit entry")
+         if not log.verify():

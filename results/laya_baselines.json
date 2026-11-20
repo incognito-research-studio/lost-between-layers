@@ -1,0 +1,56 @@
+{
+ "A_retention": {
+  "held": 135,
+  "mean_set_size": 24.35,
+  "random_per_question_expected": 58.9,
+  "random_uniform_over_56_expected": 67.0
+ },
+ "B_notice_blind_prior": {
+  "held_leave_one_out": 151,
+  "k": 24
+ },
+ "C_top_choice": {
+  "right": 13,
+  "uniform_guess_expected": 2.8
+ },
+ "D_margin": {
+  "max": 0.305,
+  "median": 0.094,
+  "strata": {
+   "margin_ge_0.0": {
+    "followed_name": 145,
+    "notices": 196,
+    "order_changed_choice": 147
+   },
+   "margin_ge_0.05": {
+    "followed_name": 110,
+    "notices": 141,
+    "order_changed_choice": 102
+   },
+   "margin_ge_0.1": {
+    "followed_name": 75,
+    "notices": 94,
+    "order_changed_choice": 59
+   },
+   "margin_ge_0.2": {
+    "followed_name": 18,
+    "notices": 23,
+    "order_changed_choice": 8
+   },
+   "margin_ge_0.3": {
+    "followed_name": 0,
+    "notices": 1,
+    "order_changed_choice": 0
+   }
+  }
+ },
+ "E_order_sets": {
+  "retention_changed": 34,
+  "set_changed": 154
+ },
+ "change_notices": 154,
+ "distinct_true_ranges": 26,
+ "fresh_model_calls": 0,
+ "post_hoc": true,
+ "replies": "replies_cpu_r1.jsonl"
+}

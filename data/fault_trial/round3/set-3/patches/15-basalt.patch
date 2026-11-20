@@ -1,0 +1,11 @@
+diff --git a/src/dsoi/layers/l5_gate.py b/src/dsoi/layers/l5_gate.py
+index 12857dd..7fdee16 100644
+--- a/src/dsoi/layers/l5_gate.py
++++ b/src/dsoi/layers/l5_gate.py
+@@ -267,5 +267,5 @@ class RecheckGate:
+         repaired = _repair(x if x is not None else np.zeros(inst.system.n), true_inst,
+                            robust=False, mode=self.fallback, rung=self.rung)
+         outcome = "fallback" if repaired.released is not None else "rejected"
+-        return GateResult(self.rung, outcome, repaired.released, {**detail, **repaired.detail})
++        return GateResult(self.rung, outcome, repaired.released, repaired.detail)
+ 

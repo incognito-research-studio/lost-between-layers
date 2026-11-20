@@ -1,0 +1,49 @@
+# S8's DC D1: logistics reports the new pallet configuration holds about 10% fewer units
+# per pallet (45 in [43, 47]) and a flow plan is released on it. After the first
+# deliveries are counted, logistics corrects the figure to an exact 48 units per pallet
+# for the same week. The correction is legitimate: it supersedes period 42, the next
+# cycle re-plans the pallet flows, and the as-of view at t = 3 keeps the hedged reading.
+id: NEG-04
+title: Counted pallet factor corrects the estimated one
+status: negative
+model: warehouse_flow
+interpreter_version: "fixture:neg04@1"
+source_priority: {"email:logistics": 1}
+
+world:
+  dc: D1
+  period: 42
+  erp_source_id: "erp:wms"
+  units_per_pallet: 50     # ERP master before the change
+  free_space: 500          # units of free floor space this week
+  in_max: 100              # pallets the plant can send
+  out_max: 60              # pallets the stores can take
+  store_demand: 2400       # units the stores need
+  space_rule: at_most
+  truth: {units_per_pallet: 48}   # S*: the counted figure
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-pallets, t: 2, kind: message, source: "email:logistics",
+     text: "From this week, the new pallet configuration holds about 10% fewer units per pallet.",
+     fixture: fixtures/estimate.json}
+  - {t: 3, kind: decide}
+  - {id: msg-count, t: 5, kind: message, source: "email:logistics",
+     text: "Correction to this week's pallet notice: after the first deliveries were counted, the new pallet configuration holds 48 units per pallet.",
+     fixture: fixtures/counted.json}
+  - {t: 6, kind: decide}
+
+trial:
+  gate: vertex
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}
+
+required_response: "Supersede the pallet factor for period 42; re-plan flows; keep the earlier view"
+expected:
+  release_t3: {x_in: 70.638, x_out: 60}      # vertex gate over [43, 47]
+  release_t6: {x_in: 70.417, x_out: 60}      # exact 48
+  asof_t3_after_correction: {units_per_pallet: [45, 43, 47]}

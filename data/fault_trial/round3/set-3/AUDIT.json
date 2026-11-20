@@ -1,0 +1,40 @@
+{
+ "absolute_paths_outside_sandbox": [
+  "/tmp/x.json"
+ ],
+ "audited": "tool-call inputs of the round-3 fault-generation agent",
+ "by_tool": {
+  "Bash": 28,
+  "SubagentHandback": 1,
+  "TaskStop": 1,
+  "ToolSearch": 1,
+  "Write": 1
+ },
+ "manifest_sha256": "5be5999a9e719913d067a03cf56fc96bbb0173d91b062ab15bc5b30a7ee6580f",
+ "notes": [
+  "/tmp/x.json: the agent's own scratch file for run_case.py output inside a loop over its episodes (written, read back, then removed with rm -f); no read of anything outside the sandbox; checked by reading those two commands",
+  "`cd ..` in one command returns from the sandbox's episodes/<case> to the sandbox root (the `../` pattern does not match a bare `cd ..`); checked by reading it",
+  "the agent's report notes that a stale __pycache__ can hide a size-preserving patch applied within the same second; the trial copies src/ with its original modification times (shutil.copytree), so a patched file's mtime differs from the cached one and is recompiled"
+ ],
+ "parent_directory_uses": [],
+ "pattern_hits": {
+  "earlier fault sets": 0,
+  "home directory": 0,
+  "other sandboxes": 0,
+  "paper": 0,
+  "project repository path": 0,
+  "properties.py": 0,
+  "repaired checks": 0,
+  "replication-package": 0,
+  "results/": 0,
+  "review files": 0,
+  "tests/": 0,
+  "tools/": 0,
+  "trace.py": 0,
+  "uv or pip": 0,
+  "web": 0
+ },
+ "python_outside_sandbox_venv": 0,
+ "tool_calls": 32,
+ "transcript_sha256": "f223f4e16abcd3e1e21b8d24257bcfadbdb60d4a6a715dc40e024232e5f77cf7"
+}

@@ -1,0 +1,156 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l6_audit.py": [
+   232,
+   233,
+   234
+  ]
+ },
+ "import_hits": [],
+ "patch": "21-velour.patch",
+ "runs": {
+  "episodes/approval-for-other-lot": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l6_audit.py:232",
+    "dsoi/layers/l6_audit.py:233",
+    "dsoi/layers/l6_audit.py:234"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/approval-lapsed-before-replan": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l6_audit.py:232",
+    "dsoi/layers/l6_audit.py:233",
+    "dsoi/layers/l6_audit.py:234"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/approval-second-release": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l6_audit.py:232",
+    "dsoi/layers/l6_audit.py:233",
+    "dsoi/layers/l6_audit.py:234"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/inspector-signoff": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l6_audit.py:232",
+    "dsoi/layers/l6_audit.py:233",
+    "dsoi/layers/l6_audit.py:234"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/relayed-approval-email": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l6_audit.py:232",
+    "dsoi/layers/l6_audit.py:233",
+    "dsoi/layers/l6_audit.py:234"
+   ],
+   "new": {
+    "full": [
+     "restart"
+    ],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {
+    "restart": "post"
+   },
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "scenarios/03-S2-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l6_audit.py:232",
+    "dsoi/layers/l6_audit.py:233",
+    "dsoi/layers/l6_audit.py:234"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    3,
+    3
+   ],
+   "world": "fixed"
+  }
+ }
+}

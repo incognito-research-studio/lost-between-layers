@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l4_decision.py b/src/dsoi/layers/l4_decision.py
+index aacf667..8f2196d 100644
+--- a/src/dsoi/layers/l4_decision.py
++++ b/src/dsoi/layers/l4_decision.py
+@@ -134,7 +134,7 @@ class CapacityPlanFormulation:
+             e = np.zeros(n)
+             e[j] = 1.0
+             rows.append(UncertainRow(a_bar=e, a_hat=np.zeros(n), b_nom=cap.value,
+-                                     b_lo=cap.interval()[0], label=f"cap[{w:g}]", keys=(key,)))
++                                     b_lo=cap.value, label=f"cap[{w:g}]", keys=(key,)))
+         system = LinearSystem(tuple(rows), lower=np.zeros(n), upper=demand,
+                               names=tuple(f"x[{w:g}]" for w in self.horizon))
+         return LPInstance(c=-np.ones(n), const=float(demand.sum()), system=system,

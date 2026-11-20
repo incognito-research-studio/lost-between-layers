@@ -1,0 +1,30 @@
+id: EP-SUPPLIER-S2-PROBATION
+title: Vendor master puts supplier S2 on probation for period 42
+model: supplier_mix
+interpreter_version: "fixture:procurement-notices@1"
+source_priority: {"email:procurement": 1}
+world:
+  period: 42
+  demand: 700
+  penalty: 100
+  erp_source_id: "erp:vendor-master"
+  suppliers:
+    S1: {capacity: 400, cost: 10, suspended: 0}
+    S2: {capacity: 500, cost: 8, suspended: 0}
+    S3: {capacity: 400, cost: 12, suspended: 0}
+  master_stale: false
+times: {erp_load: 1}
+events:
+  # Supplier quality records half of S2's volume as blocked for period 42 and full
+  # suspension as possible until the audit closes: 0.5 in [0.5, 1].
+  - {id: vm-probation, t: 2, kind: record, source: "erp:vendor-master",
+     ops: [{op: supersede, subject: "supplier:S2", predicate: suspended, value: 0.5,
+            lo: 0.5, hi: 1, valid_from: 42, valid_to: 43}]}
+  - {t: 3, kind: decide}
+trial:
+  gate: box_robust
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

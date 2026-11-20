@@ -1,0 +1,14 @@
+diff --git a/src/dsoi/pipeline.py b/src/dsoi/pipeline.py
+index d650ed6..e11b94a 100644
+--- a/src/dsoi/pipeline.py
++++ b/src/dsoi/pipeline.py
+@@ -159,7 +159,8 @@ class Pipeline:
+         self.audit.log_message(message.message_id, message.source_id, message.text, t,
+                                message.meta.get("received_at"))
+         result = self.interpreter.interpret(message, self.schema)
+-        if self.strict_versions and result.nu_i != self.versions.interpreter:
++        if self.strict_versions and (result.nu_i.split("@")[0]
++                                     != self.versions.interpreter.split("@")[0]):
+             # S6: a model other than the pinned nu_I answered (alias update, fallback).
+             rec = IngestRecord(message.message_id, t, "abstained",
+                                f"nu_I mismatch: pinned {self.versions.interpreter}, "

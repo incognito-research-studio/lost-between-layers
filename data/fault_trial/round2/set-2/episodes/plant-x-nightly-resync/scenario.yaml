@@ -1,0 +1,30 @@
+id: EP-PLANT-X-NIGHTLY-RESYNC
+title: Maintenance notice followed by the nightly capacity-master sync
+model: capacity_plan
+interpreter_version: "fixture:plant-notices@1"
+source_priority: {"email:planner-inbox": 2, "erp:capacity-master": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 700, 43: 700, 44: 700}
+times: {erp_load: 1}
+events:
+  - {id: msg-maint, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X: line 2 goes down for planned maintenance. Expect capacity of about 700 units per week for weeks 42-44.",
+     fixture: fixtures/maint.json}
+  - {t: 3, kind: decide}
+  # The nightly ERP sync re-sends the unchanged master value for the whole horizon.
+  - {id: erp-nightly, t: 4, kind: record, source: "erp:capacity-master",
+     ops: [{op: assert, subject: "plant:X", predicate: capacity, value: 1000,
+            unit: "units/week", valid_from: 41, valid_to: 46}]}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

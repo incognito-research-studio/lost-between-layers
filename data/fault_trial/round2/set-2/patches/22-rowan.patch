@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/pipeline.py b/src/dsoi/pipeline.py
+index d650ed6..79b911c 100644
+--- a/src/dsoi/pipeline.py
++++ b/src/dsoi/pipeline.py
+@@ -356,7 +356,7 @@ class Pipeline:
+                              "content hashes")
+         theta = dict(rec.theta)
+         if from_store:
+-            ctx, _ = self.context_at(rec.t_asof, theta, nu)
++            ctx, _ = self.context_at(self.state.store.last_transaction_time, theta, nu)
+         else:
+             ctx = Context(rec.state, rec.theta, rec.constraints_id, rec.objective_id, nu)
+         decision, inst = self.policy.decide(ctx)

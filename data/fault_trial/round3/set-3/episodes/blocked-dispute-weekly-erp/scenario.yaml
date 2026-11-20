@@ -1,0 +1,35 @@
+id: EP-blocked-dispute-weekly-erp
+title: Contradictory notices block the plan until the ERP posts weekly capacity buckets
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {"portal:supplier": 2, "email:planner": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-planner, t: 2, kind: message, source: "email:planner",
+     text: "Heard from Plant X: capacity down about 30% for weeks 42-44.",
+     fixture: fixtures/planner.json}
+  - {id: msg-x-portal, t: 3, kind: message, source: "portal:supplier",
+     text: "Plant X capacity for weeks 42-44: 600 units per week.",
+     fixture: fixtures/portal.json}
+  - {t: 4, kind: decide}
+  - {id: erp-x-weekly, t: 5, kind: record, source: "erp:capacity-master",
+     ops: [{op: supersede, subject: "plant:X", predicate: capacity, value: 620,
+            unit: "units/week", valid_from: 42, valid_to: 43},
+           {op: supersede, subject: "plant:X", predicate: capacity, value: 620,
+            unit: "units/week", valid_from: 43, valid_to: 44},
+           {op: supersede, subject: "plant:X", predicate: capacity, value: 620,
+            unit: "units/week", valid_from: 44, valid_to: 45}]}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  resolution: block
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,27 @@
+id: NEG-master-override-capacity
+title: Capacity master corrects a planner notice; newer authenticated records supersede notices
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {"email:planner": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-cut, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X: capacity down to roughly 700 units per week for weeks 42-44.",
+     fixture: fixtures/notice.json}
+  - {t: 3, kind: decide}
+  - {id: erp-x-confirmed, t: 4, kind: record, source: "erp:capacity-master",
+     ops: [{op: assert, subject: "plant:X", predicate: capacity, value: 680,
+            unit: "units/week", valid_from: 42, valid_to: 45}]}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  supersession: authenticated_latest
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,30 @@
+id: EP-PLANT-X-MASTER-CORRECTION
+title: Planner notice later corrected by the capacity master
+model: capacity_plan
+interpreter_version: "fixture:plant-notices@1"
+source_priority: {"email:planner-inbox": 2, "erp:capacity-master": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 650, 43: 650, 44: 650}
+times: {erp_load: 1}
+events:
+  - {id: msg-cut, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44 while the press line is rebuilt.",
+     fixture: fixtures/cut.json}
+  - {t: 3, kind: decide}
+  # Industrial engineering enters the measured rate in the capacity master after the line review.
+  - {id: erp-review, t: 5, kind: record, source: "erp:capacity-master",
+     ops: [{op: assert, subject: "plant:X", predicate: capacity, value: 650,
+            unit: "units/week", valid_from: 42, valid_to: 45}]}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: authenticated_latest
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

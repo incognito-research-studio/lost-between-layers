@@ -1,0 +1,489 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l4_decision.py": [
+   154,
+   155
+  ]
+ },
+ "import_hits": [],
+ "patch": "16-lichen.patch",
+ "runs": {
+  "episodes/lot-counts-two-sources": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l1-approval-shift-end": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l1-replan-same-approval": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l2-approval-only": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l2-partial-hold-email": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/supplier-s2-probation": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "projected",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "supplier:S1",
+          "capacity",
+          42.0
+         ],
+         400.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S1",
+          "suspended",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S2",
+          "capacity",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S2",
+          "suspended",
+          42.0
+         ],
+         0.5,
+         0.5,
+         1.0,
+         ""
+        ],
+        [
+         [
+          "supplier:S3",
+          "capacity",
+          42.0
+         ],
+         400.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S3",
+          "suspended",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        400.0,
+        -0.0,
+        50.0,
+        250.0
+       ],
+       "x_released": [
+        400.0,
+        -0.0,
+        50.0,
+        250.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        400.0,
+        -0.0,
+        50.0,
+        250.0
+       ],
+       [
+        400.0,
+        -0.0,
+        50.0,
+        250.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "supplier:S1",
+          "capacity",
+          42.0
+         ],
+         400.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S1",
+          "suspended",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S2",
+          "capacity",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S2",
+          "suspended",
+          42.0
+         ],
+         0.5,
+         0.5,
+         1.0,
+         ""
+        ],
+        [
+         [
+          "supplier:S3",
+          "capacity",
+          42.0
+         ],
+         400.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "supplier:S3",
+          "suspended",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        400.0,
+        250.0,
+        50.0,
+        0.0
+       ],
+       "x_released": [
+        400.0,
+        250.0,
+        50.0,
+        0.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        400.0,
+        250.0,
+        50.0,
+        0.0
+       ],
+       [
+        400.0,
+        250.0,
+        50.0,
+        0.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "scenarios/03-S2-nominal": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    3,
+    3
+   ],
+   "world": "fixed"
+  },
+  "scenarios/04-S3-recheck": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "scenarios/05-S3-nominal": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "scenarios/08-S5-nominal": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:154",
+    "dsoi/layers/l4_decision.py:155"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  }
+ }
+}

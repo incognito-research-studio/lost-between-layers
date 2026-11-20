@@ -1,0 +1,614 @@
+{
+ "faults": {
+  "01-orchid.patch": {
+   "activated_runs": 670,
+   "changed_runs": 107,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "uncertainty_lost",
+   "harmful_runs": 25,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The box-robust gate tests a candidate against the point values instead of the lower ends of the reported intervals, so a nominal plan passes unchanged: plant-x-span-claims releases 700 instead of 600 in weeks 42-44, dc-d1-pallet-change and supplier-s2-probation release the unprojected LP plan.",
+   "layer": "L5",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "dc-d1-pallet-change": true,
+    "plant-x-span-claims": true,
+    "supplier-s2-probation": true
+   },
+   "observed": "span-claims releases 700, not 600, in weeks 42-44; in dc-d1 and S2 the gate passes the unprojected LP plan"
+  },
+  "02-pewter.patch": {
+   "activated_runs": 700,
+   "changed_runs": 93,
+   "checks_full": [
+    "committed_unread",
+    "precedence"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "precedence_supersession",
+   "harmful_runs": 80,
+   "harmful_runs_flagged_full": 80,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 80,
+   "intended_effect": "Reads rank authenticated facts above source priority, so in plant-x-nightly-resync the re-sent master value (1000) displaces the higher-ranked planner notice (700) in the second decision.",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-nightly-resync": true
+   },
+   "observed": "nightly-resync: second decision releases the re-sent master 1000, not the planner's 700"
+  },
+  "03-marble.patch": {
+   "activated_runs": 3,
+   "changed_runs": 1,
+   "checks_full": [
+    "admission"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "stale_approval",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "An approval without a quantity cap is no longer consumed by its first executed action, so in lot-l1-replan-same-approval the second allocation is admitted and executed on the morning approval instead of being queued.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "lot-l1-replan-same-approval": true
+   },
+   "observed": "second allocation executes on the morning approval (350 drawn) instead of being queued"
+  },
+  "04-quill.patch": {
+   "activated_runs": 700,
+   "changed_runs": 677,
+   "checks_full": [
+    "restart"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "audit_restart",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The saved log keeps one disposition per input id, so repeated records from the same source (the ERP baseline and later ERP records) lose their earlier dispositions on reload; same_ingests becomes false in plant-x-nightly-resync and others.",
+   "layer": "L6",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-nightly-resync": true
+   },
+   "observed": "reload keeps 2 of 3 ingests (same_ingests false); decisions unchanged"
+  },
+  "05-fennel.patch": {
+   "activated_runs": 157,
+   "changed_runs": 150,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "unit_calendar",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Interpreted valid times treat the half-open end week as inclusive and extend each range by one week, so a notice for weeks 42-44 also changes week 45 (plant-x-nightly-resync, plant-x-scope-correction and other capacity episodes).",
+   "layer": "L1",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-nightly-resync": true,
+    "plant-x-scope-correction": true
+   },
+   "observed": "week 45 drops to 700 in nightly-resync and scope-correction"
+  },
+  "06-harbor.patch": {
+   "activated_runs": 134,
+   "changed_runs": 1,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "dropped_week_entity",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Contradiction detection ignores the subject, so under the priority policy the supplier ASN for lot L2 is taken as contradicting the warehouse count for lot L1 and is overridden in lot-counts-two-sources (L2 stays at 300 instead of 280).",
+   "layer": "L3",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "lot-counts-two-sources": true
+   },
+   "observed": "lot L2 releases 300, not 280"
+  },
+  "07-cobalt.patch": {
+   "activated_runs": 693,
+   "changed_runs": 2,
+   "checks_full": [
+    "replay_store"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "replay_observations",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Replay from the store uses the live system-of-record reader instead of the recorded re-read values, so in plant-x-recheck-mes replay_from_store returns the plan for the later MES rate (700) instead of the released 680.",
+   "layer": "pipeline",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-recheck-mes": true
+   },
+   "observed": "replay from the store returns 700, not the released 680"
+  },
+  "08-thistle.patch": {
+   "activated_runs": 697,
+   "changed_runs": 1,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "other",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The interpreter version check compares only the model family before '@', so in plant-x-alias-update the answer from the silently updated model is committed instead of abstained.",
+   "layer": "pipeline",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-alias-update": true
+   },
+   "observed": "the updated model's reading is committed (700 in weeks 42-43) instead of abstained (1000)"
+  },
+  "09-saffron.patch": {
+   "activated_runs": 6,
+   "changed_runs": 2,
+   "checks_full": [
+    "schema"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": false,
+   "detected_generic": true,
+   "family": "uncertainty_lost",
+   "harmful_runs": 1,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The span policy builds the interval only from claims that carry explicit bounds, so an exact rival value is left out of the span; in plant-x-span-claims the interval narrows from [600, 750] to [650, 750] and the box gate releases 650 instead of 600.",
+   "layer": "L3",
+   "localization": "other_run",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-span-claims": true
+   },
+   "observed": "span-claims interval narrows to [650, 750] and releases 650, not 600; schema fired only on S4, where the narrowed interval excluded the point value"
+  },
+  "10-garnet.patch": {
+   "activated_runs": 700,
+   "changed_runs": 1,
+   "checks_full": [
+    "precedence"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "precedence_supersession",
+   "harmful_runs": 1,
+   "harmful_runs_flagged_full": 1,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 1,
+   "intended_effect": "The supersession rule name is misspelled in the read path, so authenticated_latest never applies and in plant-x-master-correction the master correction (650) is ignored in favour of the earlier notice (700).",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-master-correction": true
+   },
+   "observed": "master-correction keeps 700 instead of the correction 650"
+  },
+  "11-ember.patch": {
+   "activated_runs": 4,
+   "changed_runs": 1,
+   "checks_full": [
+    "admission"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "stale_approval",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Approval expiry becomes inclusive, so an approval is still valid at its expiry time; in lot-l1-approval-shift-end the plan run exactly at expiry is admitted and executed instead of queued.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "lot-l1-approval-shift-end": true
+   },
+   "observed": "the plan at expiry is admitted and 300 executed instead of queued"
+  },
+  "12-willow.patch": {
+   "activated_runs": 700,
+   "changed_runs": 143,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "audit_restart",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Reloading logged deltas drops the lo/hi bounds of interval values, so committed changes differ after a save and reload (same_deltas false) in every episode with an interval-valued delta.",
+   "layer": "L6",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {},
+   "observed": "reloaded deltas differ in content with the same count (same_deltas false)"
+  },
+  "13-basalt.patch": {
+   "activated_runs": 2,
+   "changed_runs": 2,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "unit_calendar",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The warehouse formulation divides free floor space (units) by units per pallet while the space row is in units, so in dc-d1-pallet-change the inbound pallets are limited far more than the space allows.",
+   "layer": "L4",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "dc-d1-pallet-change": true
+   },
+   "observed": "dc-d1 inbound 52.7 pallets instead of 62.9"
+  },
+  "14-juniper.patch": {
+   "activated_runs": 153,
+   "changed_runs": 21,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "dropped_week_entity",
+   "harmful_runs": 1,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Parsed deltas keep one operation per subject and predicate, so a correction with two week ranges loses one; in plant-x-scope-correction week 42 stays at 700 instead of returning to full capacity.",
+   "layer": "L1",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-scope-correction": true
+   },
+   "observed": "scope-correction: week 42 stays at 700 after the correction"
+  },
+  "15-kestrel.patch": {
+   "activated_runs": 3,
+   "changed_runs": 3,
+   "checks_full": [
+    "C1",
+    "G1",
+    "R2",
+    "audit",
+    "replay_store",
+    "restart"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "replay_observations",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The recheck gate records its re-read values under week labels formatted differently from the keys replay looks up, so replaying a recheck decision fails for missing observations in plant-x-recheck-mes.",
+   "layer": "L5",
+   "localization": "diffuse",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-recheck-mes": true
+   },
+   "observed": "replaying the recheck decision raises an error; the released plan is unchanged"
+  },
+  "16-lichen.patch": {
+   "activated_runs": 10,
+   "changed_runs": 10,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "uncertainty_lost",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The robust lower bound of usable capacity takes the bottom of the restriction flag's interval instead of the top, so in supplier-s2-probation the box gate treats the possible full suspension of S2 as a half suspension and releases 250 from S2.",
+   "layer": "L4",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "supplier-s2-probation": true
+   },
+   "observed": "S2 releases 250 and the gate passes the unprojected plan"
+  },
+  "17-meadow.patch": {
+   "activated_runs": 10,
+   "changed_runs": 1,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "precedence_supersession",
+   "harmful_runs": 1,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Under the priority policy an incoming claim must strictly outrank its rival, so a newer claim from an equally ranked source no longer displaces the older one; in plant-x-revised-notice the planning office's 680 is overridden and the plan keeps 750.",
+   "layer": "L3",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-revised-notice": true
+   },
+   "observed": "revised-notice keeps 750 instead of the planning office's 680"
+  },
+  "18-nimbus.patch": {
+   "activated_runs": 4,
+   "changed_runs": 1,
+   "checks_full": [
+    "admission"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "stale_approval",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Threshold admission matches approval events by kind only, not by variable, so in lot-l2-approval-only the approval for lot L2 also admits the release of lot L1 and the action executes instead of being queued.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "lot-l2-approval-only": true
+   },
+   "observed": "the L2 approval admits the L1 release; 300 executed instead of queued"
+  },
+  "19-oriole.patch": {
+   "activated_runs": 700,
+   "changed_runs": 8,
+   "checks_full": [
+    "restart"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "audit_restart",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Saving the log writes only decided records, so a deferred cycle's record is lost and the reload of plant-x-contested-week45 fails its hash chain.",
+   "layer": "L6",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-contested-week45": true
+   },
+   "observed": "the reloaded log fails its hash chain"
+  },
+  "20-pumice.patch": {
+   "activated_runs": 700,
+   "changed_runs": 1,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "unit_calendar",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The blocked-conflict check excludes the first week of the blocked range, so in plant-x-contested-week45 the decision at t=4 reads the contested week 45 instead of being deferred.",
+   "layer": "L3",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-contested-week45": true
+   },
+   "observed": "the t=4 decision reads contested week 45 (600) instead of deferring"
+  },
+  "21-quartz.patch": {
+   "activated_runs": 47,
+   "changed_runs": 35,
+   "checks_full": [
+    "exception"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": true,
+   "family": "dropped_week_entity",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "When a change covers the inside of an existing fact's range, the store re-inserts only the part before it, so the master capacity for the weeks after the change is lost and the next decision fails for missing state (plant-x-nightly-resync and other capacity episodes).",
+   "layer": "L3",
+   "localization": "downstream",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-nightly-resync": true
+   },
+   "observed": "week 45 capacity is lost; the next decision fails for missing state and releases nothing"
+  },
+  "22-rowan.patch": {
+   "activated_runs": 693,
+   "changed_runs": 6,
+   "checks_full": [
+    "replay_store"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generator": true,
+   "detected_generic": false,
+   "family": "replay_observations",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Replay from the store reads the store as of the latest transaction instead of the decision's as-of time, so in plant-x-scope-correction replay_from_store of the first decision returns the corrected plan.",
+   "layer": "pipeline",
+   "localization": "cause",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-scope-correction": true
+   },
+   "observed": "replay from the store of the first decision returns the corrected plan"
+  },
+  "23-sorrel.patch": {
+   "activated_runs": 700,
+   "changed_runs": 77,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "uncertainty_lost",
+   "harmful_runs": 1,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "The canonical state copies an interval's lower bound into its upper bound, so the top of reported intervals is lost before L4 and L5: the box gate under-protects in dc-d1-pallet-change and supplier-s2-probation.",
+   "layer": "L3",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "dc-d1-pallet-change": true,
+    "supplier-s2-probation": true
+   },
+   "observed": "dc-d1 releases 68.3 instead of 62.9; in S2 the gate passes the unprojected plan"
+  },
+  "24-tundra.patch": {
+   "activated_runs": 700,
+   "changed_runs": 1,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "precedence_supersession",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Source priority takes the first matching prefix instead of the highest, so in plant-x-manager-update the plant manager's e-mail ranks as a generic e-mail and the portal figure (600) wins over 800.",
+   "layer": "L3",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "plant-x-manager-update": true
+   },
+   "observed": "manager-update: the portal's 600 wins over the manager's 800"
+  },
+  "25-umber.patch": {
+   "activated_runs": 10,
+   "changed_runs": 1,
+   "checks_full": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generator": false,
+   "detected_generic": false,
+   "family": "other",
+   "harmful_runs": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_generic": 0,
+   "harmful_runs_flagged_pre_full": 0,
+   "intended_effect": "Any restriction value above zero is treated as restrictive, so a partial hold from an unauthenticated e-mail is admitted; in lot-l2-partial-hold-email the hold of 0.5 on lot L2 is committed instead of rejected.",
+   "layer": "L2",
+   "localization": "missed",
+   "matches": true,
+   "named_episodes_changed": {
+    "lot-l2-partial-hold-email": true
+   },
+   "observed": "the unauthenticated partial hold is committed; lot L2 releases 150, not 300"
+  }
+ },
+ "method": "For each effective fault the reader compared the generator's sealed intended effect (manifest.json) with the clean and patched records, replay outputs and reload comparison of the episodes the manifest names (results/ft_perrun_r2/<fault>.json, from tools/ft_perrun.py), and with which checks newly fired on which run. 'matches' means every value or outcome the manifest states was observed. Localization codes: cause = a firing check tests the mechanism the patch broke; other_run = a check fired on a different run through a side effect of the mechanism, not on the run the manifest names; diffuse = several checks across several layers fire, among them the one testing the mechanism; downstream = the fault surfaces as an exception in a later layer; missed = no check of the full configuration fired.",
+ "note": "the checks ran as monitors after each run; no release was held",
+ "post_hoc": true,
+ "reader": "Claude (Opus 5.5), the architecture role that wrote the pipeline and the checks; after unblinding, 13 Nov 2026. Not an independent or human reader.",
+ "round": 2,
+ "totals": {
+  "activated": 25,
+  "detected_full": 12,
+  "detected_full_fixed_worlds": 8,
+  "detected_full_generator_episodes": 11,
+  "detected_full_only_generator": 4,
+  "effective": 25,
+  "harmful_faults": 7,
+  "harmful_faults_detected_elsewhere_only": 1,
+  "harmful_faults_flagged_on_harmful_run_full": 2,
+  "harmful_runs": 110,
+  "harmful_runs_flagged_full": 81,
+  "harmful_runs_flagged_generic": 0,
+  "harmful_runs_flagged_pre_full": 81,
+  "localization": {
+   "cause": 9,
+   "diffuse": 1,
+   "downstream": 1,
+   "missed": 13,
+   "other_run": 1
+  },
+  "matches_intended": 25
+ }
+}

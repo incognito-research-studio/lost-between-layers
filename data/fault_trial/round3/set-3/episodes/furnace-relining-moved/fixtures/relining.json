@@ -1,0 +1,6 @@
+{"interpreter_version": "fixture:capacity-reader@1",
+ "output": {"kind": "delta", "ops": [
+  {"op": "supersede", "subject": "plant:P4", "predicate": "capacity",
+   "value": 500, "lo": 450, "hi": 550, "unit": "units/week",
+   "valid_from": 42, "valid_to": 44,
+   "span_text": "cuts capacity to about 500 units per week in weeks 42-43"}]}}

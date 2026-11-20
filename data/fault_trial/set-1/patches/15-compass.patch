@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l6_audit.py b/src/dsoi/layers/l6_audit.py
+index 2473044..eae5492 100644
+--- a/src/dsoi/layers/l6_audit.py
++++ b/src/dsoi/layers/l6_audit.py
+@@ -78,7 +78,7 @@ class AuditRecord:
+         """(hash kappa_D, theta, C-id, J-id, z, nu): the tuple C2 compares."""
+         return logged_tuple(self.state_hash, self.theta, self.constraints_id,
+                             self.objective_id, self.nu, include_nu,
+-                            self.gate_detail.get("reread", {}))
++                            self.gate_detail.get("observations", {}))
+ 
+ 
+ @dataclass(frozen=True)

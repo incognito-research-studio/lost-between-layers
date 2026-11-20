@@ -1,0 +1,860 @@
+{
+ "faults": {
+  "01-quartz.patch": {
+   "activated_runs": 6,
+   "changed_runs": 1,
+   "checks_full": [
+    "admission"
+   ],
+   "checks_repaired": [
+    "admission"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "approval-for-other-lot": true
+   },
+   "family": "stale_approval",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 3,
+   "intended_effect": "admit_action matches approval events by kind only, not by variable, so an approval for one lot admits a threshold release of another; on approval-for-other-lot the first decision is admitted instead of queued.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "observed": "approval-for-other-lot: first decision admitted and executed on the L2 approval instead of queued"
+  },
+  "02-lantern.patch": {
+   "activated_runs": 162,
+   "changed_runs": 155,
+   "checks_full": [],
+   "checks_repaired": [
+    "l1_reference"
+   ],
+   "detected_fixed": true,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "adjacent-week-notices": true,
+    "blocked-dispute-weekly-erp": true,
+    "compressor-failure-week43": true,
+    "furnace-relining-moved": true,
+    "master-correction-after-notice": true,
+    "portal-capacity-declaration": true,
+    "press-line-maintenance": true,
+    "recheck-master-revision": true,
+    "robust-plan-reduced-week": true,
+    "span-planner-and-portal": true,
+    "stocktake-week-dispute": true,
+    "twin-plant-inboxes": true,
+    "vertex-plan-reduced-week": true
+   },
+   "family": "unit_calendar",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 156,
+   "intended_effect": "the interpreter's valid_to is read as an inclusive last week and extended by one, so every interpreted change also covers the following week; capacity episodes plan one extra reduced (or changed) week.",
+   "layer": "L1",
+   "localization": "cause",
+   "matches": true,
+   "observed": "every listed capacity episode plans one more changed week (e.g. press-line-maintenance week 45: 900 instead of 1100)"
+  },
+  "03-heron.patch": {
+   "activated_runs": 705,
+   "changed_runs": 560,
+   "checks_full": [
+    "restart"
+   ],
+   "checks_repaired": [
+    "restart"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": false,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "alias-model-update": true
+   },
+   "family": "audit_restart",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 1,
+   "intended_effect": "the saved audit log omits dispositions whose outcome is abstained, so after reload the ingest evidence differs; on alias-model-update same_ingests becomes false.",
+   "layer": "L6",
+   "localization": "cause",
+   "matches": true,
+   "observed": "alias-model-update: the reloaded log has 1 of 2 ingest dispositions (same_ingests false)"
+  },
+  "04-mosaic.patch": {
+   "activated_runs": 705,
+   "changed_runs": 93,
+   "checks_full": [
+    "committed_unread",
+    "precedence"
+   ],
+   "checks_repaired": [
+    "committed_unread",
+    "precedence"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "portal-capacity-declaration": true
+   },
+   "family": "precedence_supersession",
+   "harmful_runs": 79,
+   "harmful_runs_contained": 79,
+   "harmful_runs_flagged_full": 79,
+   "harmful_runs_flagged_repaired": 79,
+   "holds": 94,
+   "intended_effect": "read-time ranking puts authentication before source priority, so the authenticated ERP master outranks a higher-priority source asserting alongside it; on portal-capacity-declaration weeks 42-44 plan at the master value instead of the portal's 750.",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "observed": "portal-capacity-declaration: weeks 42-44 planned at 900 (master) instead of 750"
+  },
+  "05-thimble.patch": {
+   "activated_runs": 2,
+   "changed_runs": 1,
+   "checks_full": [],
+   "checks_repaired": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generated": false,
+   "detected_generic": false,
+   "detected_pre_repaired": false,
+   "detected_repaired": false,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "vertex-plan-reduced-week": true
+   },
+   "family": "uncertainty_lost",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 1,
+   "intended_effect": "the state-vertex gate builds corners from the point value and the upper bound, dropping the lower half of the reported interval; on vertex-plan-reduced-week the gate passes 720 instead of resolving to 680.",
+   "layer": "L5",
+   "localization": "missed",
+   "matches": true,
+   "observed": "vertex-plan-reduced-week: the gate passes 720 instead of resolving to 680; no violation of the true constraints"
+  },
+  "06-orchid.patch": {
+   "activated_runs": 49,
+   "changed_runs": 42,
+   "checks_full": [
+    "committed_unread"
+   ],
+   "checks_repaired": [
+    "committed_unread",
+    "span_cover"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "blocked-dispute-weekly-erp": true,
+    "furnace-relining-moved": true,
+    "press-line-maintenance": true,
+    "stocktake-week-dispute": true
+   },
+   "family": "dropped_week_entity",
+   "harmful_runs": 2,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 1,
+   "harmful_runs_flagged_repaired": 1,
+   "holds": 7,
+   "intended_effect": "when a supersede closes a longer fact, the right-hand remainder starts one week early and overlaps the last superseded week, where the authenticated old value then wins for unranked sources; the last week of a reduction reverts to the master value.",
+   "layer": "L3",
+   "localization": "other_run",
+   "matches": true,
+   "observed": "the last week of each reduction reverts to the master value on the listed episodes (e.g. press-line-maintenance week 44: 1100 instead of 900); no repaired check fired on them; span_cover fired on span episodes, where the re-inserted remainder overlaps the new claim"
+  },
+  "07-pylon.patch": {
+   "activated_runs": 698,
+   "changed_runs": 2,
+   "checks_full": [
+    "C1",
+    "restart"
+   ],
+   "checks_repaired": [
+    "C1",
+    "restart"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "recheck-master-revision": true
+   },
+   "family": "replay_observations",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 3,
+   "intended_effect": "replay uses the recorded recheck observations only when replaying from the store; replay from the logged state re-reads the live system of record; on recheck-master-revision the first decision's replay changes after the master is revised.",
+   "layer": "pipeline",
+   "localization": "cause",
+   "matches": true,
+   "observed": "recheck-master-revision: replay of decision 1 from the logged state returns 650 in week 43 after the master revision, not the released 700"
+  },
+  "08-saffron.patch": {
+   "activated_runs": 702,
+   "changed_runs": 1,
+   "checks_full": [],
+   "checks_repaired": [
+    "version_pinned"
+   ],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "alias-model-update": true
+   },
+   "family": "other",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 1,
+   "intended_effect": "the pinned-interpreter check compares only the model name before '@', so an answer from a different interpreter version is accepted; on alias-model-update the message is committed instead of abstained and the plan changes.",
+   "layer": "pipeline",
+   "localization": "cause",
+   "matches": true,
+   "observed": "alias-model-update: the updated model's answer is committed and weeks 43-44 are planned at 700"
+  },
+  "09-tundra.patch": {
+   "activated_runs": 705,
+   "changed_runs": 1,
+   "checks_full": [],
+   "checks_repaired": [],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generated": false,
+   "detected_generic": false,
+   "detected_pre_repaired": false,
+   "detected_repaired": false,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "blocked-dispute-weekly-erp": true
+   },
+   "family": "precedence_supersession",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 1,
+   "intended_effect": "an authenticated record clears a blocked conflict only if its valid time equals the blocked range exactly, so weekly ERP buckets never settle it; on blocked-dispute-weekly-erp the second decision stays deferred.",
+   "layer": "L3",
+   "localization": "missed",
+   "matches": true,
+   "observed": "blocked-dispute-weekly-erp: the second decision stays deferred after the weekly ERP records"
+  },
+  "10-gable.patch": {
+   "activated_runs": 161,
+   "changed_runs": 5,
+   "checks_full": [
+    "committed_unread"
+   ],
+   "checks_repaired": [
+    "committed_unread",
+    "l1_reference"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "compressor-failure-week43": true
+   },
+   "family": "uncertainty_lost",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 6,
+   "intended_effect": "interval bounds are parsed with a truthiness test, so a lower bound of 0 is dropped and the interval narrows to [point, hi]; on compressor-failure-week43 the box gate releases 250 in week 43 instead of 0.",
+   "layer": "L1",
+   "localization": "cause",
+   "matches": true,
+   "observed": "compressor-failure-week43: the box gate releases 250 in week 43 instead of 0"
+  },
+  "11-ferrule.patch": {
+   "activated_runs": 6,
+   "changed_runs": 1,
+   "checks_full": [
+    "admission"
+   ],
+   "checks_repaired": [
+    "admission"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "approval-lapsed-before-replan": true
+   },
+   "family": "stale_approval",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 2,
+   "intended_effect": "approval expiry is checked against the approval's issue time instead of the decision time, so expired approvals stay valid; on approval-lapsed-before-replan the decision after expiry is admitted instead of queued.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "observed": "approval-lapsed-before-replan: the decision after expiry is admitted on the expired approval"
+  },
+  "12-wicket.patch": {
+   "activated_runs": 169,
+   "changed_runs": 21,
+   "checks_full": [],
+   "checks_repaired": [
+    "commit_precedence",
+    "l1_reference"
+   ],
+   "detected_fixed": true,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "furnace-relining-moved": true
+   },
+   "family": "dropped_week_entity",
+   "harmful_runs": 1,
+   "harmful_runs_contained": 1,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 1,
+   "holds": 6,
+   "intended_effect": "parsed operations are keyed by (subject, predicate), so of two operations on the same fact over different weeks only the last survives; on furnace-relining-moved the correction's week-42 restore is dropped.",
+   "layer": "L1",
+   "localization": "cause",
+   "matches": true,
+   "observed": "furnace-relining-moved: the correction's week-42 restore is dropped (500 instead of 800 in week 43 of the plan vector)"
+  },
+  "13-cinder.patch": {
+   "activated_runs": 705,
+   "changed_runs": 9,
+   "checks_full": [
+    "restart"
+   ],
+   "checks_repaired": [
+    "restart",
+    "restart_content"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": false,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "blocked-dispute-weekly-erp": true,
+    "stocktake-week-dispute": true
+   },
+   "family": "audit_restart",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 1,
+   "intended_effect": "the saved audit log keeps only decided records and drops deferred or error records; reload then fails the hash chain or loses records on the blocked episodes.",
+   "layer": "L6",
+   "localization": "cause",
+   "matches": true,
+   "observed": "on both blocked episodes the saved log fails its hash chain on reload"
+  },
+  "14-marlin.patch": {
+   "activated_runs": 154,
+   "changed_runs": 9,
+   "checks_full": [],
+   "checks_repaired": [
+    "commit_precedence",
+    "l1_reference"
+   ],
+   "detected_fixed": true,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "adjacent-week-notices": true
+   },
+   "family": "unit_calendar",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 4,
+   "intended_effect": "valid-time overlap uses closed intervals, so adjacent week ranges count as overlapping; on adjacent-week-notices the lower-priority notice for weeks 44-45 is overridden as a contradiction.",
+   "layer": "types",
+   "localization": "cause",
+   "matches": true,
+   "observed": "adjacent-week-notices: the weeks 44-45 notice is overridden and planned at 1000 instead of 800"
+  },
+  "15-basalt.patch": {
+   "activated_runs": 2,
+   "changed_runs": 2,
+   "checks_full": [
+    "C1",
+    "C2",
+    "G1",
+    "R2",
+    "audit",
+    "replay_store",
+    "restart"
+   ],
+   "checks_repaired": [
+    "C1",
+    "C2",
+    "G1",
+    "R2",
+    "audit",
+    "recheck_complete",
+    "replay_store",
+    "restart"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "recheck-master-revision": true
+   },
+   "family": "replay_observations",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 4,
+   "intended_effect": "when the recheck gate repairs a candidate, its detail keeps only the repair detail and drops the re-read observations; replay of that decision on recheck-master-revision raises instead of reproducing the release.",
+   "layer": "L5",
+   "localization": "diffuse",
+   "matches": true,
+   "observed": "recheck-master-revision: replay of the repaired recheck decision raises instead of reproducing the release"
+  },
+  "16-juniper.patch": {
+   "activated_runs": 10,
+   "changed_runs": 1,
+   "checks_full": [],
+   "checks_repaired": [
+    "commit_precedence"
+   ],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "twin-plant-inboxes": true
+   },
+   "family": "precedence_supersession",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 2,
+   "intended_effect": "under the priority policy a newer claim must outrank the existing one strictly, so a newer claim from an equally ranked source never displaces the older one; on twin-plant-inboxes the plan keeps 700 instead of 600.",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "observed": "twin-plant-inboxes: the plan keeps 700 instead of 600"
+  },
+  "17-kestrel.patch": {
+   "activated_runs": 691,
+   "changed_runs": 686,
+   "checks_full": [],
+   "checks_repaired": [
+    "robust_release"
+   ],
+   "detected_fixed": true,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "compressor-failure-week43": true,
+    "robust-plan-reduced-week": true,
+    "span-planner-and-portal": true
+   },
+   "family": "uncertainty_lost",
+   "harmful_runs": 23,
+   "harmful_runs_contained": 23,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 23,
+   "holds": 108,
+   "intended_effect": "the capacity row's robust right-hand side takes the point value instead of the interval's lower bound; under the box gate weeks with an interval release the point (700, 250, 700) instead of the lower bound.",
+   "layer": "L4",
+   "localization": "cause",
+   "matches": true,
+   "observed": "box-gate releases at the point values: 250 in compressor week 43, 700 in robust-plan and span episodes, instead of the lower bounds"
+  },
+  "18-nimbus.patch": {
+   "activated_runs": 5,
+   "changed_runs": 5,
+   "checks_full": [
+    "admission"
+   ],
+   "checks_repaired": [
+    "admission"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "approval-second-release": true
+   },
+   "family": "stale_approval",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 2,
+   "intended_effect": "the admission records the quantity it takes under the rule's variable instead of the approval id, so consumption is never found and an uncapped approval admits a second action; on approval-second-release the re-plan is admitted instead of queued.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "observed": "approval-second-release: the re-plan is admitted on the already used approval (uses recorded under x[L1])"
+  },
+  "19-pewter.patch": {
+   "activated_runs": 705,
+   "changed_runs": 1,
+   "checks_full": [],
+   "checks_repaired": [
+    "blocked_read"
+   ],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "stocktake-week-dispute": true
+   },
+   "family": "unit_calendar",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 3,
+   "intended_effect": "the blocked-conflict horizon test excludes the first week of the blocked valid time, so a block on a single week does not defer decisions; on stocktake-week-dispute the first decision is decided instead of deferred.",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "observed": "stocktake-week-dispute: the first decision is decided (800 in week 44) instead of deferred"
+  },
+  "20-almond.patch": {
+   "activated_runs": 135,
+   "changed_runs": 1,
+   "checks_full": [],
+   "checks_repaired": [
+    "commit_precedence"
+   ],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "cycle-count-two-lots": true
+   },
+   "family": "dropped_week_entity",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 2,
+   "intended_effect": "contradiction detection ignores the subject, so claims about two different entities with the same predicate are treated as rivals; on cycle-count-two-lots the lower-priority update to lot L2 is overridden.",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "observed": "cycle-count-two-lots: the update to lot L2 is overridden and L2 stays at 300 instead of 250"
+  },
+  "21-velour.patch": {
+   "activated_runs": 6,
+   "changed_runs": 1,
+   "checks_full": [
+    "restart"
+   ],
+   "checks_repaired": [
+    "restart"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": false,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "relayed-approval-email": true
+   },
+   "family": "audit_restart",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 1,
+   "intended_effect": "reloading the audit log skips approval events that were not authenticated, so they vanish after a restart; on relayed-approval-email same_approvals becomes false.",
+   "layer": "L6",
+   "localization": "cause",
+   "matches": true,
+   "observed": "relayed-approval-email: the reload differs while deltas, dispositions and records reload unchanged; the restart check, which compares approvals, fires (same_approvals is not traced, so inferred)"
+  },
+  "22-sorrel.patch": {
+   "activated_runs": 705,
+   "changed_runs": 1,
+   "checks_full": [
+    "precedence"
+   ],
+   "checks_repaired": [
+    "precedence"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "master-correction-after-notice": true
+   },
+   "family": "precedence_supersession",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 2,
+   "intended_effect": "the authenticated-latest supersession rule is compared against a misspelled name and never fires, so a newer master correction is ignored; on master-correction-after-notice the second plan keeps 700 instead of 650.",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "observed": "master-correction-after-notice: the second plan keeps 700 instead of 650"
+  },
+  "23-dynamo.patch": {
+   "activated_runs": 6,
+   "changed_runs": 5,
+   "checks_full": [
+    "schema"
+   ],
+   "checks_repaired": [
+    "schema",
+    "span_cover"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": true,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "span-planner-and-portal": true
+   },
+   "family": "uncertainty_lost",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 6,
+   "intended_effect": "span resolution takes the larger of the two lower bounds, narrowing the spanned interval; on span-planner-and-portal the box gate releases 650 instead of 600 in weeks 42-44.",
+   "layer": "L3",
+   "localization": "cause",
+   "matches": true,
+   "observed": "span-planner-and-portal: releases 650 instead of 600 in weeks 42-44"
+  },
+  "24-ripple.patch": {
+   "activated_runs": 6,
+   "changed_runs": 1,
+   "checks_full": [
+    "admission"
+   ],
+   "checks_repaired": [
+    "admission"
+   ],
+   "detected_fixed": false,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "inspector-signoff": true
+   },
+   "family": "stale_approval",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 2,
+   "intended_effect": "approver authorization compares only the role prefix before the dot, so any 'qa.*' approver satisfies a rule reserved for qa.manager; on inspector-signoff the inspector's approval admits the first decision.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "observed": "inspector-signoff: the inspector's approval admits the first decision"
+  },
+  "25-ochre.patch": {
+   "activated_runs": 698,
+   "changed_runs": 6,
+   "checks_full": [
+    "replay_store"
+   ],
+   "checks_repaired": [
+    "replay_store"
+   ],
+   "detected_fixed": true,
+   "detected_full": true,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": false,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "approval-lapsed-before-replan": true,
+    "approval-second-release": true,
+    "furnace-relining-moved": true,
+    "master-correction-after-notice": true
+   },
+   "family": "replay_observations",
+   "harmful_runs": 0,
+   "harmful_runs_contained": 0,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 0,
+   "holds": 1,
+   "intended_effect": "replay from the store reads the store as of its latest transaction time instead of the record's as-of time; replay_from_store of earlier decisions returns the later plan in episodes with a change after the first decision.",
+   "layer": "pipeline",
+   "localization": "cause",
+   "matches": true,
+   "observed": "replay from the store of decision 1 returns the later plan on the four listed episodes"
+  },
+  "26-tamarack.patch": {
+   "activated_runs": 11,
+   "changed_runs": 1,
+   "checks_full": [],
+   "checks_repaired": [
+    "l2_authority"
+   ],
+   "detected_fixed": false,
+   "detected_full": false,
+   "detected_generated": true,
+   "detected_generic": false,
+   "detected_pre_repaired": true,
+   "detected_repaired": true,
+   "detected_solver": false,
+   "exercised_episodes_changed": {
+    "supplier-may-resume": true
+   },
+   "family": "other",
+   "harmful_runs": 1,
+   "harmful_runs_contained": 1,
+   "harmful_runs_flagged_full": 0,
+   "harmful_runs_flagged_repaired": 1,
+   "holds": 2,
+   "intended_effect": "a restriction value is treated as restrictive when its interval top is 1, so an unauthenticated hedged reading with point 0 is admitted and lifts the suspension; on supplier-may-resume the notice is committed and supplier S2 is ordered from.",
+   "layer": "L2",
+   "localization": "cause",
+   "matches": true,
+   "observed": "supplier-may-resume: the hedged unauthenticated notice is committed and 500 is ordered from S2, a violation of the true constraints"
+  }
+ },
+ "method": "As in round 2 (data/fault_trial/round2/ADJUDICATION_READER.json), against round 3's per-run rerun (results/ft_perrun_r3/) and the repaired configuration's per-run firings (results/fault_trial_r3.json, per_run). The episodes a fault exercises are those the manifest lists for it. Localization refers to the repaired configuration: cause = a firing check tests the mechanism the patch broke, on an episode the fault exercises; other_run = repaired checks fired only on other runs; diffuse = several checks across layers, the mechanism's among them; missed = no repaired check fired (frozen instrument; see DEVIATIONS.md for fault 05).",
+ "post_hoc_reading": true,
+ "reader": "Claude (Opus 5.5), the architecture role that wrote the pipeline, the frozen checks and the repaired checks; after unblinding round 3, 13 Nov 2026. Not an independent or human reader.",
+ "round": 3,
+ "totals": {
+  "activated": 26,
+  "detected_full": 15,
+  "detected_generic": 1,
+  "detected_pre_repaired": 20,
+  "detected_repaired": 24,
+  "detected_repaired_fixed_worlds": 13,
+  "detected_repaired_only_generated": 11,
+  "detected_solver": 0,
+  "effective": 26,
+  "full_only": 0,
+  "harmful_faults": 5,
+  "harmful_faults_fully_contained": 4,
+  "harmful_runs": 106,
+  "harmful_runs_contained": 104,
+  "harmful_runs_flagged_full": 80,
+  "harmful_runs_flagged_repaired": 105,
+  "localization": {
+   "cause": 22,
+   "diffuse": 1,
+   "downstream": 0,
+   "missed": 2,
+   "other_run": 1
+  },
+  "matches_intended": 26,
+  "mcnemar_exact_p": 0.00390625,
+  "repaired_only": 9
+ }
+}

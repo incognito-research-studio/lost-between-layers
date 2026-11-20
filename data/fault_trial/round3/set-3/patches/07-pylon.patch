@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/pipeline.py b/src/dsoi/pipeline.py
+index d650ed6..8a3c956 100644
+--- a/src/dsoi/pipeline.py
++++ b/src/dsoi/pipeline.py
+@@ -361,7 +361,7 @@ class Pipeline:
+             ctx = Context(rec.state, rec.theta, rec.constraints_id, rec.objective_id, nu)
+         decision, inst = self.policy.decide(ctx)
+         gate = self.gate
+-        if isinstance(gate, RecheckGate):
++        if isinstance(gate, RecheckGate) and from_store:
+             observed = rec.gate_detail.get("reread")
+             if observed is None:
+                 raise ValueError("recheck replay requires the recorded observations")

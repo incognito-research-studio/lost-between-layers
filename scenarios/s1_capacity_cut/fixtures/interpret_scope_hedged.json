@@ -1,0 +1,33 @@
+{
+  "interpreter_version": "fixture:s1-scope-hedged@1",
+  "conf": 0.8,
+  "output": {
+    "kind": "delta",
+    "ops": [
+      {
+        "op": "supersede",
+        "subject": "plant:X",
+        "predicate": "capacity",
+        "value": 700,
+        "lo": 650,
+        "hi": 750,
+        "unit": "units/week",
+        "valid_from": 42,
+        "valid_to": 44,
+        "span_text": "capacity reduced by about 30% for weeks 42-44"
+      },
+      {
+        "op": "supersede",
+        "subject": "plant:X",
+        "predicate": "capacity",
+        "value": 1000,
+        "lo": 650,
+        "hi": 1000,
+        "unit": "units/week",
+        "valid_from": 44,
+        "valid_to": 45,
+        "span_text": "capacity reduced by about 30% for weeks 42-44"
+      }
+    ]
+  }
+}

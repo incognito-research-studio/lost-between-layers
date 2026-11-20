@@ -1,0 +1,15 @@
+# Monte Carlo study of the gate ladder on S1-like capacity notices.
+# All parameters are illustrative, not calibrated against a real interpreter.
+name: sim_s1
+scenario: S1
+seed: 20261018
+runs: 1000
+weeks: [42, 44]                     # affected weeks named in the notice
+true_reduction: {low: 0.20, high: 0.40}
+interpreter:                        # dsoi.sim.noise.NoiseModel
+  point_sd: 0.03
+  bias: 0.0
+  half_width: 0.05
+  scope_misread_prob: 0.02
+  abstain_prob: 0.01
+gates: [nominal, box_robust, recheck]

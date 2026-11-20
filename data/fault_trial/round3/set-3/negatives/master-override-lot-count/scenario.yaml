@@ -1,0 +1,28 @@
+id: NEG-master-override-lot-count
+title: Inventory master corrects a warehouse e-mail count; newer authenticated records supersede notices
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {"email:warehouse": 1}
+world:
+  period: 42
+  demand: 900
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-l2-count, t: 2, kind: message, source: "email:warehouse",
+     text: "Floor count for lot L2 this morning: 260 units.",
+     fixture: fixtures/count.json}
+  - {t: 3, kind: decide}
+  - {id: erp-l2-posted, t: 4, kind: record, source: "erp:inventory",
+     ops: [{op: assert, subject: "lot:L2", predicate: qty, value: 240,
+            valid_from: 42, valid_to: 43}]}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  supersession: authenticated_latest
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,162 @@
+{
+ "post_hoc": true,
+ "fresh_model_calls": 0,
+ "run": "e1v2/phi4:latest/atleast_pct-008/r2",
+ "patch": "06-orchid.patch",
+ "notice": "Plant X capacity will fall by at least 10% for W41.",
+ "true_week": 41,
+ "true_capacity": 866.41,
+ "reply": {
+  "kind": "delta",
+  "reason": "The message specifies a capacity reduction for Plant X.",
+  "ops": [
+   {
+    "op": "retract",
+    "subject": "plant:X",
+    "predicate": "capacity",
+    "value": 1000,
+    "lo": 900,
+    "hi": 1000,
+    "unit": "units/week",
+    "valid_from": 41,
+    "valid_to": 42,
+    "span_text": "Plant X capacity will fall by at least 10% for W41."
+   }
+  ]
+ },
+ "clean": {
+  "exception": "MissingState: ('plant:X', 'capacity', 41.0)",
+  "ingests": [
+   [
+    "erp:capacity-master",
+    "admit"
+   ],
+   [
+    "erp:capacity-master",
+    "admit"
+   ],
+   [
+    "atleast_pct-008-m0",
+    "committed"
+   ]
+  ],
+  "plant_x_facts": [
+   {
+    "vt": [
+     40.0,
+     50.0
+    ],
+    "value": 1000.0
+   },
+   {
+    "vt": [
+     40.0,
+     41.0
+    ],
+    "value": 1000.0
+   },
+   {
+    "vt": [
+     42.0,
+     50.0
+    ],
+    "value": 1000.0
+   }
+  ],
+  "outcome": "error",
+  "names": null,
+  "x_released": null,
+  "x_exec": null,
+  "violates_true": null
+ },
+ "patched": {
+  "exception": null,
+  "ingests": [
+   [
+    "erp:capacity-master",
+    "admit"
+   ],
+   [
+    "erp:capacity-master",
+    "admit"
+   ],
+   [
+    "atleast_pct-008-m0",
+    "committed"
+   ]
+  ],
+  "plant_x_facts": [
+   {
+    "vt": [
+     40.0,
+     50.0
+    ],
+    "value": 1000.0
+   },
+   {
+    "vt": [
+     40.0,
+     41.0
+    ],
+    "value": 1000.0
+   },
+   {
+    "vt": [
+     41.0,
+     50.0
+    ],
+    "value": 1000.0
+   }
+  ],
+  "outcome": "decided",
+  "names": [
+   "x[40]",
+   "x[41]",
+   "x[42]",
+   "x[43]",
+   "x[44]",
+   "x[45]",
+   "x[46]",
+   "x[47]",
+   "x[48]",
+   "x[49]"
+  ],
+  "x_released": [
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0
+  ],
+  "x_exec": [
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0,
+   1000.0
+  ],
+  "violates_true": true
+ },
+ "executed_in_week": 1000.0,
+ "excess_units": 133.59,
+ "checks_fired_on_run": [
+  "committed_unread"
+ ],
+ "gate_holds_on_run": [],
+ "violations_clean_patched_gated": [
+  0,
+  1,
+  1
+ ],
+ "committed_unread_is_relative": true
+}

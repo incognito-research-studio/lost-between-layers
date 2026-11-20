@@ -1,0 +1,13 @@
+# Execution-side gaps on S1 (GSN goal A4 and TOCTOU). Illustrative parameters.
+name: sim_exec
+scenario: EXEC
+seed: 5
+runs: 300
+true_reduction: {low: 0.20, high: 0.40}
+interpreter: {point_sd: 0.03, bias: 0.0, half_width: 0.05,
+              scope_misread_prob: 0.0, abstain_prob: 0.0}
+executor_max_dev: 0.05        # a faulty execution deviates by up to +-5% per week
+toctou_drop: [0.02, 0.10]     # capacity falls a further 2-10% after the re-read
+grid:
+  p_exec_fault: [0.0, 0.05, 0.2]
+  p_toctou: [0.0, 0.05, 0.2]

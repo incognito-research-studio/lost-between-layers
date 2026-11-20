@@ -1,0 +1,23 @@
+{
+ "frozen_at": "2026-11-08T23:06:24.029997+00:00",
+ "note": "round-2 instruments frozen before any round-2 fault, episode or negative case was written; round-1 instruments byte-identical to data/fault_trial/FREEZE.json",
+ "sha256": {
+  "data/fault_trial/FAULT_BRIEF.md": "0f8cb5f743983039490820275d88af0c0e40712fa7c68ab76c15c86fd690e56d",
+  "data/fault_trial/NEGATIVE_FORMAT.md": "7599209797ab66afe2f8a6c505d80713dfff713942ad7e5a90e67920e780ac66",
+  "data/fault_trial/PROTOCOL.md": "cc56d4f292fc39714f1294a10d494483d926208e9046a51d6587c3b37decf600",
+  "data/fault_trial/authority.yaml": "f830b3dd12f95c5bcc0900f6369943b27725375a5e07a20f50d522b9196b6cda",
+  "data/fault_trial/round2/FAULT_BRIEF.md": "f206ca735e12ec92eec1ff244ddf4048cb4da055452ef6a25a0cfd98a674c763",
+  "data/fault_trial/round2/PROTOCOL.md": "76d2022dda75aecc9e1cb87ca6a973a853a54fc819704fad37669832b771be64",
+  "data/fault_trial/round2/l5_monitors_stub.py": "79b9ef1f3314a2e4218f41337fd43ca43340962ace054a56b4a77a977b2b3bc4",
+  "data/fault_trial/round2/run_case.py": "f4cbd466237893d6b1df6ce39b71c656d033beaf9524f3f66a17589a79164b4a",
+  "src/dsoi/properties.py": "07160ef534a956d9aad79961637095fabfb94492296190004484b5b226a9f175",
+  "tools/ft_harness.py": "bb7bcc79cc9071084587258443c7d916ef3dff3f6fdbffc7da554c1f4711101f",
+  "tools/ft_round2.py": "45d88555d14c3e47625d3341eb3f6e4bfd5c4ca268ad64d0d0da645cd0a80f57",
+  "tools/ft_round2_harness.py": "1c1c63a219f520548505f20b9414051071cde8d3dee8c71ec6ff2420df511eb8",
+  "tools/ft_sandbox.py": "3db9d41790bae020950a4cab58af2e9fe55b3ab043d5915524a5b7092eea4540",
+  "tools/ft_sandbox2.py": "c2f59b4b0a32c92357332e43597c2d71c16104a67ce5619bc9abf8072b0ceb3a",
+  "tools/ft_score.py": "9a298da05c57112bf0fd579bc377abde8b10c2e8105e4f58da52a8956d343587",
+  "tools/ft_trace_ext.py": "de0b5e1bc0b51326e9d3ed46920da3cfec71d39426532c6d91cc7fe172d3b97f",
+  "tools/ft_trial.py": "056feecdb0757863bd8806b79be82e9876dec28172a8c9db45e8756be6a421ac"
+ }
+}

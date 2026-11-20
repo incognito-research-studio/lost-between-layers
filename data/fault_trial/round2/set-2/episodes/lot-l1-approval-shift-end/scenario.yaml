@@ -1,0 +1,28 @@
+id: EP-LOT-L1-APPROVAL-SHIFT-END
+title: Release approval valid until the end of the early shift, plan run at shift change
+model: lot_allocation
+interpreter_version: "fixture:inventory-notices@1"
+source_priority: {"email:warehouse": 1}
+world:
+  period: 42
+  demand: 600
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {t: 2, kind: approval, approval_id: apr-l1-early, approval_kind: lot-release,
+     variable: "x[L1]", approver: qa.manager, source: "idp:qa-approvals", expires_at: 6}
+  - {id: msg-count, t: 5, kind: message, source: "email:warehouse",
+     text: "Cycle count done: lot L1 has 450 units on hand.",
+     fixture: fixtures/count.json}
+  # The planning run at the shift change, exactly when the early-shift approval lapses.
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: [{kind: lot-release, variable: "x[L1]", approvers: [qa.manager]}]
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,33 @@
+# S3 (Table IV): supplier suspension. The plan must exclude the supplier, and
+# L5 re-checks against the vendor master at execution (Prop. 3(a)). If the
+# vendor master is stale, A-ORACLE fails and the re-check can pass a bad plan.
+id: S3
+title: Supplier suspension
+status: implemented
+model: supplier_mix
+interpreter_version: "fixture:s3@1"
+
+world:
+  period: 42
+  demand: 700
+  penalty: 100              # per unit of unmet demand
+  erp_source_id: "erp:vendor-master"
+  suppliers:
+    S1: {capacity: 400, cost: 10, suspended: 0}
+    S2: {capacity: 500, cost: 8, suspended: 0}
+    S3: {capacity: 400, cost: 12, suspended: 0}
+  truth: {S2: {suspended: 1}}  # S*: S2 really is suspended
+  master_stale: false         # true: the vendor master still shows S2 active
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-suspend, t: 2, kind: message, source: "email:procurement",
+     text: "Supplier S2 is suspended effective immediately pending a quality audit.",
+     fixture: fixtures/suspend.json}   # variant: fixtures/missed.json (interpreter abstains)
+  - {t: 3, kind: decide}
+
+required_response: "Exclude supplier from F; re-solve"
+analytic_measure: "Plans in F(S_hat, C); K-exec re-check against the vendor master"
+depends_on: [L3, L4, L5, "P3(a)"]
+risk: "Stale master data"

@@ -1,0 +1,29 @@
+{
+ "absolute_paths_outside_sandbox": [],
+ "audited": "tool-call inputs of the round-2 fault-generation agent",
+ "by_tool": {
+  "Bash": 29,
+  "SubagentHandback": 1
+ },
+ "parent_directory_uses": "3 commands use ../: each resolves inside the sandbox (from episodes/<case> or .out/<dir> back to the sandbox root or its .venv); checked by reading those command fragments",
+ "pattern_hits": {
+  "ft_ tools": 0,
+  "home directory": 0,
+  "mdpi-paper": 0,
+  "project repository path": 0,
+  "properties.py": 0,
+  "replication-package": 0,
+  "results/": 0,
+  "review files": 0,
+  "round-1 fault set": 0,
+  "round-1 sandbox": 0,
+  "tests/": 0,
+  "tools/": 0,
+  "trace.py": 0,
+  "uv or pip": 0,
+  "web": 0
+ },
+ "python_outside_sandbox_venv": 0,
+ "tool_calls": 30,
+ "transcript_sha256": "a9c1eccbe666a49769460ce14c4e0ae51ad4406bdddbea076dbb6bcebb2113aa"
+}

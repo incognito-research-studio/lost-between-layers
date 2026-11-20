@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/canon.py b/src/dsoi/canon.py
+index 8bfc5a2..89d154b 100644
+--- a/src/dsoi/canon.py
++++ b/src/dsoi/canon.py
+@@ -54,7 +54,7 @@ def canonicalize(restricted: dict[tuple, Fact], d: DecisionClass) -> CanonicalSt
+             raise TypeError(f"canon@1 handles numeric quantities only: {key}")
+         q = f.o
+         entries.append(
+-            (key, _norm(q.value, d.decimals), _norm(q.lo, d.decimals), _norm(q.hi, d.decimals),
++            (key, _norm(q.value, d.decimals), _norm(q.lo, d.decimals), _norm(q.lo, d.decimals),
+              q.unit)
+         )
+     return tuple(sorted(entries))

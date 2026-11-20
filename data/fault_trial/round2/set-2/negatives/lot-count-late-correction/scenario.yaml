@@ -1,0 +1,29 @@
+id: NEG-LOT-COUNT-LATE-CORRECTION
+title: Warehouse corrects a lot count after the allocation was released
+model: lot_allocation
+interpreter_version: "fixture:inventory-notices@1"
+source_priority: {"email:warehouse": 1}
+world:
+  period: 42
+  demand: 800
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-l2-count, t: 2, kind: message, source: "email:warehouse",
+     text: "Cycle count done: lot L2 has 260 units on hand.",
+     fixture: fixtures/count.json}
+  - {t: 3, kind: decide}
+  - {id: msg-l2-recount, t: 5, kind: message, source: "email:warehouse",
+     text: "Correction to this morning's count: lot L2 has 290 units, one pallet was missed.",
+     fixture: fixtures/recount.json}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

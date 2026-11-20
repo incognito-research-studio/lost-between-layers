@@ -1,0 +1,299 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l5_gate.py": [
+   174,
+   175
+  ]
+ },
+ "import_hits": [],
+ "patch": "05-thimble.patch",
+ "runs": {
+  "episodes/vertex-plan-reduced-week": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l5_gate.py:174",
+    "dsoi/layers/l5_gate.py:175"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "resolved",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:P1",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          43.0
+         ],
+         720.0,
+         680.0,
+         760.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          44.0
+         ],
+         720.0,
+         680.0,
+         760.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        950.0,
+        950.0,
+        680.0,
+        680.0,
+        950.0
+       ],
+       "x_released": [
+        950.0,
+        950.0,
+        680.0,
+        680.0,
+        950.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        950.0,
+        950.0,
+        680.0,
+        680.0,
+        950.0
+       ],
+       [
+        950.0,
+        950.0,
+        680.0,
+        680.0,
+        950.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:P1",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          43.0
+         ],
+         720.0,
+         680.0,
+         760.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          44.0
+         ],
+         720.0,
+         680.0,
+         760.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:P1",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        950.0,
+        950.0,
+        720.0,
+        720.0,
+        950.0
+       ],
+       "x_released": [
+        950.0,
+        950.0,
+        720.0,
+        720.0,
+        950.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        950.0,
+        950.0,
+        720.0,
+        720.0,
+        950.0
+       ],
+       [
+        950.0,
+        950.0,
+        720.0,
+        720.0,
+        950.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "scenarios/11-S8-vertex": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l5_gate.py:174",
+    "dsoi/layers/l5_gate.py:175"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  }
+ }
+}

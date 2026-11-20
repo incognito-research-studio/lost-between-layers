@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..cc0e622 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -139,7 +139,7 @@ class StateLayer:
+             return []
+         return [
+             f for f in self.store.facts()
+-            if f.current and f.s == op.s and f.p == op.p and overlaps(f.vt, op.vt)
++            if f.current and f.p == op.p and overlaps(f.vt, op.vt)
+             and not f.prov.authenticated and f.prov.source_id != op.prov.source_id
+             and f.o != op.o
+         ]

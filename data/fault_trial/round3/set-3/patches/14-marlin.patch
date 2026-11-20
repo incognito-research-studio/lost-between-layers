@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/types.py b/src/dsoi/types.py
+index 18f542f..e0223d5 100644
+--- a/src/dsoi/types.py
++++ b/src/dsoi/types.py
+@@ -12,7 +12,7 @@ Interval = tuple[float, float]
+ 
+ 
+ def overlaps(a: Interval, b: Interval) -> bool:
+-    return a[0] < b[1] and b[0] < a[1]
++    return a[0] <= b[1] and b[0] <= a[1]
+ 
+ 
+ def contains(iv: Interval, point: float) -> bool:

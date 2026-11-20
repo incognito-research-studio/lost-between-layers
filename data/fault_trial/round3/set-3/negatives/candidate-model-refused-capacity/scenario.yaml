@@ -1,0 +1,23 @@
+id: NEG-candidate-model-refused-capacity
+title: A release-candidate interpreter answers; the deployment declared it and refuses it
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@3"
+source_priority: {}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-rc, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 20% for weeks 43-44.",
+     fixture: fixtures/rc.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: ["fixture:capacity-reader@4-rc1"]
+  system_of_record: {}

@@ -1,0 +1,32 @@
+# S7 (Table IV): last week's notice is corrected after a plan was released.
+# The correction supersedes valid time that the first notice already covered.
+id: S7
+title: Late correction of last week's notice
+status: implemented
+model: capacity_plan
+interpreter_version: "fixture:s7@1"
+
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {43: 650, 44: 650, 45: 650}   # the corrected range is the true one
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-notice, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44.",
+     fixture: fixtures/notice.json}
+  - {t: 3, kind: decide}
+  - {id: msg-correction, t: 5, kind: message, source: "email:planner-inbox",
+     text: "Correction to last week's notice: the reduction applies to weeks 43-45. Week 42 runs at full capacity.",
+     fixture: fixtures/correction.json}
+  - {t: 6, kind: decide}
+
+required_response: "Back-date valid time"
+analytic_measure: "Past as-of queries unchanged; correction audited"
+depends_on: [L3, L6, "R2(i)"]
+risk: "Re-planning churn"

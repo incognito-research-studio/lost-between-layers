@@ -1,0 +1,22 @@
+diff --git a/src/dsoi/layers/l1_interpreter.py b/src/dsoi/layers/l1_interpreter.py
+index 2d13bac..a85c12a 100644
+--- a/src/dsoi/layers/l1_interpreter.py
++++ b/src/dsoi/layers/l1_interpreter.py
+@@ -81,6 +81,7 @@ def parse_output(
+     if payload.get("kind") != "delta":
+         return Abstain(f"unknown output kind: {payload.get('kind')!r}")
+     ops: list[Op] = []
++    seen: set[tuple[str, str]] = set()
+     for raw in payload.get("ops", []):
+         try:
+             op = _parse_op(raw, message, schema, nu_i)
+@@ -88,6 +89,9 @@ def parse_output(
+             return Abstain(f"malformed operation {raw!r}: {exc}")
+         if isinstance(op, Abstain):
+             return op
++        if (op.s, op.p) in seen:  # models sometimes repeat an operation
++            continue
++        seen.add((op.s, op.p))
+         ops.append(op)
+     if not ops:
+         return Abstain("empty delta")

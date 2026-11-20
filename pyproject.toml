@@ -1,0 +1,46 @@
+[project]
+name = "dsoi"
+version = "0.1.0"
+description = "Reference implementation, proposition checks and simulation environment for the DSOI six-layer reference architecture"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pyyaml>=6",
+]
+
+[project.optional-dependencies]
+providers = ["anthropic>=1.0"]
+plots = ["matplotlib>=3.8"]
+dev = ["pytest>=8", "hypothesis>=6.100", "ruff>=0.5"]
+
+[project.scripts]
+dsoi-sim = "dsoi.sim.cli:main"
+dsoi-trace = "dsoi.trace:main"
+dsoi-sweep = "dsoi.sim.sweep:main"
+dsoi-plot = "dsoi.sim.plots:main"
+dsoi-witnesses = "dsoi.witnesses:main"
+dsoi-intervals = "dsoi.sim.intervals:main"
+dsoi-e1 = "dsoi.experiments.e1_cli:main"
+dsoi-e1v2 = "dsoi.experiments.e1v2_cli:main"
+dsoi-e1v3 = "dsoi.experiments.e1v3_cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dsoi"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l4_decision.py b/src/dsoi/layers/l4_decision.py
+index aacf667..7cd4db5 100644
+--- a/src/dsoi/layers/l4_decision.py
++++ b/src/dsoi/layers/l4_decision.py
+@@ -152,7 +152,7 @@ def _usable(q: dict, cap_key: tuple, flag_key: tuple) -> tuple[float, float]:
+     if flag_key not in q:
+         raise MissingState(flag_key)
+     cap, flag = q[cap_key], q[flag_key]
+-    return cap.value * (1.0 - flag.value), cap.interval()[0] * (1.0 - flag.interval()[1])
++    return cap.value * (1.0 - flag.value), cap.interval()[0] * (1.0 - flag.interval()[0])
+ 
+ 
+ class LotAllocationFormulation:

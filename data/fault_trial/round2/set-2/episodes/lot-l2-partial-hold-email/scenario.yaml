@@ -1,0 +1,26 @@
+id: EP-LOT-L2-PARTIAL-HOLD-EMAIL
+title: E-mail reports part of lot L2 on hold
+model: lot_allocation
+interpreter_version: "fixture:inventory-notices@1"
+source_priority: {"email:qa-inbox": 1}
+world:
+  period: 42
+  demand: 800
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+lift_issuers: {hold: ["idp:qa-approvals"]}
+times: {erp_load: 1}
+events:
+  - {id: msg-partial-hold, t: 2, kind: message, source: "email:qa-inbox",
+     text: "QA: half of lot L2 is on hold pending re-inspection of the second pallet layer.",
+     fixture: fixtures/partial.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

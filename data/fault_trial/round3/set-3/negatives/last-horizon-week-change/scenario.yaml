@@ -1,0 +1,23 @@
+id: NEG-last-horizon-week-change
+title: A reduction that applies only to the last week of the planning horizon
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-wk45, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X: week 45 only, capacity 750 units because of the works holiday.",
+     fixture: fixtures/wk45.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

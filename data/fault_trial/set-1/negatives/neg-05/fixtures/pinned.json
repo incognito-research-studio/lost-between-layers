@@ -1,0 +1,20 @@
+{
+  "interpreter_version": "fixture:neg05@1",
+  "output": {
+    "kind": "delta",
+    "ops": [
+      {
+        "op": "supersede",
+        "subject": "supplier:S2",
+        "predicate": "suspended",
+        "value": 1,
+        "lo": null,
+        "hi": null,
+        "unit": "",
+        "valid_from": 42,
+        "valid_to": 43,
+        "span_text": "Supplier S2 is suspended effective immediately"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+id: EP-adjacent-week-notices
+title: Portal and planner report capacity for adjacent week ranges
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {"portal:supplier": 2, "email:planner": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-portal4243, t: 2, kind: message, source: "portal:supplier",
+     text: "Plant X capacity, weeks 42-43: 600 units per week.",
+     fixture: fixtures/portal.json}
+  - {id: msg-x-planner4445, t: 3, kind: message, source: "email:planner",
+     text: "Plant X: from week 44, back up to about 800 units per week through week 45.",
+     fixture: fixtures/planner.json}
+  - {t: 4, kind: decide}
+trial:
+  gate: nominal
+  resolution: priority
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

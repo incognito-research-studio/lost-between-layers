@@ -1,0 +1,25 @@
+id: EP-PLANT-X-ALIAS-UPDATE
+title: Notice answered by a newer model behind the interpreter alias
+model: capacity_plan
+interpreter_version: "fixture:plant-notices@1"
+source_priority: {"email:planner-inbox": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 650, 43: 650, 44: 650}
+times: {erp_load: 1}
+events:
+  - {id: msg-cut-v2, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44.",
+     fixture: fixtures/served_v2.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

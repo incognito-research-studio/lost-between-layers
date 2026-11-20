@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..a852f87 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -157,7 +157,7 @@ class StateLayer:
+                 ops.append(op)
+                 continue
+             rival = max(rivals, key=lambda f: (self._priority(f.prov.source_id), f.tt[0]))
+-            incoming_wins = self._priority(op.prov.source_id) >= self._priority(
++            incoming_wins = self._priority(op.prov.source_id) <= self._priority(
+                 rival.prov.source_id)
+             notes.append(f"{op.s}/{op.p} {op.prov.source_id} vs {rival.prov.source_id}")
+             if self.resolution == "block":

@@ -1,0 +1,39 @@
+{
+ "laya": "0.4.1",
+ "model_safetensors_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+ "passes": [
+  [
+   "cpu",
+   "r1"
+  ],
+  [
+   "cpu",
+   "r2"
+  ],
+  [
+   "mps",
+   "r1"
+  ]
+ ],
+ "repo": "convaiinnovations/laya",
+ "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+ "runs": {
+  "cpu_r1": {
+   "calls": 1960,
+   "seconds": 1359.1,
+   "sha256": "3a591adca73716c5a7dd1eb5c480c32560fef2ce8b6eb43d79ff3d9d8a4b6d47"
+  },
+  "cpu_r2": {
+   "calls": 196,
+   "seconds": 140.9,
+   "sha256": "7ee11ddb8073f194da1425fea78e9f5f71ebb8ba2bbeae6eccf93f89733e6799"
+  },
+  "mps_r1": {
+   "calls": 196,
+   "seconds": 30.7,
+   "sha256": "698cacfcba541ce990380861dba406ece62b60e42568c8bc9f1ad91fff88d95f"
+  }
+ },
+ "subfolder": "typed-decisions",
+ "torch": "2.14.1"
+}

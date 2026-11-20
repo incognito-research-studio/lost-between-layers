@@ -1,0 +1,26 @@
+id: NEG-full-suspension-from-email
+title: An unauthenticated procurement e-mail suspends a supplier in full before ordering
+model: supplier_mix
+interpreter_version: "fixture:supplier-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 700
+  penalty: 100
+  erp_source_id: "erp:vendor-master"
+  suppliers:
+    S1: {capacity: 400, cost: 10, suspended: 0}
+    S2: {capacity: 500, cost: 8, suspended: 0}
+    S3: {capacity: 400, cost: 12, suspended: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-s1-suspend, t: 2, kind: message, source: "email:procurement",
+     text: "Please stop all orders to supplier S1 this week: suspended pending the payment dispute.",
+     fixture: fixtures/suspend.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,2424 @@
+{
+ "categories": {
+  "llama3.1:8b": {
+   "absolute": {
+    "abstained": 9,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "atleast_pct": {
+    "abstained": 9,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "conflict": {
+    "abstained": 14,
+    "covered_or_kept": 4,
+    "n": 16,
+    "violation_stated": 11
+   },
+   "correction": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "exact_pct": {
+    "abstained": 7,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "hedged_pct": {
+    "abstained": 12,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "injection": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "other_entity": {
+    "abstained": 14,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   },
+   "out_of_scope": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   },
+   "per_day": {
+    "abstained": 14,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "scope_relative": {
+    "abstained": 12,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "two_entities": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "upto_pct": {
+    "abstained": 14,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "vague": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   }
+  },
+  "phi4:latest": {
+   "absolute": {
+    "abstained": 7,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "atleast_pct": {
+    "abstained": 6,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 13
+   },
+   "conflict": {
+    "abstained": 14,
+    "covered_or_kept": 6,
+    "n": 16,
+    "violation_stated": 9
+   },
+   "correction": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "exact_pct": {
+    "abstained": 7,
+    "covered_or_kept": 1,
+    "n": 16,
+    "violation_stated": 14
+   },
+   "hedged_pct": {
+    "abstained": 6,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 15
+   },
+   "injection": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "other_entity": {
+    "abstained": 3,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   },
+   "out_of_scope": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   },
+   "per_day": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "scope_relative": {
+    "abstained": 11,
+    "covered_or_kept": 1,
+    "n": 16,
+    "violation_stated": 14
+   },
+   "two_entities": {
+    "abstained": 13,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "upto_pct": {
+    "abstained": 9,
+    "covered_or_kept": 1,
+    "n": 16,
+    "violation_stated": 15
+   },
+   "vague": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   }
+  },
+  "qwen2.5:7b-instruct": {
+   "absolute": {
+    "abstained": 15,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "atleast_pct": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "conflict": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "correction": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "exact_pct": {
+    "abstained": 15,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "hedged_pct": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "injection": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "other_entity": {
+    "abstained": 13,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   },
+   "out_of_scope": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   },
+   "per_day": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "scope_relative": {
+    "abstained": 14,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "two_entities": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "upto_pct": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "violation_stated": 16
+   },
+   "vague": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "violation_stated": 0
+   }
+  }
+ },
+ "differences": {
+  "llama3.1:8b": {
+   "release: stated_hold - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.858,
+     -0.7216
+    ],
+    "diff": -0.7897727272727273,
+    "discordant": 139,
+    "n": 176
+   },
+   "violation: cal_corrected - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "diff": 0.0,
+    "discordant": 0,
+    "n": 176
+   },
+   "violation: recheck - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -1.0,
+     -0.9318
+    ],
+    "diff": -0.9715909090909091,
+    "discordant": 171,
+    "n": 176
+   },
+   "violation: stated - point": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "diff": 0.0,
+    "discordant": 0,
+    "n": 176
+   },
+   "violation: stated_hold - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.8409,
+     -0.6989
+    ],
+    "diff": -0.7727272727272727,
+    "discordant": 136,
+    "n": 176
+   }
+  },
+  "phi4:latest": {
+   "release: stated_hold - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.7557,
+     -0.6023
+    ],
+    "diff": -0.6818181818181818,
+    "discordant": 120,
+    "n": 176
+   },
+   "violation: cal_corrected - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.0852,
+     -0.0114
+    ],
+    "diff": -0.045454545454545456,
+    "discordant": 8,
+    "n": 176
+   },
+   "violation: recheck - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.9489,
+     -0.8693
+    ],
+    "diff": -0.9090909090909091,
+    "discordant": 160,
+    "n": 176
+   },
+   "violation: stated - point": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.017,
+     0.0
+    ],
+    "diff": -0.005681818181818182,
+    "discordant": 1,
+    "n": 176
+   },
+   "violation: stated_hold - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.733,
+     -0.5795
+    ],
+    "diff": -0.6590909090909091,
+    "discordant": 116,
+    "n": 176
+   }
+  },
+  "qwen2.5:7b-instruct": {
+   "release: stated_hold - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.9943,
+     -0.9545
+    ],
+    "diff": -0.9772727272727273,
+    "discordant": 172,
+    "n": 176
+   },
+   "violation: cal_corrected - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "diff": 0.0,
+    "discordant": 0,
+    "n": 176
+   },
+   "violation: recheck - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -1.0,
+     -1.0
+    ],
+    "diff": -1.0,
+    "discordant": 176,
+    "n": 176
+   },
+   "violation: stated - point": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "diff": 0.0,
+    "discordant": 0,
+    "n": 176
+   },
+   "violation: stated_hold - stated": {
+    "cases": 88,
+    "ci95_bootstrap": [
+     -0.9943,
+     -0.9545
+    ],
+    "diff": -0.9772727272727273,
+    "discordant": 172,
+    "n": 176
+   }
+  }
+ },
+ "draws": 10000,
+ "failures": {
+  "llama3.1:8b": {
+   "contract": 3,
+   "covered": 1,
+   "entity": 0,
+   "error": 0,
+   "error_in_abstention": 0,
+   "model": 136,
+   "nochange": 35,
+   "scope": 1,
+   "value": 0
+  },
+  "phi4:latest": {
+   "contract": 5,
+   "covered": 5,
+   "entity": 0,
+   "error": 6,
+   "error_in_abstention": 1,
+   "model": 116,
+   "nochange": 39,
+   "scope": 0,
+   "value": 5
+  },
+  "qwen2.5:7b-instruct": {
+   "contract": 0,
+   "covered": 0,
+   "entity": 0,
+   "error": 0,
+   "error_in_abstention": 0,
+   "model": 172,
+   "nochange": 4,
+   "scope": 0,
+   "value": 0
+  }
+ },
+ "manifest": "b964ec016ea1b1f5ae95cb1a82ff4177ad9ab29532992867d4ca0ecad97346cd",
+ "models": {
+  "llama3.1:8b": {
+   "abstained": {
+    "cases": 88,
+    "ci95": [
+     0.7137,
+     0.8499
+    ],
+    "ci95_bootstrap": [
+     0.7216,
+     0.8523
+    ],
+    "ci95_wilson_iid": [
+     0.7237,
+     0.8435
+    ],
+    "deff": 1.2961,
+    "k": 139,
+    "n": 176,
+    "n_eff": 135.79,
+    "rate": 0.7897727272727273
+   },
+   "cal_corrected": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    }
+   },
+   "calibrated": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "coverage_cal_corrected": {
+    "cases": 88,
+    "ci95": [
+     0.0093,
+     0.0835
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0682
+    ],
+    "ci95_wilson_iid": [
+     0.0122,
+     0.0648
+    ],
+    "deff": 1.8148,
+    "k": 5,
+    "n": 176,
+    "n_eff": 96.98,
+    "rate": 0.028409090909090908
+   },
+   "coverage_calibrated": {
+    "cases": 88,
+    "ci95": [
+     0.0,
+     0.0418
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "ci95_wilson_iid": [
+     0.0,
+     0.0214
+    ],
+    "deff": 2.0,
+    "k": 0,
+    "n": 176,
+    "n_eff": 88.0,
+    "rate": 0.0
+   },
+   "coverage_stated": {
+    "cases": 88,
+    "ci95": [
+     0.0073,
+     0.0685
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0511
+    ],
+    "ci95_wilson_iid": [
+     0.0089,
+     0.057
+    ],
+    "deff": 1.5055,
+    "k": 4,
+    "n": 176,
+    "n_eff": 116.91,
+    "rate": 0.022727272727272728
+   },
+   "entity_ok": {
+    "cases": 96,
+    "ci95": [
+     0.0138,
+     0.0925
+    ],
+    "ci95_bootstrap": [
+     0.0052,
+     0.0781
+    ],
+    "ci95_wilson_iid": [
+     0.0178,
+     0.0733
+    ],
+    "deff": 1.8712,
+    "k": 7,
+    "n": 192,
+    "n_eff": 102.61,
+    "rate": 0.036458333333333336
+   },
+   "held_quiet": {
+    "cases": 24,
+    "ci95": [
+     0.8602,
+     0.9885
+    ],
+    "ci95_bootstrap": [
+     0.8958,
+     1.0
+    ],
+    "ci95_wilson_iid": [
+     0.8602,
+     0.9885
+    ],
+    "deff": 1.0,
+    "k": 46,
+    "n": 48,
+    "n_eff": 48.0,
+    "rate": 0.9583333333333334
+   },
+   "point": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    }
+   },
+   "quiet_ok": {
+    "cases": 24,
+    "ci95": [
+     0.862,
+     1.0
+    ],
+    "ci95_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "ci95_wilson_iid": [
+     0.9259,
+     1.0
+    ],
+    "deff": 2.0,
+    "k": 48,
+    "n": 48,
+    "n_eff": 24.0,
+    "rate": 1.0
+   },
+   "recheck": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    }
+   },
+   "scope_exact": {
+    "cases": 88,
+    "ci95": [
+     0.0044,
+     0.0639
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0455
+    ],
+    "ci95_wilson_iid": [
+     0.0058,
+     0.0489
+    ],
+    "deff": 1.68,
+    "k": 3,
+    "n": 176,
+    "n_eff": 104.76,
+    "rate": 0.017045454545454544
+   },
+   "stated": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    }
+   },
+   "stated_hold": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.1501,
+      0.2863
+     ],
+     "ci95_bootstrap": [
+      0.142,
+      0.2841
+     ],
+     "ci95_wilson_iid": [
+      0.1565,
+      0.2763
+     ],
+     "deff": 1.2961,
+     "k": 37,
+     "n": 176,
+     "n_eff": 135.79,
+     "rate": 0.21022727272727273
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.1396,
+      0.2752
+     ],
+     "ci95_bootstrap": [
+      0.1307,
+      0.267
+     ],
+     "ci95_wilson_iid": [
+      0.1466,
+      0.264
+     ],
+     "deff": 1.3376,
+     "k": 35,
+     "n": 176,
+     "n_eff": 131.58,
+     "rate": 0.19886363636363635
+    },
+    "violation_given_release": {
+     "cases": 29,
+     "ci95": [
+      0.8178,
+      0.9856
+     ],
+     "ci95_bootstrap": [
+      0.8611,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.823,
+      0.985
+     ],
+     "deff": 1.0613,
+     "k": 35,
+     "n": 37,
+     "n_eff": 34.86,
+     "rate": 0.9459459459459459
+    }
+   }
+  },
+  "phi4:latest": {
+   "abstained": {
+    "cases": 88,
+    "ci95": [
+     0.6051,
+     0.7595
+    ],
+    "ci95_bootstrap": [
+     0.608,
+     0.767
+    ],
+    "ci95_wilson_iid": [
+     0.6156,
+     0.7514
+    ],
+    "deff": 1.3007,
+    "k": 121,
+    "n": 176,
+    "n_eff": 135.31,
+    "rate": 0.6875
+   },
+   "cal_corrected": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0194,
+      0.0798
+     ],
+     "ci95_bootstrap": [
+      0.017,
+      0.0682
+     ],
+     "ci95_wilson_iid": [
+      0.0194,
+      0.0798
+     ],
+     "deff": 1.0,
+     "k": 7,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.03977272727272727
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9202,
+      0.9806
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      0.9886
+     ],
+     "ci95_wilson_iid": [
+      0.9202,
+      0.9806
+     ],
+     "deff": 1.0,
+     "k": 169,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9602272727272727
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.7975,
+      0.9106
+     ],
+     "ci95_bootstrap": [
+      0.8068,
+      0.9148
+     ],
+     "ci95_wilson_iid": [
+      0.8051,
+      0.9066
+     ],
+     "deff": 1.2422,
+     "k": 152,
+     "n": 176,
+     "n_eff": 141.69,
+     "rate": 0.8636363636363636
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.8356,
+      0.9402
+     ],
+     "ci95_bootstrap": [
+      0.8448,
+      0.9474
+     ],
+     "ci95_wilson_iid": [
+      0.8448,
+      0.9362
+     ],
+     "deff": 1.3039,
+     "k": 152,
+     "n": 169,
+     "n_eff": 129.61,
+     "rate": 0.8994082840236687
+    }
+   },
+   "calibrated": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "coverage_cal_corrected": {
+    "cases": 88,
+    "ci95": [
+     0.0574,
+     0.158
+    ],
+    "ci95_bootstrap": [
+     0.0511,
+     0.1477
+    ],
+    "ci95_wilson_iid": [
+     0.0612,
+     0.1492
+    ],
+    "deff": 1.2985,
+    "k": 17,
+    "n": 176,
+    "n_eff": 135.54,
+    "rate": 0.09659090909090909
+   },
+   "coverage_calibrated": {
+    "cases": 88,
+    "ci95": [
+     0.0,
+     0.0418
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "ci95_wilson_iid": [
+     0.0,
+     0.0214
+    ],
+    "deff": 2.0,
+    "k": 0,
+    "n": 176,
+    "n_eff": 88.0,
+    "rate": 0.0
+   },
+   "coverage_stated": {
+    "cases": 88,
+    "ci95": [
+     0.0271,
+     0.0943
+    ],
+    "ci95_bootstrap": [
+     0.0227,
+     0.0852
+    ],
+    "ci95_wilson_iid": [
+     0.0271,
+     0.0943
+    ],
+    "deff": 1.0,
+    "k": 9,
+    "n": 176,
+    "n_eff": 176.0,
+    "rate": 0.05113636363636364
+   },
+   "entity_ok": {
+    "cases": 96,
+    "ci95": [
+     0.0985,
+     0.2106
+    ],
+    "ci95_bootstrap": [
+     0.0938,
+     0.2031
+    ],
+    "ci95_wilson_iid": [
+     0.1029,
+     0.2027
+    ],
+    "deff": 1.2605,
+    "k": 28,
+    "n": 192,
+    "n_eff": 152.32,
+    "rate": 0.14583333333333334
+   },
+   "held_quiet": {
+    "cases": 24,
+    "ci95": [
+     0.5424,
+     0.8595
+    ],
+    "ci95_bootstrap": [
+     0.5625,
+     0.875
+    ],
+    "ci95_wilson_iid": [
+     0.59,
+     0.8343
+    ],
+    "deff": 1.7567,
+    "k": 35,
+    "n": 48,
+    "n_eff": 27.32,
+    "rate": 0.7291666666666666
+   },
+   "point": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0194,
+      0.0798
+     ],
+     "ci95_bootstrap": [
+      0.0114,
+      0.0682
+     ],
+     "ci95_wilson_iid": [
+      0.0194,
+      0.0798
+     ],
+     "deff": 1.0,
+     "k": 7,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.03977272727272727
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9202,
+      0.9806
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      0.9886
+     ],
+     "ci95_wilson_iid": [
+      0.9202,
+      0.9806
+     ],
+     "deff": 1.0,
+     "k": 169,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9602272727272727
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.8642,
+      0.9477
+     ],
+     "ci95_bootstrap": [
+      0.875,
+      0.9545
+     ],
+     "ci95_wilson_iid": [
+      0.8642,
+      0.9477
+     ],
+     "deff": 1.0,
+     "k": 161,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9147727272727273
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9094,
+      0.9758
+     ],
+     "ci95_bootstrap": [
+      0.9191,
+      0.9821
+     ],
+     "ci95_wilson_iid": [
+      0.9094,
+      0.9758
+     ],
+     "deff": 1.0,
+     "k": 161,
+     "n": 169,
+     "n_eff": 169.0,
+     "rate": 0.9526627218934911
+    }
+   },
+   "quiet_ok": {
+    "cases": 24,
+    "ci95": [
+     0.862,
+     1.0
+    ],
+    "ci95_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "ci95_wilson_iid": [
+     0.9259,
+     1.0
+    ],
+    "deff": 2.0,
+    "k": 48,
+    "n": 48,
+    "n_eff": 24.0,
+    "rate": 1.0
+   },
+   "recheck": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0194,
+      0.0798
+     ],
+     "ci95_bootstrap": [
+      0.017,
+      0.0682
+     ],
+     "ci95_wilson_iid": [
+      0.0194,
+      0.0798
+     ],
+     "deff": 1.0,
+     "k": 7,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.03977272727272727
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9202,
+      0.9806
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      0.983
+     ],
+     "ci95_wilson_iid": [
+      0.9202,
+      0.9806
+     ],
+     "deff": 1.0,
+     "k": 169,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9602272727272727
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0435
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0222
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 169,
+     "n_eff": 84.5,
+     "rate": 0.0
+    }
+   },
+   "scope_exact": {
+    "cases": 88,
+    "ci95": [
+     0.0748,
+     0.185
+    ],
+    "ci95_bootstrap": [
+     0.0682,
+     0.1761
+    ],
+    "ci95_wilson_iid": [
+     0.0794,
+     0.1755
+    ],
+    "deff": 1.312,
+    "k": 21,
+    "n": 176,
+    "n_eff": 134.15,
+    "rate": 0.11931818181818182
+   },
+   "stated": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0194,
+      0.0798
+     ],
+     "ci95_bootstrap": [
+      0.0114,
+      0.0682
+     ],
+     "ci95_wilson_iid": [
+      0.0194,
+      0.0798
+     ],
+     "deff": 1.0,
+     "k": 7,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.03977272727272727
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9202,
+      0.9806
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      0.9886
+     ],
+     "ci95_wilson_iid": [
+      0.9202,
+      0.9806
+     ],
+     "deff": 1.0,
+     "k": 169,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9602272727272727
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.8574,
+      0.9433
+     ],
+     "ci95_bootstrap": [
+      0.8693,
+      0.9489
+     ],
+     "ci95_wilson_iid": [
+      0.8574,
+      0.9433
+     ],
+     "deff": 1.0,
+     "k": 160,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9090909090909091
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9019,
+      0.9717
+     ],
+     "ci95_bootstrap": [
+      0.9118,
+      0.9765
+     ],
+     "ci95_wilson_iid": [
+      0.9019,
+      0.9717
+     ],
+     "deff": 1.0,
+     "k": 160,
+     "n": 169,
+     "n_eff": 169.0,
+     "rate": 0.9467455621301775
+    }
+   },
+   "stated_hold": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0157,
+      0.0724
+     ],
+     "ci95_bootstrap": [
+      0.0114,
+      0.0625
+     ],
+     "ci95_wilson_iid": [
+      0.0157,
+      0.0724
+     ],
+     "deff": 1.0,
+     "k": 6,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.03409090909090909
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.211,
+      0.3576
+     ],
+     "ci95_bootstrap": [
+      0.2045,
+      0.3523
+     ],
+     "ci95_wilson_iid": [
+      0.2175,
+      0.3488
+     ],
+     "deff": 1.2506,
+     "k": 49,
+     "n": 176,
+     "n_eff": 140.73,
+     "rate": 0.2784090909090909
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.1863,
+      0.3267
+     ],
+     "ci95_bootstrap": [
+      0.1818,
+      0.3239
+     ],
+     "ci95_wilson_iid": [
+      0.1918,
+      0.3189
+     ],
+     "deff": 1.2261,
+     "k": 44,
+     "n": 176,
+     "n_eff": 143.55,
+     "rate": 0.25
+    },
+    "violation_given_release": {
+     "cases": 38,
+     "ci95": [
+      0.7824,
+      0.9556
+     ],
+     "ci95_bootstrap": [
+      0.8077,
+      0.9787
+     ],
+     "ci95_wilson_iid": [
+      0.7824,
+      0.9556
+     ],
+     "deff": 1.0,
+     "k": 44,
+     "n": 49,
+     "n_eff": 49.0,
+     "rate": 0.8979591836734694
+    }
+   }
+  },
+  "qwen2.5:7b-instruct": {
+   "abstained": {
+    "cases": 88,
+    "ci95": [
+     0.943,
+     0.9911
+    ],
+    "ci95_bootstrap": [
+     0.9545,
+     0.9943
+    ],
+    "ci95_wilson_iid": [
+     0.943,
+     0.9911
+    ],
+    "deff": 1.0,
+    "k": 172,
+    "n": 176,
+    "n_eff": 176.0,
+    "rate": 0.9772727272727273
+   },
+   "cal_corrected": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "calibrated": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "coverage_cal_corrected": {
+    "cases": 88,
+    "ci95": [
+     0.0,
+     0.0418
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "ci95_wilson_iid": [
+     0.0,
+     0.0214
+    ],
+    "deff": 2.0,
+    "k": 0,
+    "n": 176,
+    "n_eff": 88.0,
+    "rate": 0.0
+   },
+   "coverage_calibrated": {
+    "cases": 88,
+    "ci95": [
+     0.0,
+     0.0418
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "ci95_wilson_iid": [
+     0.0,
+     0.0214
+    ],
+    "deff": 2.0,
+    "k": 0,
+    "n": 176,
+    "n_eff": 88.0,
+    "rate": 0.0
+   },
+   "coverage_stated": {
+    "cases": 88,
+    "ci95": [
+     0.0,
+     0.0418
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "ci95_wilson_iid": [
+     0.0,
+     0.0214
+    ],
+    "deff": 2.0,
+    "k": 0,
+    "n": 176,
+    "n_eff": 88.0,
+    "rate": 0.0
+   },
+   "entity_ok": {
+    "cases": 96,
+    "ci95": [
+     0.0009,
+     0.029
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0156
+    ],
+    "ci95_wilson_iid": [
+     0.0009,
+     0.0289
+    ],
+    "deff": 1.0052,
+    "k": 1,
+    "n": 192,
+    "n_eff": 191.0,
+    "rate": 0.005208333333333333
+   },
+   "held_quiet": {
+    "cases": 24,
+    "ci95": [
+     0.8316,
+     0.9785
+    ],
+    "ci95_bootstrap": [
+     0.8745,
+     1.0
+    ],
+    "ci95_wilson_iid": [
+     0.8316,
+     0.9785
+    ],
+    "deff": 1.0,
+    "k": 45,
+    "n": 48,
+    "n_eff": 48.0,
+    "rate": 0.9375
+   },
+   "point": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "quiet_ok": {
+    "cases": 24,
+    "ci95": [
+     0.862,
+     1.0
+    ],
+    "ci95_bootstrap": [
+     1.0,
+     1.0
+    ],
+    "ci95_wilson_iid": [
+     0.9259,
+     1.0
+    ],
+    "deff": 2.0,
+    "k": 48,
+    "n": 48,
+    "n_eff": 24.0,
+    "rate": 1.0
+   },
+   "recheck": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    }
+   },
+   "scope_exact": {
+    "cases": 88,
+    "ci95": [
+     0.0,
+     0.0418
+    ],
+    "ci95_bootstrap": [
+     0.0,
+     0.0
+    ],
+    "ci95_wilson_iid": [
+     0.0,
+     0.0214
+    ],
+    "deff": 2.0,
+    "k": 0,
+    "n": 176,
+    "n_eff": 88.0,
+    "rate": 0.0
+   },
+   "stated": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "violation_given_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "stated_hold": {
+    "error": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "release": {
+     "cases": 88,
+     "ci95": [
+      0.0089,
+      0.057
+     ],
+     "ci95_bootstrap": [
+      0.0057,
+      0.0455
+     ],
+     "ci95_wilson_iid": [
+      0.0089,
+      0.057
+     ],
+     "deff": 1.0,
+     "k": 4,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.022727272727272728
+    },
+    "violation": {
+     "cases": 88,
+     "ci95": [
+      0.0089,
+      0.057
+     ],
+     "ci95_bootstrap": [
+      0.0057,
+      0.0455
+     ],
+     "ci95_wilson_iid": [
+      0.0089,
+      0.057
+     ],
+     "deff": 1.0,
+     "k": 4,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.022727272727272728
+    },
+    "violation_given_release": {
+     "cases": 4,
+     "ci95": [
+      0.5101,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.5101,
+      1.0
+     ],
+     "deff": 1.0,
+     "k": 4,
+     "n": 4,
+     "n_eff": 4.0,
+     "rate": 1.0
+    }
+   }
+  }
+ },
+ "note": "    uv run python tools/e1v2_clustered.py A reanalysis of the stored scores; no model is called and no stored file is changed. The frozen scorer gives 95% Wilson intervals over case-repeats, which treat the two repeats of a case as independent. Here each case is a cluster (both repeats, and every arm of a case-repeat, stay together):   intervals    Wilson intervals on the effective sample size n / deff, where the design                effect deff is the cluster-robust variance of the rate divided by its binomial                variance, bounded below by 1 and above by the largest cluster (2). A rate of 0                or 1 has no estimable deff and takes the bound 2, i.e. one unit per case.                A case bootstrap (percentile, 10,000 draws) is stored beside it for comparison.   differences  paired differences between arms over the same case-repeats, in percentage                points, with a case bootstrap interval and the number of discordant case-repeats.   failures     each change-notice case-repeat put in exactly one class, in this order: model                abstention, contract rejection, error cycle, no change committed, wrong plant,                wrong weeks, value outside the stated interval, covered.   categories   abstentions, coverage and violations per category and model.",
+ "post_hoc": true,
+ "seed": 20261103
+}

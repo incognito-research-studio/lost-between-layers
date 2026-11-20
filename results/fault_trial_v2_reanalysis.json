@@ -1,0 +1,1192 @@
+{
+ "checks": {
+  "C1": {
+   "config": "full",
+   "layers": [
+    "L4",
+    "L5"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "C2": {
+   "config": "full",
+   "layers": [
+    "L5",
+    "L6",
+    "registry"
+   ],
+   "relative": false,
+   "timing": "post"
+  },
+  "G1": {
+   "config": "full",
+   "layers": [
+    "L1",
+    "L3"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "G2": {
+   "config": "full",
+   "layers": [
+    "L4"
+   ],
+   "relative": true,
+   "timing": "pre"
+  },
+  "R2": {
+   "config": "full",
+   "layers": [
+    "L3",
+    "L6"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "action": {
+   "config": "generic",
+   "layers": [
+    "L4",
+    "L5"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "admission": {
+   "config": "full",
+   "layers": [
+    "L2"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "audit": {
+   "config": "full",
+   "layers": [
+    "L6"
+   ],
+   "relative": false,
+   "timing": "post"
+  },
+  "committed_unread": {
+   "config": "full",
+   "layers": [
+    "L3",
+    "L4"
+   ],
+   "relative": true,
+   "timing": "pre"
+  },
+  "exception": {
+   "config": "generic",
+   "layers": [
+    "by-traceback"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "exec_fidelity": {
+   "config": "full",
+   "layers": [
+    "L5",
+    "pipeline"
+   ],
+   "relative": false,
+   "timing": "post"
+  },
+  "fields": {
+   "config": "generic",
+   "layers": [
+    "L6"
+   ],
+   "relative": false,
+   "timing": "post"
+  },
+  "kprop": {
+   "config": "solver",
+   "layers": [
+    "L4",
+    "L5"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "precedence": {
+   "config": "full",
+   "layers": [
+    "L3"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "replay_store": {
+   "config": "full",
+   "layers": [
+    "L3",
+    "L4"
+   ],
+   "relative": false,
+   "timing": "post"
+  },
+  "restart": {
+   "config": "full",
+   "layers": [
+    "L6"
+   ],
+   "relative": false,
+   "timing": "post"
+  },
+  "schema": {
+   "config": "generic",
+   "layers": [
+    "L1",
+    "L3"
+   ],
+   "relative": false,
+   "timing": "pre"
+  },
+  "version": {
+   "config": "full",
+   "layers": [
+    "L1",
+    "registry"
+   ],
+   "relative": false,
+   "timing": "pre"
+  }
+ },
+ "clean": {
+  "fired": {
+   "C1": 0,
+   "C2": 0,
+   "G1": 0,
+   "G2": 1,
+   "R2": 0,
+   "action": 0,
+   "admission": 0,
+   "audit": 0,
+   "committed_unread": 25,
+   "exception": 7,
+   "exec_fidelity": 0,
+   "fields": 0,
+   "kprop": 0,
+   "precedence": 0,
+   "replay_store": 0,
+   "restart": 0,
+   "schema": 0,
+   "version": 0
+  },
+  "releases": 681,
+  "runs": 684,
+  "violations": 434
+ },
+ "counts": {
+  "broken": 0,
+  "effective": 17,
+  "inert": 9,
+  "rejected": 0
+ },
+ "deviation": {
+  "harness_sha256": "de0b5e1bc0b51326e9d3ed46920da3cfec71d39426532c6d91cc7fe172d3b97f",
+  "harness_used": "tools/ft_trace_ext.py",
+  "id": 1,
+  "note": "extended effect trace (replay outputs and the reloaded log); decided after unblinding; see data/fault_trial/DEVIATIONS.md"
+ },
+ "faults": {
+  "01-lantern.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "04cde6ab24ff9c05f4e71a789ce0c14a6ad1fe795a1e404b92f2a9114275452a",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "02-meadow.patch": {
+   "full": {
+    "checks": [
+     "committed_unread"
+    ],
+    "detected": true,
+    "detected_pre_execution": true,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 1,
+    "runs_flagged": 1,
+    "silent_violation_runs": 1
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 2
+   },
+   "releases": [
+    681,
+    682
+   ],
+   "runs_changed": 110,
+   "sha256": "b2378719ada7f480c4c6c526138712168ff7e8225d4ec9f1596089b6f99d8764",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 2
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    424
+   ]
+  },
+  "03-quartz.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "70e60cca235785f01b5afbe2c9d254a7a6db738a5a0be4d978a570ae86954ac4",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "04-harbor.patch": {
+   "full": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 1
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 1
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 6,
+   "sha256": "a5e93cb8c92b322faf436ea4df2761f4b717493d8a69f61edc9d3b0d60130527",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 1
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    435
+   ]
+  },
+  "05-thimble.patch": {
+   "full": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 18
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 18
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 102,
+   "sha256": "76da00d6619ec69816b051eb5a9ab585fb4f23268ff69f117265c476e54ea576",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 18
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    452
+   ]
+  },
+  "06-saffron.patch": {
+   "full": {
+    "checks": [
+     "replay_store"
+    ],
+    "detected": true,
+    "detected_pre_execution": false,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 1,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 1,
+   "sha256": "8c97867bdce4690b831cf17baf7a873bfd98a0c8ece9364b999ee2345e110dd5",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "07-pebble.patch": {
+   "full": {
+    "checks": [
+     "exception"
+    ],
+    "detected": true,
+    "detected_pre_execution": true,
+    "layers": [
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 8,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [
+     "exception"
+    ],
+    "detected": true,
+    "detected_pre_execution": true,
+    "layers": [
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 8,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    677
+   ],
+   "runs_changed": 20,
+   "sha256": "782808b3e927c127a3bada35198b478323b4a72af38fd25dee89b28f4cf95fc2",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "08-orchid.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "5bf944c050ce72eee7f3a332fd46894d5868c9895934608c4654b54fcfc28e2a",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "09-falcon.patch": {
+   "full": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 23
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 23
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 672,
+   "sha256": "242500466b8c3872d9bfdfc184231f671ccfb06cfd23bff9c4c88937baa45a63",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 23
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    457
+   ]
+  },
+  "10-cinder.patch": {
+   "full": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 135,
+   "sha256": "73cc971cedee76ea6c8a74d68f385ff175707bb4613b57bc8eb6e4b5f3808396",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "11-walnut.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "7812d9047492e6592732740aa6683425e0db87bf82aad4c9e64261d3d56f3204",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "12-juniper.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "f85e6dc484307bdff3234c7a316333c31bd5ee3dce3b4bb9ca12b556c3276ec3",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "13-marble.patch": {
+   "full": {
+    "checks": [
+     "G2"
+    ],
+    "detected": true,
+    "detected_pre_execution": true,
+    "layers": [
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 1,
+    "runs_flagged": 1,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 1,
+   "sha256": "2c5cc9d4a57ae3aa71892123631f9d3ff69730830e20dd5272919cc9599b325c",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "14-velvet.patch": {
+   "full": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 1,
+   "sha256": "d5aa0ab2525e69704f465f86019e90985b05e6317a234c9769b328208a703ded",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "15-compass.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "9a5210f105f72326156ed17563fd2203e1b3215e101c87dc15c8b74d4a86ca67",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "16-tundra.patch": {
+   "full": {
+    "checks": [
+     "restart"
+    ],
+    "detected": true,
+    "detected_pre_execution": false,
+    "layers": [
+     "L6"
+    ],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 672,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 672,
+   "sha256": "f1de3861d4cb4c11abecd73942a2647963bd9a636f63f1886a34f1e9d1345adc",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "17-mosaic.patch": {
+   "full": {
+    "checks": [
+     "committed_unread"
+    ],
+    "detected": true,
+    "detected_pre_execution": true,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 1,
+    "runs_flagged": 1,
+    "silent_violation_runs": 24
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 24
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 140,
+   "sha256": "246fba1b819d3ae7a779ab950ad243fc46b59d855df5ebe26cce4b96fccda405",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 24
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    456
+   ]
+  },
+  "18-paddle.patch": {
+   "full": {
+    "checks": [
+     "committed_unread",
+     "precedence"
+    ],
+    "detected": true,
+    "detected_pre_execution": true,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 92,
+    "runs_flagged": 92,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 79
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 92,
+   "sha256": "3645449ea9c09e3f65c04a4212d7869f391b0e95ed418103da0a713705d324e2",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 79
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    513
+   ]
+  },
+  "19-garnet.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "c16cde8ac089e0c692c0749331325d3c9e474a1bec80c40ede6e7edd38e7e9e7",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "20-heron.patch": {
+   "full": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 139,
+   "sha256": "82df25250dc811bd628bd6a58aa546f002ee4809b7747f6ad8b9d154fc593892",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    422
+   ]
+  },
+  "21-ripple.patch": {
+   "full": {
+    "checks": [
+     "exec_fidelity"
+    ],
+    "detected": true,
+    "detected_pre_execution": false,
+    "layers": [
+     "L5",
+     "pipeline"
+    ],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 106,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 25
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 106,
+   "sha256": "3e35dceb12e612647b629add6702753857df6c3f75dd8b1348de1d4d0803c20b",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 25
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    460
+   ]
+  },
+  "22-sorrel.patch": {
+   "full": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 3
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 3
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 672,
+   "sha256": "a1ef88a854a94ff22e7a88bd2a168a44c5736ffd2d5b1a9b0956808794732d9a",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 3
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    437
+   ]
+  },
+  "23-kettle.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "05a2fbfffb2bd17e01ffa644a27c569d9d69effdabaca6c01cff9da438612d12",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "24-lagoon.patch": {
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 0,
+   "sha256": "0ace0d91ccf0cb650aef765b203ff1eb219dcf7ee8d4684b2b2cf11c61fc1cf4",
+   "status": "inert",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "25-bramble.patch": {
+   "full": {
+    "checks": [
+     "restart"
+    ],
+    "detected": true,
+    "detected_pre_execution": false,
+    "layers": [
+     "L6"
+    ],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 684,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 684,
+   "sha256": "614307dfbebebedec083a84610d85c82d092c1271edbc3e219fed0d8cc9d81d7",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    434
+   ]
+  },
+  "26-willow.patch": {
+   "full": {
+    "checks": [
+     "committed_unread",
+     "precedence"
+    ],
+    "detected": true,
+    "detected_pre_execution": true,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "releases_a_pre_check_would_hold": 78,
+    "runs_flagged": 78,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 69
+   },
+   "releases": [
+    681,
+    681
+   ],
+   "runs_changed": 672,
+   "sha256": "65e6473a84d7843aad4bfbbd7ea7c7d36c934bf461c46d05c31e84545378e9ed",
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "detected_pre_execution": false,
+    "layers": [],
+    "releases_a_pre_check_would_hold": 0,
+    "runs_flagged": 0,
+    "silent_violation_runs": 69
+   },
+   "status": "effective",
+   "violations": [
+    434,
+    503
+   ]
+  }
+ },
+ "fresh_model_calls": 0,
+ "instruments_sha256": {
+  "data/fault_trial/FAULT_BRIEF.md": "0f8cb5f743983039490820275d88af0c0e40712fa7c68ab76c15c86fd690e56d",
+  "data/fault_trial/NEGATIVE_FORMAT.md": "7599209797ab66afe2f8a6c505d80713dfff713942ad7e5a90e67920e780ac66",
+  "data/fault_trial/PROTOCOL.md": "cc56d4f292fc39714f1294a10d494483d926208e9046a51d6587c3b37decf600",
+  "data/fault_trial/authority.yaml": "f830b3dd12f95c5bcc0900f6369943b27725375a5e07a20f50d522b9196b6cda",
+  "src/dsoi/properties.py": "07160ef534a956d9aad79961637095fabfb94492296190004484b5b226a9f175",
+  "tools/ft_harness.py": "bb7bcc79cc9071084587258443c7d916ef3dff3f6fdbffc7da554c1f4711101f",
+  "tools/ft_sandbox.py": "3db9d41790bae020950a4cab58af2e9fe55b3ab043d5915524a5b7092eea4540",
+  "tools/ft_score.py": "9a298da05c57112bf0fd579bc377abde8b10c2e8105e4f58da52a8956d343587",
+  "tools/ft_trial.py": "056feecdb0757863bd8806b79be82e9876dec28172a8c9db45e8756be6a421ac"
+ },
+ "manifest_sha256": "2645c6264dfe9ea3e45d3b6d2f56207ab4d757384e1938fba390536a6602cc4d",
+ "negatives": {
+  "_sha256": {
+   "neg-01": "214618a1207ec95d83e0ae4020a9a01dd21690ae41fe7fdb379068d5f5f3ebb1",
+   "neg-02": "9c342aef9d40d03db739c98d496a910bb41d92f2d987803306776b2795e725d3",
+   "neg-03": "e57f41852b7ecfe4a07dfa58fac84424f866bcf5382b03b635b7d1fd8490a6d5",
+   "neg-04": "291cb76adf308d3c588a74d1cdd4a0739d7be05252c57309058d16a01e63fb45",
+   "neg-05": "139e4d1e0c3a32ccebcb2308c423484a7025b4de176c4ebca663ae14574e4980",
+   "neg-06": "c7e35082724f7da8431e0366b3200231ab0fa876fa28d4218b983b5b4d6a955d"
+  },
+  "neg-01": {
+   "crashed": false,
+   "decisions": 2,
+   "exception": null,
+   "fired": [
+    "committed_unread"
+   ],
+   "full": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "generic": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "released": 2,
+   "solver": {
+    "checks": [],
+    "false_alarm": false
+   }
+  },
+  "neg-02": {
+   "crashed": false,
+   "decisions": 2,
+   "exception": null,
+   "fired": [
+    "committed_unread"
+   ],
+   "full": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "generic": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "released": 2,
+   "solver": {
+    "checks": [],
+    "false_alarm": false
+   }
+  },
+  "neg-03": {
+   "crashed": false,
+   "decisions": 2,
+   "exception": null,
+   "fired": [],
+   "full": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "generic": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "released": 2,
+   "solver": {
+    "checks": [],
+    "false_alarm": false
+   }
+  },
+  "neg-04": {
+   "crashed": false,
+   "decisions": 2,
+   "exception": null,
+   "fired": [
+    "committed_unread"
+   ],
+   "full": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "generic": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "released": 2,
+   "solver": {
+    "checks": [],
+    "false_alarm": false
+   }
+  },
+  "neg-05": {
+   "crashed": false,
+   "decisions": 2,
+   "exception": null,
+   "fired": [],
+   "full": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "generic": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "released": 2,
+   "solver": {
+    "checks": [],
+    "false_alarm": false
+   }
+  },
+  "neg-06": {
+   "crashed": false,
+   "decisions": 2,
+   "exception": null,
+   "fired": [],
+   "full": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "generic": {
+    "checks": [],
+    "false_alarm": false
+   },
+   "released": 2,
+   "solver": {
+    "checks": [],
+    "false_alarm": false
+   }
+  }
+ },
+ "post_hoc": false
+}

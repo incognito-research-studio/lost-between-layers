@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l6_audit.py b/src/dsoi/layers/l6_audit.py
+index 2473044..4ad9337 100644
+--- a/src/dsoi/layers/l6_audit.py
++++ b/src/dsoi/layers/l6_audit.py
+@@ -157,7 +157,7 @@ class AuditLog:
+         This file is not a write-once store and cannot establish A-LOG by itself.
+         """
+         path = Path(path)
+-        entries = [{"record": asdict(rec)} for rec in self.records]
++        entries = [{"record": asdict(rec)} for rec in self.records if rec.decided]
+         entries += [{"encoding": key, "value": value}
+                     for key, value in sorted(self.encodings.items())]
+         entries += [{"delta": t, "ops": [asdict(op) for op in delta.ops]}

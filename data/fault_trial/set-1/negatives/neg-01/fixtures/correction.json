@@ -1,0 +1,20 @@
+{
+  "interpreter_version": "fixture:neg01@1",
+  "output": {
+    "kind": "delta",
+    "ops": [
+      {
+        "op": "supersede",
+        "subject": "plant:X",
+        "predicate": "capacity",
+        "value": 750,
+        "lo": 700,
+        "hi": 800,
+        "unit": "units/week",
+        "valid_from": 42,
+        "valid_to": 44,
+        "span_text": "the reduction at Plant X for weeks 42-43 is about 25%"
+      }
+    ]
+  }
+}

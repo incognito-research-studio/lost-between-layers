@@ -1,0 +1,20 @@
+{
+  "interpreter_version": "fixture:s5@1",
+  "output": {
+    "kind": "delta",
+    "ops": [
+      {
+        "op": "supersede",
+        "subject": "lot:L2",
+        "predicate": "qty",
+        "value": 5000,
+        "lo": null,
+        "hi": null,
+        "unit": "",
+        "valid_from": 42,
+        "valid_to": 43,
+        "span_text": "lot L2 quantity is 5000"
+      }
+    ]
+  }
+}

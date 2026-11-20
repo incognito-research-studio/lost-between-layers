@@ -1,0 +1,90 @@
+{
+ "any_order_flip": 147,
+ "by_expect": {
+  "abstain": {
+   "cases": 14,
+   "constructed": 0,
+   "mean_ranges_kept": 31.5,
+   "null": 0,
+   "set_right": 0,
+   "top_right": 0
+  },
+  "change": {
+   "cases": 154,
+   "constructed": 154,
+   "mean_ranges_kept": 24.35,
+   "null": 6,
+   "set_right": 135,
+   "top_right": 13
+  },
+  "no_change": {
+   "cases": 28,
+   "constructed": 28,
+   "mean_ranges_kept": 21.46,
+   "null": 0,
+   "set_right": 0,
+   "top_right": 0
+  }
+ },
+ "cases": 196,
+ "collapsed_small_questions": 0,
+ "cpu_vs_mps": {
+  "identical_replies": 182,
+  "max_abs_probability_difference": 0.0001,
+  "same_decisions": 196
+ },
+ "fresh_model_calls": 0,
+ "invariance": {
+  "names_neutral": {
+   "flips": 126,
+   "mean_tv": 0.3136
+  },
+  "names_swapped": {
+   "flips": 192,
+   "mean_tv": 0.4401
+  },
+  "reversed": {
+   "flips": 87,
+   "mean_tv": 0.1931
+  },
+  "shuffle0": {
+   "flips": 104,
+   "mean_tv": 0.2437
+  },
+  "shuffle1": {
+   "flips": 114,
+   "mean_tv": 0.2458
+  },
+  "shuffle2": {
+   "flips": 108,
+   "mean_tv": 0.2389
+  },
+  "shuffle3": {
+   "flips": 104,
+   "mean_tv": 0.2316
+  },
+  "shuffle4": {
+   "flips": 107,
+   "mean_tv": 0.2382
+  }
+ },
+ "null_threshold": 0.5,
+ "post_hoc": false,
+ "repeat_cpu": {
+  "identical_replies": 196,
+  "max_abs_probability_difference": 0.0,
+  "same_decisions": 196
+ },
+ "set_mass": 0.9,
+ "swapped_followed_name": 145,
+ "truncated_calls": 0,
+ "wide56": {
+  "cases_collapsed": 196,
+  "distinct_max": 20,
+  "distinct_min": 20,
+  "options": 56,
+  "tokens_per_option": [
+   4
+  ]
+ }
+}

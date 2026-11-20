@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l2_procedural.py b/src/dsoi/layers/l2_procedural.py
+index 1b8d658..8ee4d4d 100644
+--- a/src/dsoi/layers/l2_procedural.py
++++ b/src/dsoi/layers/l2_procedural.py
+@@ -163,7 +163,7 @@ class ProceduralLayer:
+             return False
+         if op.kind is OpKind.RETRACT:
+             return True
+-        return not (isinstance(op.o, Quantity) and op.o.value >= 1)
++        return not (isinstance(op.o, Quantity) and op.o.value > 0)
+ 
+     def flag_in_range(self, op: Op) -> bool:
+         """Restriction flags, with their interval bounds, must lie in [0, 1]."""

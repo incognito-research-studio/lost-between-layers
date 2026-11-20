@@ -1,0 +1,291 @@
+{
+ "faults": {
+  "01-orchid.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L5",
+   "intended_effect": "The box-robust gate tests a candidate against the point values instead of the lower ends of the reported intervals, so a nominal plan passes unchanged: plant-x-span-claims releases 700 instead of 600 in weeks 42-44, dc-d1-pallet-change and supplier-s2-probation release the unprojected LP plan."
+  },
+  "02-pewter.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "Reads rank authenticated facts above source priority, so in plant-x-nightly-resync the re-sent master value (1000) displaces the higher-ranked planner notice (700) in the second decision."
+  },
+  "03-marble.patch": {
+   "family": "stale_approval",
+   "layer": "L2",
+   "intended_effect": "An approval without a quantity cap is no longer consumed by its first executed action, so in lot-l1-replan-same-approval the second allocation is admitted and executed on the morning approval instead of being queued."
+  },
+  "04-quill.patch": {
+   "family": "audit_restart",
+   "layer": "L6",
+   "intended_effect": "The saved log keeps one disposition per input id, so repeated records from the same source (the ERP baseline and later ERP records) lose their earlier dispositions on reload; same_ingests becomes false in plant-x-nightly-resync and others."
+  },
+  "05-fennel.patch": {
+   "family": "unit_calendar",
+   "layer": "L1",
+   "intended_effect": "Interpreted valid times treat the half-open end week as inclusive and extend each range by one week, so a notice for weeks 42-44 also changes week 45 (plant-x-nightly-resync, plant-x-scope-correction and other capacity episodes)."
+  },
+  "06-harbor.patch": {
+   "family": "dropped_week_entity",
+   "layer": "L3",
+   "intended_effect": "Contradiction detection ignores the subject, so under the priority policy the supplier ASN for lot L2 is taken as contradicting the warehouse count for lot L1 and is overridden in lot-counts-two-sources (L2 stays at 300 instead of 280)."
+  },
+  "07-cobalt.patch": {
+   "family": "replay_observations",
+   "layer": "pipeline",
+   "intended_effect": "Replay from the store uses the live system-of-record reader instead of the recorded re-read values, so in plant-x-recheck-mes replay_from_store returns the plan for the later MES rate (700) instead of the released 680."
+  },
+  "08-thistle.patch": {
+   "family": "other",
+   "layer": "pipeline",
+   "intended_effect": "The interpreter version check compares only the model family before '@', so in plant-x-alias-update the answer from the silently updated model is committed instead of abstained."
+  },
+  "09-saffron.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L3",
+   "intended_effect": "The span policy builds the interval only from claims that carry explicit bounds, so an exact rival value is left out of the span; in plant-x-span-claims the interval narrows from [600, 750] to [650, 750] and the box gate releases 650 instead of 600."
+  },
+  "10-garnet.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "The supersession rule name is misspelled in the read path, so authenticated_latest never applies and in plant-x-master-correction the master correction (650) is ignored in favour of the earlier notice (700)."
+  },
+  "11-ember.patch": {
+   "family": "stale_approval",
+   "layer": "L2",
+   "intended_effect": "Approval expiry becomes inclusive, so an approval is still valid at its expiry time; in lot-l1-approval-shift-end the plan run exactly at expiry is admitted and executed instead of queued."
+  },
+  "12-willow.patch": {
+   "family": "audit_restart",
+   "layer": "L6",
+   "intended_effect": "Reloading logged deltas drops the lo/hi bounds of interval values, so committed changes differ after a save and reload (same_deltas false) in every episode with an interval-valued delta."
+  },
+  "13-basalt.patch": {
+   "family": "unit_calendar",
+   "layer": "L4",
+   "intended_effect": "The warehouse formulation divides free floor space (units) by units per pallet while the space row is in units, so in dc-d1-pallet-change the inbound pallets are limited far more than the space allows."
+  },
+  "14-juniper.patch": {
+   "family": "dropped_week_entity",
+   "layer": "L1",
+   "intended_effect": "Parsed deltas keep one operation per subject and predicate, so a correction with two week ranges loses one; in plant-x-scope-correction week 42 stays at 700 instead of returning to full capacity."
+  },
+  "15-kestrel.patch": {
+   "family": "replay_observations",
+   "layer": "L5",
+   "intended_effect": "The recheck gate records its re-read values under week labels formatted differently from the keys replay looks up, so replaying a recheck decision fails for missing observations in plant-x-recheck-mes."
+  },
+  "16-lichen.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L4",
+   "intended_effect": "The robust lower bound of usable capacity takes the bottom of the restriction flag's interval instead of the top, so in supplier-s2-probation the box gate treats the possible full suspension of S2 as a half suspension and releases 250 from S2."
+  },
+  "17-meadow.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "Under the priority policy an incoming claim must strictly outrank its rival, so a newer claim from an equally ranked source no longer displaces the older one; in plant-x-revised-notice the planning office's 680 is overridden and the plan keeps 750."
+  },
+  "18-nimbus.patch": {
+   "family": "stale_approval",
+   "layer": "L2",
+   "intended_effect": "Threshold admission matches approval events by kind only, not by variable, so in lot-l2-approval-only the approval for lot L2 also admits the release of lot L1 and the action executes instead of being queued."
+  },
+  "19-oriole.patch": {
+   "family": "audit_restart",
+   "layer": "L6",
+   "intended_effect": "Saving the log writes only decided records, so a deferred cycle's record is lost and the reload of plant-x-contested-week45 fails its hash chain."
+  },
+  "20-pumice.patch": {
+   "family": "unit_calendar",
+   "layer": "L3",
+   "intended_effect": "The blocked-conflict check excludes the first week of the blocked range, so in plant-x-contested-week45 the decision at t=4 reads the contested week 45 instead of being deferred."
+  },
+  "21-quartz.patch": {
+   "family": "dropped_week_entity",
+   "layer": "L3",
+   "intended_effect": "When a change covers the inside of an existing fact's range, the store re-inserts only the part before it, so the master capacity for the weeks after the change is lost and the next decision fails for missing state (plant-x-nightly-resync and other capacity episodes)."
+  },
+  "22-rowan.patch": {
+   "family": "replay_observations",
+   "layer": "pipeline",
+   "intended_effect": "Replay from the store reads the store as of the latest transaction instead of the decision's as-of time, so in plant-x-scope-correction replay_from_store of the first decision returns the corrected plan."
+  },
+  "23-sorrel.patch": {
+   "family": "uncertainty_lost",
+   "layer": "L3",
+   "intended_effect": "The canonical state copies an interval's lower bound into its upper bound, so the top of reported intervals is lost before L4 and L5: the box gate under-protects in dc-d1-pallet-change and supplier-s2-probation."
+  },
+  "24-tundra.patch": {
+   "family": "precedence_supersession",
+   "layer": "L3",
+   "intended_effect": "Source priority takes the first matching prefix instead of the highest, so in plant-x-manager-update the plant manager's e-mail ranks as a generic e-mail and the portal figure (600) wins over 800."
+  },
+  "25-umber.patch": {
+   "family": "other",
+   "layer": "L2",
+   "intended_effect": "Any restriction value above zero is treated as restrictive, so a partial hold from an unauthenticated e-mail is admitted; in lot-l2-partial-hold-email the hold of 0.5 on lot L2 is committed instead of rejected."
+  }
+ },
+ "episodes": {
+  "dc-d1-pallet-change": {
+   "exercises": [
+    "01-orchid.patch",
+    "12-willow.patch",
+    "13-basalt.patch",
+    "23-sorrel.patch"
+   ],
+   "description": "A logistics notice sets the new pallet factor at DC D1 to 45 units in [44, 48], planned under the box-robust gate."
+  },
+  "lot-counts-two-sources": {
+   "exercises": [
+    "06-harbor.patch"
+   ],
+   "description": "A warehouse count for lot L1 and a supplier ASN update for lot L2 arrive on the same day under the priority policy."
+  },
+  "lot-l1-approval-shift-end": {
+   "exercises": [
+    "11-ember.patch"
+   ],
+   "description": "A lot-release approval for lot L1 expires at the end of the early shift, and the allocation run happens exactly at that time."
+  },
+  "lot-l1-replan-same-approval": {
+   "exercises": [
+    "03-marble.patch",
+    "04-quill.patch",
+    "22-rowan.patch"
+   ],
+   "description": "A second allocation run after an inventory adjustment would reuse the lot L1 release approval already consumed by the first run."
+  },
+  "lot-l2-approval-only": {
+   "exercises": [
+    "18-nimbus.patch"
+   ],
+   "description": "QA has approved the release of lot L2 only, while the plan also allocates from lot L1, which needs its own approval."
+  },
+  "lot-l2-partial-hold-email": {
+   "exercises": [
+    "25-umber.patch"
+   ],
+   "description": "An unauthenticated QA e-mail reports half of lot L2 on hold."
+  },
+  "plant-x-alias-update": {
+   "exercises": [
+    "08-thistle.patch"
+   ],
+   "description": "A capacity notice is answered by a newer model behind the interpreter alias than the pinned version."
+  },
+  "plant-x-contested-week45": {
+   "exercises": [
+    "04-quill.patch",
+    "19-oriole.patch",
+    "20-pumice.patch"
+   ],
+   "description": "The supplier portal and a planner contradict each other about weeks 45-46, the last planning week is blocked, and the capacity master settles it before the next run."
+  },
+  "plant-x-manager-update": {
+   "exercises": [
+    "05-fennel.patch",
+    "21-quartz.patch",
+    "24-tundra.patch"
+   ],
+   "description": "The supplier portal reports 600 for weeks 42-44 and the plant manager, whose mailbox is ranked highest, reports 800 under the priority policy."
+  },
+  "plant-x-master-correction": {
+   "exercises": [
+    "04-quill.patch",
+    "05-fennel.patch",
+    "10-garnet.patch",
+    "12-willow.patch",
+    "21-quartz.patch",
+    "22-rowan.patch"
+   ],
+   "description": "A planner notice cuts weeks 42-44, and the capacity master later records the measured rate of 650 under a deployment where newer authenticated records supersede."
+  },
+  "plant-x-nightly-resync": {
+   "exercises": [
+    "02-pewter.patch",
+    "04-quill.patch",
+    "05-fennel.patch",
+    "12-willow.patch",
+    "21-quartz.patch"
+   ],
+   "description": "A planner notice cuts weeks 42-44 to about 700, and the nightly ERP sync then re-sends the unchanged master value of 1000 for the whole horizon."
+  },
+  "plant-x-recheck-mes": {
+   "exercises": [
+    "05-fennel.patch",
+    "07-cobalt.patch",
+    "12-willow.patch",
+    "15-kestrel.patch",
+    "21-quartz.patch"
+   ],
+   "description": "A capacity notice is released through the execution-time recheck gate, and the MES posts a better rate after the release."
+  },
+  "plant-x-revised-notice": {
+   "exercises": [
+    "05-fennel.patch",
+    "12-willow.patch",
+    "17-meadow.patch",
+    "21-quartz.patch",
+    "22-rowan.patch"
+   ],
+   "description": "A shift lead's capacity estimate for weeks 43-44 is revised by the planning office, both e-mail sources with the same rank, under the priority policy."
+  },
+  "plant-x-scope-correction": {
+   "exercises": [
+    "05-fennel.patch",
+    "12-willow.patch",
+    "14-juniper.patch",
+    "21-quartz.patch",
+    "22-rowan.patch"
+   ],
+   "description": "A planner corrects the week range of a capacity notice after the plan was released, with one operation per week range."
+  },
+  "plant-x-span-claims": {
+   "exercises": [
+    "01-orchid.patch",
+    "05-fennel.patch",
+    "09-saffron.patch",
+    "12-willow.patch",
+    "21-quartz.patch"
+   ],
+   "description": "A higher-ranked planner estimate and an exact supplier-portal figure contradict each other for weeks 42-44 under the span policy and the box-robust gate."
+  },
+  "supplier-s2-probation": {
+   "exercises": [
+    "01-orchid.patch",
+    "04-quill.patch",
+    "12-willow.patch",
+    "16-lichen.patch",
+    "23-sorrel.patch"
+   ],
+   "description": "The vendor master puts supplier S2 on probation for period 42 with a suspension flag of 0.5 in [0.5, 1], planned under the box-robust gate."
+  }
+ },
+ "negatives": {
+  "dc-pallet-late-correction": {
+   "kind": "valid_late_correction",
+   "description": "Logistics corrects the pallet factor at DC D1 to an exact 48 units after the flow plan was released. The system re-plans and keeps the earlier plan replayable."
+  },
+  "inventory-count-master-override": {
+   "kind": "authorized_master_override",
+   "description": "A higher-ranked warehouse e-mail gives lot L2 as 250 units, and the posted cycle count in the inventory master later records 270. Under the declared supersession rule the posted count replaces the e-mail value."
+  },
+  "lot-count-late-correction": {
+   "kind": "valid_late_correction",
+   "description": "The warehouse corrects lot L2's count from 260 to 290 after the allocation was released. The system re-plans, and replay of the first decision still returns the earlier allocation."
+  },
+  "plant-x-candidate-model-refused": {
+   "kind": "deliberate_version_rejection",
+   "description": "A capacity notice is answered by a declared release-candidate interpreter that is not yet promoted, so the system abstains. The notice is re-read by the pinned model and then committed."
+  },
+  "supplier-candidate-model-refused": {
+   "kind": "deliberate_version_rejection",
+   "description": "A suspension notice is answered by a declared candidate model and refused. The pinned model's reading of the same notice is committed before the plan, which excludes S2."
+  },
+  "wms-pallet-master-override": {
+   "kind": "authorized_master_override",
+   "description": "A logistics notice sets the pallet factor at DC D1, and the WMS master later records the measured value of 46. The deployment declares that newer authenticated records supersede notices, so the second plan uses 46."
+  }
+ }
+}

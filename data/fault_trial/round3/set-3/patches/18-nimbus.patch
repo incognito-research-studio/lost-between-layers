@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l2_procedural.py b/src/dsoi/layers/l2_procedural.py
+index 1b8d658..45e4e3e 100644
+--- a/src/dsoi/layers/l2_procedural.py
++++ b/src/dsoi/layers/l2_procedural.py
+@@ -251,7 +251,7 @@ class ProceduralLayer:
+             valid = [e for e in events if why[e.id] is None]
+             if valid:
+                 linked.append(valid[-1].id)
+-                uses[valid[-1].id] = quantity
++                uses[rule.variable] = quantity
+             else:
+                 stale = [f"{i}: {r}" for i, r in why.items() if r not in ("unauthenticated",
+                                                                           "issued later")]

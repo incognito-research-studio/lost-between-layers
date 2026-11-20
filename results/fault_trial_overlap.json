@@ -1,0 +1,578 @@
+{
+ "method": "of a patch P against an earlier patch Q (both unified diffs of src/):\n  identical  P and Q change the same file with the same removed and added lines, after\n             stripping whitespace and trailing comments;\n  same line  not identical, but they change the same file and remove at least one common\n             line, or (for patches that only add lines) insert after the same context line;\n  none       otherwise.\nA patch's class is the closest it reaches against any earlier patch. Round 2 is compared with\nround 1; round 3 with rounds 1 and 2.",
+ "post_hoc": true,
+ "round2_vs_round1": {
+  "counts": {
+   "identical": 5,
+   "none": 14,
+   "same_line": 6
+  },
+  "patches": {
+   "01-orchid": {
+    "class": "none",
+    "counterparts": []
+   },
+   "02-pewter": {
+    "class": "identical",
+    "counterparts": [
+     "r1:18-paddle"
+    ]
+   },
+   "03-marble": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:19-garnet"
+    ]
+   },
+   "04-quill": {
+    "class": "identical",
+    "counterparts": [
+     "r1:16-tundra"
+    ]
+   },
+   "05-fennel": {
+    "class": "identical",
+    "counterparts": [
+     "r1:20-heron"
+    ]
+   },
+   "06-harbor": {
+    "class": "none",
+    "counterparts": []
+   },
+   "07-cobalt": {
+    "class": "identical",
+    "counterparts": [
+     "r1:06-saffron"
+    ]
+   },
+   "08-thistle": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:08-orchid"
+    ]
+   },
+   "09-saffron": {
+    "class": "none",
+    "counterparts": []
+   },
+   "10-garnet": {
+    "class": "none",
+    "counterparts": []
+   },
+   "11-ember": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:01-lantern"
+    ]
+   },
+   "12-willow": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:10-cinder"
+    ]
+   },
+   "13-basalt": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:13-marble"
+    ]
+   },
+   "14-juniper": {
+    "class": "none",
+    "counterparts": []
+   },
+   "15-kestrel": {
+    "class": "none",
+    "counterparts": []
+   },
+   "16-lichen": {
+    "class": "none",
+    "counterparts": []
+   },
+   "17-meadow": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:04-harbor"
+    ]
+   },
+   "18-nimbus": {
+    "class": "identical",
+    "counterparts": [
+     "r1:11-walnut"
+    ]
+   },
+   "19-oriole": {
+    "class": "none",
+    "counterparts": []
+   },
+   "20-pumice": {
+    "class": "none",
+    "counterparts": []
+   },
+   "21-quartz": {
+    "class": "none",
+    "counterparts": []
+   },
+   "22-rowan": {
+    "class": "none",
+    "counterparts": []
+   },
+   "23-sorrel": {
+    "class": "none",
+    "counterparts": []
+   },
+   "24-tundra": {
+    "class": "none",
+    "counterparts": []
+   },
+   "25-umber": {
+    "class": "none",
+    "counterparts": []
+   }
+  }
+ },
+ "round3_all": {
+  "faults": 26,
+  "full": {
+   "detected": 15,
+   "detected_on_fixed_worlds": 9,
+   "detected_only_on_generated": 6,
+   "wilson": [
+    0.3895,
+    0.7446
+   ]
+  },
+  "harm": {
+   "contained": 104,
+   "fully_contained_faults": 4,
+   "harmful_faults": 5,
+   "harmful_runs": 106
+  },
+  "names": [
+   "01-quartz",
+   "02-lantern",
+   "03-heron",
+   "04-mosaic",
+   "05-thimble",
+   "06-orchid",
+   "07-pylon",
+   "08-saffron",
+   "09-tundra",
+   "10-gable",
+   "11-ferrule",
+   "12-wicket",
+   "13-cinder",
+   "14-marlin",
+   "15-basalt",
+   "16-juniper",
+   "17-kestrel",
+   "18-nimbus",
+   "19-pewter",
+   "20-almond",
+   "21-velour",
+   "22-sorrel",
+   "23-dynamo",
+   "24-ripple",
+   "25-ochre",
+   "26-tamarack"
+  ],
+  "repaired": {
+   "detected": 24,
+   "detected_on_fixed_worlds": 13,
+   "detected_only_on_generated": 11,
+   "wilson": [
+    0.7586,
+    0.9786
+   ]
+  },
+  "repaired_dev1": {
+   "detected": 25,
+   "wilson": [
+    0.8111,
+    0.9932
+   ]
+  },
+  "repaired_dev1_vs_full": {
+   "full_only": 0,
+   "mcnemar_p": 0.002,
+   "repaired_only": 10
+  },
+  "repaired_vs_full": {
+   "full_only": 0,
+   "mcnemar_p": 0.0039,
+   "repaired_only": 9
+  }
+ },
+ "round3_by_class": {
+  "identical": {
+   "faults": 8,
+   "full": {
+    "detected": 3,
+    "detected_on_fixed_worlds": 1,
+    "detected_only_on_generated": 2,
+    "wilson": [
+     0.1368,
+     0.6943
+    ]
+   },
+   "harm": {
+    "contained": 23,
+    "fully_contained_faults": 1,
+    "harmful_faults": 1,
+    "harmful_runs": 23
+   },
+   "names": [
+    "01-quartz",
+    "02-lantern",
+    "11-ferrule",
+    "16-juniper",
+    "17-kestrel",
+    "19-pewter",
+    "20-almond",
+    "25-ochre"
+   ],
+   "repaired": {
+    "detected": 8,
+    "detected_on_fixed_worlds": 3,
+    "detected_only_on_generated": 5,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "repaired_dev1": {
+    "detected": 8,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "repaired_dev1_vs_full": {
+    "full_only": 0,
+    "mcnemar_p": 0.0625,
+    "repaired_only": 5
+   },
+   "repaired_vs_full": {
+    "full_only": 0,
+    "mcnemar_p": 0.0625,
+    "repaired_only": 5
+   }
+  },
+  "none": {
+   "faults": 9,
+   "full": {
+    "detected": 6,
+    "detected_on_fixed_worlds": 3,
+    "detected_only_on_generated": 3,
+    "wilson": [
+     0.3542,
+     0.8794
+    ]
+   },
+   "harm": {
+    "contained": 0,
+    "fully_contained_faults": 0,
+    "harmful_faults": 1,
+    "harmful_runs": 2
+   },
+   "names": [
+    "05-thimble",
+    "06-orchid",
+    "09-tundra",
+    "10-gable",
+    "14-marlin",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "24-ripple"
+   ],
+   "repaired": {
+    "detected": 7,
+    "detected_on_fixed_worlds": 4,
+    "detected_only_on_generated": 3,
+    "wilson": [
+     0.4526,
+     0.9368
+    ]
+   },
+   "repaired_dev1": {
+    "detected": 8,
+    "wilson": [
+     0.565,
+     0.9801
+    ]
+   },
+   "repaired_dev1_vs_full": {
+    "full_only": 0,
+    "mcnemar_p": 0.5,
+    "repaired_only": 2
+   },
+   "repaired_vs_full": {
+    "full_only": 0,
+    "mcnemar_p": 1.0,
+    "repaired_only": 1
+   }
+  },
+  "same_line": {
+   "faults": 9,
+   "full": {
+    "detected": 6,
+    "detected_on_fixed_worlds": 5,
+    "detected_only_on_generated": 1,
+    "wilson": [
+     0.3542,
+     0.8794
+    ]
+   },
+   "harm": {
+    "contained": 81,
+    "fully_contained_faults": 3,
+    "harmful_faults": 3,
+    "harmful_runs": 81
+   },
+   "names": [
+    "03-heron",
+    "04-mosaic",
+    "07-pylon",
+    "08-saffron",
+    "12-wicket",
+    "13-cinder",
+    "22-sorrel",
+    "23-dynamo",
+    "26-tamarack"
+   ],
+   "repaired": {
+    "detected": 9,
+    "detected_on_fixed_worlds": 6,
+    "detected_only_on_generated": 3,
+    "wilson": [
+     0.7009,
+     1.0
+    ]
+   },
+   "repaired_dev1": {
+    "detected": 9,
+    "wilson": [
+     0.7009,
+     1.0
+    ]
+   },
+   "repaired_dev1_vs_full": {
+    "full_only": 0,
+    "mcnemar_p": 0.25,
+    "repaired_only": 3
+   },
+   "repaired_vs_full": {
+    "full_only": 0,
+    "mcnemar_p": 0.25,
+    "repaired_only": 3
+   }
+  }
+ },
+ "round3_vs_rounds1_2": {
+  "counts": {
+   "identical": 8,
+   "none": 9,
+   "same_line": 9
+  },
+  "patches": {
+   "01-quartz": {
+    "class": "identical",
+    "counterparts": [
+     "r1:11-walnut",
+     "r2:18-nimbus"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "02-lantern": {
+    "class": "identical",
+    "counterparts": [
+     "r1:20-heron",
+     "r2:05-fennel"
+    ],
+    "full": false,
+    "repaired": true
+   },
+   "03-heron": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:16-tundra",
+     "r2:04-quill"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "04-mosaic": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:18-paddle",
+     "r2:02-pewter"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "05-thimble": {
+    "class": "none",
+    "counterparts": [],
+    "full": false,
+    "repaired": false
+   },
+   "06-orchid": {
+    "class": "none",
+    "counterparts": [],
+    "full": true,
+    "repaired": true
+   },
+   "07-pylon": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:06-saffron",
+     "r2:07-cobalt"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "08-saffron": {
+    "class": "same_line",
+    "counterparts": [
+     "r1:08-orchid",
+     "r2:08-thistle"
+    ],
+    "full": false,
+    "repaired": true
+   },
+   "09-tundra": {
+    "class": "none",
+    "counterparts": [],
+    "full": false,
+    "repaired": false
+   },
+   "10-gable": {
+    "class": "none",
+    "counterparts": [],
+    "full": true,
+    "repaired": true
+   },
+   "11-ferrule": {
+    "class": "identical",
+    "counterparts": [
+     "r1:01-lantern"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "12-wicket": {
+    "class": "same_line",
+    "counterparts": [
+     "r2:14-juniper"
+    ],
+    "full": false,
+    "repaired": true
+   },
+   "13-cinder": {
+    "class": "same_line",
+    "counterparts": [
+     "r2:19-oriole"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "14-marlin": {
+    "class": "none",
+    "counterparts": [],
+    "full": false,
+    "repaired": true
+   },
+   "15-basalt": {
+    "class": "none",
+    "counterparts": [],
+    "full": true,
+    "repaired": true
+   },
+   "16-juniper": {
+    "class": "identical",
+    "counterparts": [
+     "r2:17-meadow"
+    ],
+    "full": false,
+    "repaired": true
+   },
+   "17-kestrel": {
+    "class": "identical",
+    "counterparts": [
+     "r1:09-falcon"
+    ],
+    "full": false,
+    "repaired": true
+   },
+   "18-nimbus": {
+    "class": "none",
+    "counterparts": [],
+    "full": true,
+    "repaired": true
+   },
+   "19-pewter": {
+    "class": "identical",
+    "counterparts": [
+     "r2:20-pumice"
+    ],
+    "full": false,
+    "repaired": true
+   },
+   "20-almond": {
+    "class": "identical",
+    "counterparts": [
+     "r2:06-harbor"
+    ],
+    "full": false,
+    "repaired": true
+   },
+   "21-velour": {
+    "class": "none",
+    "counterparts": [],
+    "full": true,
+    "repaired": true
+   },
+   "22-sorrel": {
+    "class": "same_line",
+    "counterparts": [
+     "r2:10-garnet"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "23-dynamo": {
+    "class": "same_line",
+    "counterparts": [
+     "r2:09-saffron"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "24-ripple": {
+    "class": "none",
+    "counterparts": [],
+    "full": true,
+    "repaired": true
+   },
+   "25-ochre": {
+    "class": "identical",
+    "counterparts": [
+     "r2:22-rowan"
+    ],
+    "full": true,
+    "repaired": true
+   },
+   "26-tamarack": {
+    "class": "same_line",
+    "counterparts": [
+     "r2:25-umber"
+    ],
+    "full": false,
+    "repaired": true
+   }
+  }
+ }
+}

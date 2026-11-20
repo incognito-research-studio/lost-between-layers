@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l5_gate.py b/src/dsoi/layers/l5_gate.py
+index 12857dd..ee2a44e 100644
+--- a/src/dsoi/layers/l5_gate.py
++++ b/src/dsoi/layers/l5_gate.py
+@@ -106,7 +106,7 @@ class BoxRobustGate:
+         if x is None:
+             return _repair(np.zeros(inst.system.n), inst, robust=True, mode="resolve",
+                            rung=self.rung)
+-        if inst.system.robust_feasible(x):
++        if inst.system.nominal_feasible(x):
+             return GateResult(self.rung, "pass", x)
+         return _repair(x, inst, robust=True, mode=self.mode, rung=self.rung)
+ 

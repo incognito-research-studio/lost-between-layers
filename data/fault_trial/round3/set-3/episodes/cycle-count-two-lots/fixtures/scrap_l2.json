@@ -1,0 +1,6 @@
+{"interpreter_version": "fixture:lot-reader@1",
+ "output": {"kind": "delta", "ops": [
+  {"op": "supersede", "subject": "lot:L2", "predicate": "qty",
+   "value": 250, "lo": null, "hi": null, "unit": "",
+   "valid_from": 42, "valid_to": 43,
+   "span_text": "250 units remain"}]}}

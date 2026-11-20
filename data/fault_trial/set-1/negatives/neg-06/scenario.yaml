@@ -1,0 +1,45 @@
+# S4's sources: the supplier portal ranks above planner e-mail. The portal posts an
+# exact 600 units per week for Plant X weeks 43-45. The plant then restores a shift for
+# week 45, and the capacity master records 750 for week 45 only. The portal outranks the
+# unranked master, but this deployment declares that a newer authenticated record
+# supersedes a notice (supersession: authenticated_latest): from t = 4.5 week 45 is
+# planned at 750 while weeks 43-44 keep the portal's 600.
+id: NEG-06
+title: Capacity master restores one week of a portal capacity notice
+status: negative
+model: capacity_plan
+interpreter_version: "fixture:neg06@1"
+source_priority: {"portal:supplier": 2, "email:planner": 1}
+
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {43: 600, 44: 600, 45: 750}
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-portal, t: 2, kind: message, source: "portal:supplier",
+     text: "Plant X capacity for weeks 43-45: 600 units per week.",
+     fixture: fixtures/portal.json}
+  - {t: 3, kind: decide}
+  - {id: rec-week45, t: 4.5, kind: record, source: "erp:capacity-master",
+     ops: [{op: assert, subject: "plant:X", predicate: capacity, value: 750,
+            unit: "units/week", valid_from: 45, valid_to: 46}]}
+  - {t: 5, kind: decide}
+
+trial:
+  gate: box_robust
+  resolution: priority
+  supersession: authenticated_latest
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}
+
+required_response: "Week 45 follows the newer master record; weeks 43-44 keep the portal value"
+expected:
+  release_t3: {41: 1000, 42: 1000, 43: 600, 44: 600, 45: 600}
+  release_t5: {41: 1000, 42: 1000, 43: 600, 44: 600, 45: 750}

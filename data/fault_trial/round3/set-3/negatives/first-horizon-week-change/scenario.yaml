@@ -1,0 +1,23 @@
+id: NEG-first-horizon-week-change
+title: A one-week reduction in the first week of the planning horizon
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 950
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-wk41, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X: in week 41 capacity is 820 units while the conveyor is replaced; normal from week 42.",
+     fixture: fixtures/wk41.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

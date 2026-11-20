@@ -1,0 +1,15 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..0f2c1fe 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -131,8 +131,8 @@ class StateLayer:
+         return self.store.commit(delta, t)
+ 
+     def _priority(self, source_id: str) -> int:
+-        return max((p for prefix, p in self.source_priority.items()
+-                    if source_id.startswith(prefix)), default=0)
++        return next((p for prefix, p in self.source_priority.items()
++                     if source_id.startswith(prefix)), 0)
+ 
+     def _contradicted(self, op: Op, t: float) -> list[Fact]:
+         if op.prov.authenticated or op.kind is OpKind.RETRACT:

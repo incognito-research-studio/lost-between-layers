@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..b425b9b 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -213,7 +213,7 @@ class StateLayer:
+     def read(self, d: DecisionClass, t: float) -> tuple[CanonicalState, dict[tuple, Fact]]:
+         """kappa_D(S(v, t)) over D's horizon, plus the facts it was built from (for rho)."""
+         for s, p, vt in self.blocked:
+-            if s in d.subjects and p in d.reads and any(vt[0] <= v < vt[1] for v in d.horizon):
++            if s in d.subjects and p in d.reads and any(vt[0] < v < vt[1] for v in d.horizon):
+                 raise UnresolvedConflict(f"{s}/{p} over {vt} is blocked pending resolution")
+         by_time = {v: self.resolve(self.store.asof(v, t, d.reads)) for v in d.horizon}
+         used = restrict(by_time, d)

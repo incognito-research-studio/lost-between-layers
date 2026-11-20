@@ -1,0 +1,675 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l3_state.py": [
+   159,
+   160
+  ]
+ },
+ "import_hits": [],
+ "patch": "17-meadow.patch",
+ "runs": {
+  "e1v2/llama3.1:8b/conflict-003/r1": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/llama3.1:8b/conflict-005/r1": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/conflict-010/r2": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/conflict-011/r2": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "episodes/plant-x-contested-week45": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-manager-update": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-revised-notice": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 1,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         680.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         680.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    2,
+    2
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-span-claims": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "scenarios/06-S4-box_robust": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "scenarios/07-S4-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l3_state.py:159",
+    "dsoi/layers/l3_state.py:160"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  }
+ }
+}

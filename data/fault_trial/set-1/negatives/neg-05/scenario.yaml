@@ -1,0 +1,58 @@
+# S3's supplier world. The deployment pins interpreter fixture:neg05@1 and has declared
+# the release candidate fixture:neg05@2, which it refuses until promotion. The suspension
+# notice is first answered by the candidate, so L1's output is refused and L3 still shows
+# S2 active; the recheck gate re-reads the vendor master, which already records the
+# suspension, and repairs the plan so nothing is ordered from S2. When the notice is
+# re-sent and the pinned version answers, the suspension is committed and the plan
+# excludes S2 before the gate.
+id: NEG-05
+title: Suspension notice first answered by a refused candidate interpreter
+status: negative
+model: supplier_mix
+interpreter_version: "fixture:neg05@1"
+source_priority: {"email:procurement": 1}
+
+world:
+  period: 42
+  demand: 700
+  penalty: 100
+  erp_source_id: "erp:vendor-master"
+  suppliers:
+    S1: {capacity: 400, cost: 10, suspended: 0}
+    S2: {capacity: 500, cost: 8, suspended: 0}
+    S3: {capacity: 400, cost: 12, suspended: 0}
+  truth: {S2: {suspended: 1}}
+  master_stale: false
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-suspend, t: 2, kind: message, source: "email:procurement",
+     text: "Supplier S2 is suspended effective immediately pending a quality audit.",
+     fixture: fixtures/candidate.json}
+  - {t: 3, kind: decide}
+  - {id: msg-suspend-resent, t: 4, kind: message, source: "email:procurement",
+     text: "Re-sent for the record: Supplier S2 is suspended effective immediately pending a quality audit.",
+     fixture: fixtures/pinned.json}
+  - {t: 5, kind: decide}
+
+trial:
+  gate: recheck
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: ["fixture:neg05@2"]
+  system_of_record:
+    "supplier:S1|capacity|42": 400
+    "supplier:S1|suspended|42": 0
+    "supplier:S2|capacity|42": 500
+    "supplier:S2|suspended|42": 1
+    "supplier:S3|capacity|42": 400
+    "supplier:S3|suspended|42": 0
+
+required_response: "Refuse the declared candidate's output; the re-read keeps S2 out of the executed plan"
+expected:
+  ingest_msg_suspend: abstained
+  ingest_msg_suspend_resent: committed
+  gate_t3: fallback          # re-read shows S2 suspended; released q[S2] = 0
+  release_t5: {"q[S1]": 400, "q[S2]": 0, "q[S3]": 300, "u": 0}

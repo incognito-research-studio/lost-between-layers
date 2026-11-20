@@ -1,0 +1,15 @@
+diff --git a/src/dsoi/layers/l2_procedural.py b/src/dsoi/layers/l2_procedural.py
+index 1b8d658..3281205 100644
+--- a/src/dsoi/layers/l2_procedural.py
++++ b/src/dsoi/layers/l2_procedural.py
+@@ -108,8 +108,8 @@ class ApprovalEvent:
+             return "issued later"
+         if self.expires_at is not None and t >= self.expires_at:
+             return f"expired at {self.expires_at:g}"
+-        if self.max_quantity is None:
+-            return "already used" if used else None
++        if self.max_quantity is None:  # no cap: covers any quantity
++            return None
+         if sum(used) + quantity > self.max_quantity + tol:
+             return (f"approved up to {self.max_quantity:g}, used {sum(used):g}, "
+                     f"released {quantity:g}")

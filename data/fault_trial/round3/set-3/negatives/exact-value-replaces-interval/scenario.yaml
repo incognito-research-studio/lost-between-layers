@@ -1,0 +1,27 @@
+id: NEG-exact-value-replaces-interval
+title: An approximate reduction is replaced by an exact figure from the same inbox
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-approx, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44.",
+     fixture: fixtures/approx.json}
+  - {t: 3, kind: decide}
+  - {id: msg-x-exact, t: 4, kind: message, source: "email:planner-inbox",
+     text: "Plant X follow-up: the figure for weeks 42-44 is exactly 680 units per week.",
+     fixture: fixtures/exact.json}
+  - {t: 5, kind: decide}
+trial:
+  gate: box_robust
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

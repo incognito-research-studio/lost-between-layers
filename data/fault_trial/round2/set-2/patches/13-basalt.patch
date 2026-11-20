@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l4_decision.py b/src/dsoi/layers/l4_decision.py
+index aacf667..2bc934e 100644
+--- a/src/dsoi/layers/l4_decision.py
++++ b/src/dsoi/layers/l4_decision.py
+@@ -249,7 +249,7 @@ class WarehouseFlowFormulation:
+         for k in (c_key, f_key):
+             if k not in q:
+                 raise MissingState(k)
+-        c, free = q[c_key], q[f_key].value
++        c, free = q[c_key], q[f_key].value / q[c_key].value  # free space in pallets
+         lo, hi = c.interval()
+         v, h = c.value, max(c.value - lo, hi - c.value)
+         demand = float(theta["store_demand"])

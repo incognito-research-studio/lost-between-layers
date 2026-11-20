@@ -1,0 +1,251 @@
+{
+ "check_detail": {
+  "llama3.1:8b/change/hold_deadline_0.5": true,
+  "llama3.1:8b/change/hold_deadline_0.9": true,
+  "llama3.1:8b/change/recheck_stale_0.2": true,
+  "llama3.1:8b/change/recheck_stale_0.5": true,
+  "llama3.1:8b/quiet/hold_deadline_0.5": true,
+  "llama3.1:8b/quiet/hold_deadline_0.9": true,
+  "llama3.1:8b/quiet/recheck_stale_0.2": true,
+  "llama3.1:8b/quiet/recheck_stale_0.5": true,
+  "phi4:latest/change/hold_deadline_0.5": true,
+  "phi4:latest/change/hold_deadline_0.9": true,
+  "phi4:latest/change/recheck_stale_0.2": true,
+  "phi4:latest/change/recheck_stale_0.5": true,
+  "phi4:latest/quiet/hold_deadline_0.5": true,
+  "phi4:latest/quiet/hold_deadline_0.9": true,
+  "phi4:latest/quiet/recheck_stale_0.2": true,
+  "phi4:latest/quiet/recheck_stale_0.5": true,
+  "qwen2.5:7b-instruct/change/hold_deadline_0.5": true,
+  "qwen2.5:7b-instruct/change/hold_deadline_0.9": true,
+  "qwen2.5:7b-instruct/change/recheck_stale_0.2": true,
+  "qwen2.5:7b-instruct/change/recheck_stale_0.5": true,
+  "qwen2.5:7b-instruct/quiet/hold_deadline_0.5": true,
+  "qwen2.5:7b-instruct/quiet/hold_deadline_0.9": true,
+  "qwen2.5:7b-instruct/quiet/recheck_stale_0.2": true,
+  "qwen2.5:7b-instruct/quiet/recheck_stale_0.5": true
+ },
+ "development_data": true,
+ "fresh_model_calls": 0,
+ "models": {
+  "llama3.1:8b": {
+   "change": {
+    "case_repeats": 176,
+    "hold_deadline_0.5": {
+     "expected_delivered_share": 0.9883,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.4744,
+     "expected_violations": 83.5,
+     "seeded_draw_delivered_share": 0.9887,
+     "seeded_draw_violations": 80
+    },
+    "hold_deadline_0.9": {
+     "expected_delivered_share": 0.988,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.1585,
+     "expected_violations": 27.9,
+     "seeded_draw_delivered_share": 0.9879,
+     "seeded_draw_violations": 24
+    },
+    "recheck_stale_0.2": {
+     "expected_delivered_share": 0.9879,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.2341,
+     "expected_violations": 41.2,
+     "seeded_draw_delivered_share": 0.9879,
+     "seeded_draw_violations": 44
+    },
+    "recheck_stale_0.5": {
+     "expected_delivered_share": 0.9879,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.4659,
+     "expected_violations": 82.0,
+     "seeded_draw_delivered_share": 0.9879,
+     "seeded_draw_violations": 78
+    }
+   },
+   "quiet": {
+    "case_repeats": 48,
+    "hold_deadline_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "hold_deadline_0.9": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "recheck_stale_0.2": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "recheck_stale_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    }
+   }
+  },
+  "phi4:latest": {
+   "change": {
+    "case_repeats": 176,
+    "hold_deadline_0.5": {
+     "expected_delivered_share": 0.9614,
+     "expected_release_rate": 0.9631,
+     "expected_violation_rate": 0.4006,
+     "expected_violations": 70.5,
+     "seeded_draw_delivered_share": 0.9643,
+     "seeded_draw_violations": 67
+    },
+    "hold_deadline_0.9": {
+     "expected_delivered_share": 0.9591,
+     "expected_release_rate": 0.9608,
+     "expected_violation_rate": 0.1256,
+     "expected_violations": 22.1,
+     "seeded_draw_delivered_share": 0.9586,
+     "seeded_draw_violations": 19
+    },
+    "recheck_stale_0.2": {
+     "expected_delivered_share": 0.9586,
+     "expected_release_rate": 0.9602,
+     "expected_violation_rate": 0.1898,
+     "expected_violations": 33.4,
+     "seeded_draw_delivered_share": 0.9586,
+     "seeded_draw_violations": 39
+    },
+    "recheck_stale_0.5": {
+     "expected_delivered_share": 0.9586,
+     "expected_release_rate": 0.9602,
+     "expected_violation_rate": 0.3892,
+     "expected_violations": 68.5,
+     "seeded_draw_delivered_share": 0.9586,
+     "seeded_draw_violations": 72
+    }
+   },
+   "quiet": {
+    "case_repeats": 48,
+    "hold_deadline_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "hold_deadline_0.9": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "recheck_stale_0.2": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "recheck_stale_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    }
+   }
+  },
+  "qwen2.5:7b-instruct": {
+   "change": {
+    "case_repeats": 176,
+    "hold_deadline_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.4886,
+     "expected_violations": 86.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 85
+    },
+    "hold_deadline_0.9": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0977,
+     "expected_violations": 17.2,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 11
+    },
+    "recheck_stale_0.2": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.1955,
+     "expected_violations": 34.4,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 40
+    },
+    "recheck_stale_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.4886,
+     "expected_violations": 86.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 85
+    }
+   },
+   "quiet": {
+    "case_repeats": 48,
+    "hold_deadline_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "hold_deadline_0.9": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "recheck_stale_0.2": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    },
+    "recheck_stale_0.5": {
+     "expected_delivered_share": 1.0,
+     "expected_release_rate": 1.0,
+     "expected_violation_rate": 0.0,
+     "expected_violations": 0.0,
+     "seeded_draw_delivered_share": 1.0,
+     "seeded_draw_violations": 0
+    }
+   }
+  }
+ },
+ "note": "DEVELOPMENT DATA, POST HOC, NO MODEL CALLS. e1v2_abstention_policies.py scores the policies \"hold to a deadline (q)\" and \"recheck, source stale with probability p\" with one seeded draw per case-repeat, so their reported rates are single draws. Both policies are mixtures of deterministic outcomes per case-repeat with no reading:   hold_deadline_q    = q * (recheck with the true source) + (1 - q) * (standing plan)   recheck_stale_p    = (1 - p) * (recheck with the true source) + p * (recheck that returns                        the value in force before the notice) and every case-repeat with a reading is decided as under every other policy. This tool computes the three deterministic outcomes for every case-repeat, with the same functions as e1v2_abstention_policies.py, and reports the exact expected violations per change notice and delivered shares. It also re-derives the seeded draws, as a check that the outcomes match the stored policy results. Raised by the pre-submission review of the AI4Factory paper (manuscripts/aaai-workshop/REVIEW-2026-11-16.md, row 10). ",
+ "post_hoc": true,
+ "seeded_draws_match_stored_policy_results": true
+}

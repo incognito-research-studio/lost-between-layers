@@ -1,0 +1,27 @@
+id: EP-approval-second-release
+title: One lot release approval, then a re-plan after a recount
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 700
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 400, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {t: 2, kind: approval, approval_id: apr-qa-L1-0413, approval_kind: lot-release,
+     variable: "x[L1]", approver: qa.manager, source: "idp:qa-approvals"}
+  - {t: 3, kind: decide}
+  - {id: msg-l2-recount2, t: 4, kind: message, source: "email:warehouse",
+     text: "Lot L2 recount: 250 units usable after rework.",
+     fixture: fixtures/recount.json}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: [{kind: lot-release, variable: "x[L1]", approvers: [qa.manager]}]
+  declared_versions: []
+  system_of_record: {}

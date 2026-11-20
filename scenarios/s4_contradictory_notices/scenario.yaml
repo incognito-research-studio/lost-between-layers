@@ -1,0 +1,34 @@
+# S4 (Table IV): two sources contradict each other about the same weeks.
+# The L3 policy (nu.resolution) decides: latest | priority | span | block.
+# "span" follows Sec. VI: the contradiction becomes the interval it spans.
+id: S4
+title: Contradictory capacity notices
+status: implemented
+model: capacity_plan
+interpreter_version: "fixture:s4@1"
+
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 620, 43: 620, 44: 620}   # inside the span of the two claims
+
+source_priority: {"portal:supplier": 2, "email:planner": 1}
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-planner, t: 2, kind: message, source: "email:planner",
+     text: "Heard from Plant X: capacity down about 30% for weeks 42-44.",
+     fixture: fixtures/planner.json}
+  - {id: msg-portal, t: 3, kind: message, source: "portal:supplier",
+     text: "Plant X capacity for weeks 42-44: 600 units per week.",
+     fixture: fixtures/portal.json}
+  - {t: 4, kind: decide}
+
+required_response: "Flag; defer or resolve deterministically"
+analytic_measure: "Resolution is a function of logged provenance"
+depends_on: [L3, P1]
+risk: "Wrong resolution rule"

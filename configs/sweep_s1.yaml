@@ -1,0 +1,21 @@
+# Gate-ladder sweep over interpreter calibration (S1). Illustrative parameters.
+#
+# The supplier rounds the true cut to 5% ("about 30%"), so even a perfect reader
+# faces up to 2.5 points of error. point_sd adds reading error on top; bias < 0
+# means the interpreter under-reads the cut (the unsafe direction for capacity);
+# half_width is the interval the interpreter reports around its point estimate.
+name: sweep_s1
+base:
+  scenario: S1
+  seed: 20261018
+  runs: 200
+  weeks: [42, 44]
+  true_reduction: {low: 0.20, high: 0.40}
+  interpreter: {point_sd: 0.03, bias: 0.0, half_width: 0.05,
+                scope_misread_prob: 0.0, abstain_prob: 0.0}
+  gates: [nominal, "chance:0.2", "chance:0.05", box_robust, recheck]
+grid:
+  point_sd: [0.0, 0.01, 0.02, 0.03, 0.05, 0.08]
+  half_width: [0.03, 0.05, 0.08]
+  bias: [0.0, -0.02]
+  scope_misread_prob: [0.0, 0.02]

@@ -1,0 +1,1013 @@
+{
+ "alpha": 0.1,
+ "by_category": {
+  "reference-reader": {
+   "absolute": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "atleast_pct": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "conflict": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "correction": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "exact_pct": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "hedged_pct": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "injection": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "other_entity": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "out_of_scope": {
+    "abstained": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": null,
+    "quiet_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "per_day": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "scope_relative": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "two_entities": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "upto_pct": {
+    "abstained": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "quiet_ok": {
+     "ci95": [
+      0.0,
+      0.3244
+     ],
+     "k": 0,
+     "n": 8,
+     "rate": 0.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   },
+   "vague": {
+    "abstained": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_calibrated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "coverage_stated": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "entity_ok": null,
+    "quiet_ok": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    },
+    "rows": 8,
+    "scope_exact": {
+     "ci95": [
+      0.6756,
+      1.0
+     ],
+     "k": 8,
+     "n": 8,
+     "rate": 1.0
+    }
+   }
+  }
+ },
+ "manifest": "46082059ff7d059c8de1ccc987cccf95d7195cbec07ef3f675d534e92737adcc",
+ "margin_q": {
+  "reference-reader": 0.0
+ },
+ "models": {
+  "reference-reader": {
+   "abstained": {
+    "ci95": [
+     0.0,
+     0.0418
+    ],
+    "k": 0,
+    "n": 88,
+    "rate": 0.0
+   },
+   "calibrated": {
+    "error": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    },
+    "mean_excess_when_released": 38.89681818181816,
+    "release": {
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "k": 88,
+     "n": 88,
+     "rate": 1.0
+    },
+    "violation": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    }
+   },
+   "change_rows": 88,
+   "coverage_calibrated": {
+    "ci95": [
+     0.9582,
+     1.0
+    ],
+    "k": 88,
+    "n": 88,
+    "rate": 1.0
+   },
+   "coverage_stated": {
+    "ci95": [
+     0.9582,
+     1.0
+    ],
+    "k": 88,
+    "n": 88,
+    "rate": 1.0
+   },
+   "entity_ok": {
+    "ci95": [
+     0.9615,
+     1.0
+    ],
+    "k": 96,
+    "n": 96,
+    "rate": 1.0
+   },
+   "mean_stated_width": 34.09090909090909,
+   "point": {
+    "error": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    },
+    "mean_excess_when_released": 5.033181818181799,
+    "release": {
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "k": 88,
+     "n": 88,
+     "rate": 1.0
+    },
+    "violation": {
+     "ci95": [
+      0.1061,
+      0.2624
+     ],
+     "k": 15,
+     "n": 88,
+     "rate": 0.17045454545454544
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.1061,
+      0.2624
+     ],
+     "k": 15,
+     "n": 88,
+     "rate": 0.17045454545454544
+    }
+   },
+   "quiet_ok": {
+    "ci95": [
+     0.862,
+     1.0
+    ],
+    "k": 24,
+    "n": 24,
+    "rate": 1.0
+   },
+   "quiet_rows": 24,
+   "recheck": {
+    "error": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    },
+    "mean_excess_when_released": 15.529431818181779,
+    "release": {
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "k": 88,
+     "n": 88,
+     "rate": 1.0
+    },
+    "violation": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    }
+   },
+   "scope_exact": {
+    "ci95": [
+     0.9582,
+     1.0
+    ],
+    "k": 88,
+    "n": 88,
+    "rate": 1.0
+   },
+   "snapshot_mismatches": 0,
+   "state_varies_across_repeats": 0.0,
+   "stated": {
+    "error": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    },
+    "mean_excess_when_released": 38.89681818181816,
+    "release": {
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "k": 88,
+     "n": 88,
+     "rate": 1.0
+    },
+    "violation": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "k": 0,
+     "n": 88,
+     "rate": 0.0
+    }
+   },
+   "test_rows": 112
+  }
+ }
+}

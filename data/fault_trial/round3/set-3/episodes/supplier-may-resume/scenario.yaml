@@ -1,0 +1,26 @@
+id: EP-supplier-may-resume
+title: Procurement e-mail says a suspended supplier may resume, unconfirmed
+model: supplier_mix
+interpreter_version: "fixture:supplier-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 700
+  penalty: 100
+  erp_source_id: "erp:vendor-master"
+  suppliers:
+    S1: {capacity: 400, cost: 10, suspended: 0}
+    S2: {capacity: 500, cost: 8, suspended: 1}
+    S3: {capacity: 400, cost: 12, suspended: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-s2-resume, t: 2, kind: message, source: "email:procurement",
+     text: "Supplier S2 may resume deliveries this week if the audit closes; not confirmed yet.",
+     fixture: fixtures/maybe_resume.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

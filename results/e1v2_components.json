@@ -1,0 +1,2364 @@
+{
+ "categories": {
+  "llama3.1:8b": {
+   "absolute": {
+    "abstained": 9,
+    "covered_or_kept": 3,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 11,
+    "violation_widened": 11
+   },
+   "atleast_pct": {
+    "abstained": 9,
+    "covered_or_kept": 1,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 13,
+    "violation_widened": 10
+   },
+   "conflict": {
+    "abstained": 14,
+    "covered_or_kept": 4,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 11,
+    "violation_widened": 11
+   },
+   "correction": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "exact_pct": {
+    "abstained": 7,
+    "covered_or_kept": 3,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 9,
+    "violation_widened": 8
+   },
+   "hedged_pct": {
+    "abstained": 12,
+    "covered_or_kept": 1,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 15,
+    "violation_widened": 14
+   },
+   "injection": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "other_entity": {
+    "abstained": 14,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   },
+   "out_of_scope": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   },
+   "per_day": {
+    "abstained": 14,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 14,
+    "violation_widened": 14
+   },
+   "scope_relative": {
+    "abstained": 12,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 15,
+    "violation_widened": 15
+   },
+   "two_entities": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "upto_pct": {
+    "abstained": 14,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 14,
+    "violation_widened": 14
+   },
+   "vague": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   }
+  },
+  "phi4:latest": {
+   "absolute": {
+    "abstained": 7,
+    "covered_or_kept": 9,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 7,
+    "violation_widened": 7
+   },
+   "atleast_pct": {
+    "abstained": 6,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 13,
+    "violation_stated": 13,
+    "violation_widened": 6
+   },
+   "conflict": {
+    "abstained": 14,
+    "covered_or_kept": 6,
+    "n": 16,
+    "released_widened": 15,
+    "violation_stated": 9,
+    "violation_widened": 6
+   },
+   "correction": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "exact_pct": {
+    "abstained": 7,
+    "covered_or_kept": 8,
+    "n": 16,
+    "released_widened": 15,
+    "violation_stated": 7,
+    "violation_widened": 7
+   },
+   "hedged_pct": {
+    "abstained": 6,
+    "covered_or_kept": 6,
+    "n": 16,
+    "released_widened": 15,
+    "violation_stated": 9,
+    "violation_widened": 6
+   },
+   "injection": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "other_entity": {
+    "abstained": 3,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   },
+   "out_of_scope": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   },
+   "per_day": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "scope_relative": {
+    "abstained": 11,
+    "covered_or_kept": 3,
+    "n": 16,
+    "released_widened": 15,
+    "violation_stated": 11,
+    "violation_widened": 11
+   },
+   "two_entities": {
+    "abstained": 13,
+    "covered_or_kept": 3,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 13,
+    "violation_widened": 13
+   },
+   "upto_pct": {
+    "abstained": 9,
+    "covered_or_kept": 7,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 9,
+    "violation_widened": 9
+   },
+   "vague": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   }
+  },
+  "qwen2.5:7b-instruct": {
+   "absolute": {
+    "abstained": 15,
+    "covered_or_kept": 1,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 15,
+    "violation_widened": 15
+   },
+   "atleast_pct": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "conflict": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "correction": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "exact_pct": {
+    "abstained": 15,
+    "covered_or_kept": 1,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 15,
+    "violation_widened": 15
+   },
+   "hedged_pct": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "injection": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "other_entity": {
+    "abstained": 13,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   },
+   "out_of_scope": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   },
+   "per_day": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "scope_relative": {
+    "abstained": 14,
+    "covered_or_kept": 2,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 14,
+    "violation_widened": 14
+   },
+   "two_entities": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "upto_pct": {
+    "abstained": 16,
+    "covered_or_kept": 0,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 16,
+    "violation_widened": 16
+   },
+   "vague": {
+    "abstained": 16,
+    "covered_or_kept": 16,
+    "n": 16,
+    "released_widened": 16,
+    "violation_stated": 0,
+    "violation_widened": 0
+   }
+  }
+ },
+ "draws": 10000,
+ "factorial": {
+  "llama3.1:8b": {
+   "corrected/gate": {
+    "excluding_changed_inputs": {
+     "case_repeats": 174,
+     "stated_violation": 150,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       -0.2312,
+       -0.1086
+      ],
+      "diff": -0.16666666666666666,
+      "discordant": 29,
+      "n": 174
+     },
+     "widened_violation": 145
+    },
+    "label": "both fixes (Table~\\ref{tab:e1corrected})",
+    "q": 861.99,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0366,
+      0.1236
+     ],
+     "ci95_bootstrap": [
+      0.0284,
+      0.1136
+     ],
+     "ci95_wilson_iid": [
+      0.0394,
+      0.1154
+     ],
+     "deff": 1.2993,
+     "k": 12,
+     "n": 176,
+     "n_eff": 135.46,
+     "rate": 0.06818181818181818
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.1705,
+      -0.0739
+     ],
+     "diff": -0.11931818181818182,
+     "discordant": 21,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.7858,
+      0.9007
+     ],
+     "ci95_bootstrap": [
+      0.7955,
+      0.9034
+     ],
+     "ci95_wilson_iid": [
+      0.7923,
+      0.8971
+     ],
+     "deff": 1.2013,
+     "k": 150,
+     "n": 176,
+     "n_eff": 146.5,
+     "rate": 0.8522727272727273
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.1166,
+      0.2424
+     ],
+     "ci95_bootstrap": [
+      0.108,
+      0.2386
+     ],
+     "ci95_wilson_iid": [
+      0.1221,
+      0.2329
+     ],
+     "deff": 1.2914,
+     "k": 30,
+     "n": 176,
+     "n_eff": 136.29,
+     "rate": 0.17045454545454544
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.2443,
+      -0.1136
+     ],
+     "diff": -0.17613636363636365,
+     "discordant": 31,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.7495,
+      0.8797
+     ],
+     "ci95_bootstrap": [
+      0.7557,
+      0.8864
+     ],
+     "ci95_wilson_iid": [
+      0.7608,
+      0.873
+     ],
+     "deff": 1.3497,
+     "k": 145,
+     "n": 176,
+     "n_eff": 130.4,
+     "rate": 0.8238636363636364
+    }
+   },
+   "corrected/relabel": {
+    "excluding_changed_inputs": {
+     "case_repeats": 174,
+     "stated_violation": 150,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       0.0,
+       0.0
+      ],
+      "diff": 0.0,
+      "discordant": 0,
+      "n": 174
+     },
+     "widened_violation": 174
+    },
+    "label": "source-priority fix only",
+    "q": 861.99,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0366,
+      0.1236
+     ],
+     "ci95_bootstrap": [
+      0.0284,
+      0.1136
+     ],
+     "ci95_wilson_iid": [
+      0.0394,
+      0.1154
+     ],
+     "deff": 1.2993,
+     "k": 12,
+     "n": 176,
+     "n_eff": 135.46,
+     "rate": 0.06818181818181818
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.1705,
+      -0.0739
+     ],
+     "diff": -0.11931818181818182,
+     "discordant": 21,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.7858,
+      0.9007
+     ],
+     "ci95_bootstrap": [
+      0.7955,
+      0.9034
+     ],
+     "ci95_wilson_iid": [
+      0.7923,
+      0.8971
+     ],
+     "deff": 1.2013,
+     "k": 150,
+     "n": 176,
+     "n_eff": 146.5,
+     "rate": 0.8522727272727273
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 2,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "historical/gate": {
+    "excluding_changed_inputs": {
+     "case_repeats": 174,
+     "stated_violation": 171,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       -0.0407,
+       0.0
+      ],
+      "diff": -0.017241379310344827,
+      "discordant": 3,
+      "n": 174
+     },
+     "widened_violation": 171
+    },
+    "label": "widening fix only",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0073,
+      0.0685
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0511
+     ],
+     "ci95_wilson_iid": [
+      0.0089,
+      0.057
+     ],
+     "deff": 1.5055,
+     "k": 4,
+     "n": 176,
+     "n_eff": 116.91,
+     "rate": 0.022727272727272728
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0093,
+      0.0835
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0682
+     ],
+     "ci95_wilson_iid": [
+      0.0122,
+      0.0648
+     ],
+     "deff": 1.8148,
+     "k": 5,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.028409090909090908
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.0682,
+      0.0
+     ],
+     "diff": -0.028409090909090908,
+     "discordant": 5,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    }
+   },
+   "historical/relabel": {
+    "excluding_changed_inputs": {
+     "case_repeats": 174,
+     "stated_violation": 171,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       0.0,
+       0.0
+      ],
+      "diff": 0.0,
+      "discordant": 0,
+      "n": 174
+     },
+     "widened_violation": 174
+    },
+    "label": "original pipeline",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0073,
+      0.0685
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0511
+     ],
+     "ci95_wilson_iid": [
+      0.0089,
+      0.057
+     ],
+     "deff": 1.5055,
+     "k": 4,
+     "n": 176,
+     "n_eff": 116.91,
+     "rate": 0.022727272727272728
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9165,
+      0.9907
+     ],
+     "ci95_bootstrap": [
+      0.9375,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9352,
+      0.9878
+     ],
+     "deff": 1.8148,
+     "k": 171,
+     "n": 176,
+     "n_eff": 96.98,
+     "rate": 0.9715909090909091
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 2,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "quiet_rows": 48
+  },
+  "phi4:latest": {
+   "corrected/gate": {
+    "excluding_changed_inputs": {
+     "case_repeats": 169,
+     "stated_violation": 123,
+     "widened_minus_original": {
+      "cases": 86,
+      "ci95_bootstrap": [
+       -0.4142,
+       -0.2544
+      ],
+      "diff": -0.33136094674556216,
+      "discordant": 56,
+      "n": 169
+     },
+     "widened_violation": 113
+    },
+    "label": "both fixes (Table~\\ref{tab:e1corrected})",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.1769,
+      0.3137
+     ],
+     "ci95_bootstrap": [
+      0.1705,
+      0.3068
+     ],
+     "ci95_wilson_iid": [
+      0.1817,
+      0.3068
+     ],
+     "deff": 1.2006,
+     "k": 42,
+     "n": 176,
+     "n_eff": 146.6,
+     "rate": 0.23863636363636365
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.2614,
+      -0.1307
+     ],
+     "diff": -0.19318181818181818,
+     "discordant": 34,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.6409,
+      0.7806
+     ],
+     "ci95_bootstrap": [
+      0.642,
+      0.7841
+     ],
+     "ci95_wilson_iid": [
+      0.6452,
+      0.7774
+     ],
+     "deff": 1.1187,
+     "k": 126,
+     "n": 176,
+     "n_eff": 157.32,
+     "rate": 0.7159090909090909
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.2475,
+      0.3983
+     ],
+     "ci95_bootstrap": [
+      0.2443,
+      0.392
+     ],
+     "ci95_wilson_iid": [
+      0.2539,
+      0.3902
+     ],
+     "deff": 1.2282,
+     "k": 56,
+     "n": 176,
+     "n_eff": 143.29,
+     "rate": 0.3181818181818182
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.4375,
+      -0.2784
+     ],
+     "diff": -0.35795454545454547,
+     "discordant": 63,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9202,
+      0.9806
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      0.983
+     ],
+     "ci95_wilson_iid": [
+      0.9202,
+      0.9806
+     ],
+     "deff": 1.0,
+     "k": 169,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9602272727272727
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.5601,
+      0.7164
+     ],
+     "ci95_bootstrap": [
+      0.5625,
+      0.7216
+     ],
+     "ci95_wilson_iid": [
+      0.5689,
+      0.7091
+     ],
+     "deff": 1.2478,
+     "k": 113,
+     "n": 176,
+     "n_eff": 141.05,
+     "rate": 0.6420454545454546
+    }
+   },
+   "corrected/relabel": {
+    "excluding_changed_inputs": {
+     "case_repeats": 169,
+     "stated_violation": 123,
+     "widened_minus_original": {
+      "cases": 86,
+      "ci95_bootstrap": [
+       0.0,
+       0.0
+      ],
+      "diff": 0.0,
+      "discordant": 0,
+      "n": 169
+     },
+     "widened_violation": 169
+    },
+    "label": "source-priority fix only",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.1769,
+      0.3137
+     ],
+     "ci95_bootstrap": [
+      0.1705,
+      0.3068
+     ],
+     "ci95_wilson_iid": [
+      0.1817,
+      0.3068
+     ],
+     "deff": 1.2006,
+     "k": 42,
+     "n": 176,
+     "n_eff": 146.6,
+     "rate": 0.23863636363636365
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.2614,
+      -0.1307
+     ],
+     "diff": -0.19318181818181818,
+     "discordant": 34,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.6409,
+      0.7806
+     ],
+     "ci95_bootstrap": [
+      0.6477,
+      0.7841
+     ],
+     "ci95_wilson_iid": [
+      0.6452,
+      0.7774
+     ],
+     "deff": 1.1187,
+     "k": 126,
+     "n": 176,
+     "n_eff": 157.32,
+     "rate": 0.7159090909090909
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 7,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "historical/gate": {
+    "excluding_changed_inputs": {
+     "case_repeats": 169,
+     "stated_violation": 157,
+     "widened_minus_original": {
+      "cases": 86,
+      "ci95_bootstrap": [
+       -0.152,
+       -0.0536
+      ],
+      "diff": -0.10059171597633136,
+      "discordant": 17,
+      "n": 169
+     },
+     "widened_violation": 152
+    },
+    "label": "widening fix only",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0271,
+      0.0943
+     ],
+     "ci95_bootstrap": [
+      0.0227,
+      0.0852
+     ],
+     "ci95_wilson_iid": [
+      0.0271,
+      0.0943
+     ],
+     "deff": 1.0,
+     "k": 9,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.05113636363636364
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.8574,
+      0.9433
+     ],
+     "ci95_bootstrap": [
+      0.8693,
+      0.9489
+     ],
+     "ci95_wilson_iid": [
+      0.8574,
+      0.9433
+     ],
+     "deff": 1.0,
+     "k": 160,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9090909090909091
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0574,
+      0.158
+     ],
+     "ci95_bootstrap": [
+      0.0511,
+      0.1477
+     ],
+     "ci95_wilson_iid": [
+      0.0612,
+      0.1492
+     ],
+     "deff": 1.2985,
+     "k": 17,
+     "n": 176,
+     "n_eff": 135.54,
+     "rate": 0.09659090909090909
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.1989,
+      -0.0852
+     ],
+     "diff": -0.13636363636363635,
+     "discordant": 24,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9202,
+      0.9806
+     ],
+     "ci95_bootstrap": [
+      0.9318,
+      0.9831
+     ],
+     "ci95_wilson_iid": [
+      0.9202,
+      0.9806
+     ],
+     "deff": 1.0,
+     "k": 169,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9602272727272727
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.7975,
+      0.9106
+     ],
+     "ci95_bootstrap": [
+      0.8011,
+      0.9148
+     ],
+     "ci95_wilson_iid": [
+      0.8051,
+      0.9066
+     ],
+     "deff": 1.2422,
+     "k": 152,
+     "n": 176,
+     "n_eff": 141.69,
+     "rate": 0.8636363636363636
+    }
+   },
+   "historical/relabel": {
+    "excluding_changed_inputs": {
+     "case_repeats": 169,
+     "stated_violation": 157,
+     "widened_minus_original": {
+      "cases": 86,
+      "ci95_bootstrap": [
+       0.0,
+       0.0
+      ],
+      "diff": 0.0,
+      "discordant": 0,
+      "n": 169
+     },
+     "widened_violation": 169
+    },
+    "label": "original pipeline",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0271,
+      0.0943
+     ],
+     "ci95_bootstrap": [
+      0.0227,
+      0.0852
+     ],
+     "ci95_wilson_iid": [
+      0.0271,
+      0.0943
+     ],
+     "deff": 1.0,
+     "k": 9,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.05113636363636364
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.8574,
+      0.9433
+     ],
+     "ci95_bootstrap": [
+      0.8693,
+      0.9489
+     ],
+     "ci95_wilson_iid": [
+      0.8574,
+      0.9433
+     ],
+     "deff": 1.0,
+     "k": 160,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9090909090909091
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 7,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "quiet_rows": 48
+  },
+  "qwen2.5:7b-instruct": {
+   "corrected/gate": {
+    "excluding_changed_inputs": {
+     "case_repeats": 176,
+     "stated_violation": 172,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       -0.0455,
+       -0.0057
+      ],
+      "diff": -0.022727272727272728,
+      "discordant": 4,
+      "n": 176
+     },
+     "widened_violation": 172
+    },
+    "label": "both fixes (Table~\\ref{tab:e1corrected})",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0089,
+      0.057
+     ],
+     "ci95_bootstrap": [
+      0.0057,
+      0.0455
+     ],
+     "ci95_wilson_iid": [
+      0.0089,
+      0.057
+     ],
+     "deff": 1.0,
+     "k": 4,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.022727272727272728
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.0455,
+      -0.0057
+     ],
+     "diff": -0.022727272727272728,
+     "discordant": 4,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.943,
+      0.9911
+     ],
+     "ci95_bootstrap": [
+      0.9545,
+      0.9943
+     ],
+     "ci95_wilson_iid": [
+      0.943,
+      0.9911
+     ],
+     "deff": 1.0,
+     "k": 172,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9772727272727273
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0089,
+      0.057
+     ],
+     "ci95_bootstrap": [
+      0.0057,
+      0.0455
+     ],
+     "ci95_wilson_iid": [
+      0.0089,
+      0.057
+     ],
+     "deff": 1.0,
+     "k": 4,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.022727272727272728
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.0455,
+      -0.0057
+     ],
+     "diff": -0.022727272727272728,
+     "discordant": 4,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.943,
+      0.9911
+     ],
+     "ci95_bootstrap": [
+      0.9545,
+      0.9943
+     ],
+     "ci95_wilson_iid": [
+      0.943,
+      0.9911
+     ],
+     "deff": 1.0,
+     "k": 172,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9772727272727273
+    }
+   },
+   "corrected/relabel": {
+    "excluding_changed_inputs": {
+     "case_repeats": 176,
+     "stated_violation": 172,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       0.0,
+       0.0
+      ],
+      "diff": 0.0,
+      "discordant": 0,
+      "n": 176
+     },
+     "widened_violation": 176
+    },
+    "label": "source-priority fix only",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0089,
+      0.057
+     ],
+     "ci95_bootstrap": [
+      0.0057,
+      0.0455
+     ],
+     "ci95_wilson_iid": [
+      0.0089,
+      0.057
+     ],
+     "deff": 1.0,
+     "k": 4,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.022727272727272728
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      -0.0455,
+      -0.0057
+     ],
+     "diff": -0.022727272727272728,
+     "discordant": 4,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.943,
+      0.9911
+     ],
+     "ci95_bootstrap": [
+      0.9545,
+      0.9943
+     ],
+     "ci95_wilson_iid": [
+      0.943,
+      0.9911
+     ],
+     "deff": 1.0,
+     "k": 172,
+     "n": 176,
+     "n_eff": 176.0,
+     "rate": 0.9772727272727273
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "historical/gate": {
+    "excluding_changed_inputs": {
+     "case_repeats": 176,
+     "stated_violation": 176,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       0.0,
+       0.0
+      ],
+      "diff": 0.0,
+      "discordant": 0,
+      "n": 176
+     },
+     "widened_violation": 176
+    },
+    "label": "widening fix only",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "historical/relabel": {
+    "excluding_changed_inputs": {
+     "case_repeats": 176,
+     "stated_violation": 176,
+     "widened_minus_original": {
+      "cases": 88,
+      "ci95_bootstrap": [
+       0.0,
+       0.0
+      ],
+      "diff": 0.0,
+      "discordant": 0,
+      "n": 176
+     },
+     "widened_violation": 176
+    },
+    "label": "original pipeline",
+    "q": 1000.0,
+    "state_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "stated_minus_original_stated": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "stated_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_coverage": {
+     "cases": 88,
+     "ci95": [
+      0.0,
+      0.0418
+     ],
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "ci95_wilson_iid": [
+      0.0,
+      0.0214
+     ],
+     "deff": 2.0,
+     "k": 0,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 0.0
+    },
+    "widened_minus_original": {
+     "cases": 88,
+     "ci95_bootstrap": [
+      0.0,
+      0.0
+     ],
+     "diff": 0.0,
+     "discordant": 0,
+     "n": 176
+    },
+    "widened_release": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    },
+    "widened_snapshot_mismatches": 0,
+    "widened_violation": {
+     "cases": 88,
+     "ci95": [
+      0.9582,
+      1.0
+     ],
+     "ci95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "ci95_wilson_iid": [
+      0.9786,
+      1.0
+     ],
+     "deff": 2.0,
+     "k": 176,
+     "n": 176,
+     "n_eff": 88.0,
+     "rate": 1.0
+    }
+   },
+   "quiet_rows": 48
+  }
+ },
+ "fresh_model_calls": 0,
+ "inputs_sha256": {
+  "cases": "a289a93b45949841489eb425eaca11f2bad5efd15ec0905d91b268c3eaf7b16e",
+  "replies": "627f3139d4f7f41e8fcac8f252531add6355415e572d203e4ea6cabe519fc3b0"
+ },
+ "margins": {
+  "corrected": {
+   "llama3.1:8b": 861.99,
+   "phi4:latest": 1000.0,
+   "qwen2.5:7b-instruct": 1000.0
+  },
+  "historical": {
+   "llama3.1:8b": 1000.0,
+   "phi4:latest": 1000.0,
+   "qwen2.5:7b-instruct": 1000.0
+  }
+ },
+ "note": "    uv run python tools/e1v2_components.py --tables ../mdpi-paper/tables Review of 4 Nov 2026. A reanalysis of the stored replies; no model is called and no stored result file is changed. Three outputs, all on the test split:",
+ "post_hoc": true,
+ "reproduces_stored": {
+  "corrected": {
+   "file": "results/e1v2_corrected/rows.csv",
+   "mismatched_values": 0
+  },
+  "historical": {
+   "file": "results/e1v2/rows.csv",
+   "mismatched_values": 0
+  }
+ },
+ "seed": 20261103,
+ "stratified": {
+  "llama3.1:8b": {
+   "abstained": {
+    "case_bootstrap_ci95": [
+     0.7216,
+     0.858
+    ],
+    "clustered_ci95": [
+     0.7137,
+     0.8499
+    ],
+    "k": 139,
+    "n": 176,
+    "rate": 0.7897727272727273,
+    "stratified_bootstrap_ci95": [
+     0.733,
+     0.8409
+    ]
+   },
+   "state_coverage": {
+    "case_bootstrap_ci95": [
+     0.0284,
+     0.1136
+    ],
+    "clustered_ci95": [
+     0.0366,
+     0.1236
+    ],
+    "k": 12,
+    "n": 176,
+    "rate": 0.06818181818181818,
+    "stratified_bootstrap_ci95": [
+     0.0341,
+     0.108
+    ]
+   },
+   "stated_violation": {
+    "case_bootstrap_ci95": [
+     0.7955,
+     0.9034
+    ],
+    "clustered_ci95": [
+     0.7858,
+     0.9007
+    ],
+    "k": 150,
+    "n": 176,
+    "rate": 0.8522727272727273,
+    "stratified_bootstrap_ci95": [
+     0.8011,
+     0.8977
+    ]
+   },
+   "widened_coverage": {
+    "case_bootstrap_ci95": [
+     0.1136,
+     0.2386
+    ],
+    "clustered_ci95": [
+     0.1166,
+     0.2424
+    ],
+    "k": 30,
+    "n": 176,
+    "rate": 0.17045454545454544,
+    "stratified_bootstrap_ci95": [
+     0.1193,
+     0.2273
+    ]
+   },
+   "widened_minus_stated_violation": {
+    "case_bootstrap_ci95": [
+     -0.0568,
+     -0.0057
+    ],
+    "diff": -0.028409090909090908,
+    "stratified_bootstrap_ci95": [
+     -0.0511,
+     -0.0114
+    ]
+   },
+   "widened_violation": {
+    "case_bootstrap_ci95": [
+     0.7557,
+     0.8864
+    ],
+    "clustered_ci95": [
+     0.7495,
+     0.8797
+    ],
+    "k": 145,
+    "n": 176,
+    "rate": 0.8238636363636364,
+    "stratified_bootstrap_ci95": [
+     0.767,
+     0.875
+    ]
+   }
+  },
+  "phi4:latest": {
+   "abstained": {
+    "case_bootstrap_ci95": [
+     0.608,
+     0.7614
+    ],
+    "clustered_ci95": [
+     0.6051,
+     0.7595
+    ],
+    "k": 121,
+    "n": 176,
+    "rate": 0.6875,
+    "stratified_bootstrap_ci95": [
+     0.6307,
+     0.7443
+    ]
+   },
+   "state_coverage": {
+    "case_bootstrap_ci95": [
+     0.1705,
+     0.3068
+    ],
+    "clustered_ci95": [
+     0.1769,
+     0.3137
+    ],
+    "k": 42,
+    "n": 176,
+    "rate": 0.23863636363636365,
+    "stratified_bootstrap_ci95": [
+     0.1875,
+     0.2898
+    ]
+   },
+   "stated_violation": {
+    "case_bootstrap_ci95": [
+     0.642,
+     0.7841
+    ],
+    "clustered_ci95": [
+     0.6409,
+     0.7806
+    ],
+    "k": 126,
+    "n": 176,
+    "rate": 0.7159090909090909,
+    "stratified_bootstrap_ci95": [
+     0.6591,
+     0.767
+    ]
+   },
+   "widened_coverage": {
+    "case_bootstrap_ci95": [
+     0.2443,
+     0.3922
+    ],
+    "clustered_ci95": [
+     0.2475,
+     0.3983
+    ],
+    "k": 56,
+    "n": 176,
+    "rate": 0.3181818181818182,
+    "stratified_bootstrap_ci95": [
+     0.2614,
+     0.3807
+    ]
+   },
+   "widened_minus_stated_violation": {
+    "case_bootstrap_ci95": [
+     -0.125,
+     -0.0341
+    ],
+    "diff": -0.07386363636363637,
+    "stratified_bootstrap_ci95": [
+     -0.1136,
+     -0.0398
+    ]
+   },
+   "widened_violation": {
+    "case_bootstrap_ci95": [
+     0.5625,
+     0.7216
+    ],
+    "clustered_ci95": [
+     0.5601,
+     0.7164
+    ],
+    "k": 113,
+    "n": 176,
+    "rate": 0.6420454545454546,
+    "stratified_bootstrap_ci95": [
+     0.5852,
+     0.6989
+    ]
+   }
+  },
+  "qwen2.5:7b-instruct": {
+   "abstained": {
+    "case_bootstrap_ci95": [
+     0.9545,
+     0.9943
+    ],
+    "clustered_ci95": [
+     0.943,
+     0.9911
+    ],
+    "k": 172,
+    "n": 176,
+    "rate": 0.9772727272727273,
+    "stratified_bootstrap_ci95": [
+     0.9545,
+     0.9943
+    ]
+   },
+   "state_coverage": {
+    "case_bootstrap_ci95": [
+     0.0057,
+     0.0455
+    ],
+    "clustered_ci95": [
+     0.0089,
+     0.057
+    ],
+    "k": 4,
+    "n": 176,
+    "rate": 0.022727272727272728,
+    "stratified_bootstrap_ci95": [
+     0.0057,
+     0.0455
+    ]
+   },
+   "stated_violation": {
+    "case_bootstrap_ci95": [
+     0.9545,
+     0.9943
+    ],
+    "clustered_ci95": [
+     0.943,
+     0.9911
+    ],
+    "k": 172,
+    "n": 176,
+    "rate": 0.9772727272727273,
+    "stratified_bootstrap_ci95": [
+     0.9545,
+     0.9943
+    ]
+   },
+   "widened_coverage": {
+    "case_bootstrap_ci95": [
+     0.0057,
+     0.0455
+    ],
+    "clustered_ci95": [
+     0.0089,
+     0.057
+    ],
+    "k": 4,
+    "n": 176,
+    "rate": 0.022727272727272728,
+    "stratified_bootstrap_ci95": [
+     0.0057,
+     0.0455
+    ]
+   },
+   "widened_minus_stated_violation": {
+    "case_bootstrap_ci95": [
+     0.0,
+     0.0
+    ],
+    "diff": 0.0,
+    "stratified_bootstrap_ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "widened_violation": {
+    "case_bootstrap_ci95": [
+     0.9545,
+     0.9943
+    ],
+    "clustered_ci95": [
+     0.943,
+     0.9911
+    ],
+    "k": 172,
+    "n": 176,
+    "rate": 0.9772727272727273,
+    "stratified_bootstrap_ci95": [
+     0.9545,
+     0.9943
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+diff --git a/src/dsoi/pipeline.py b/src/dsoi/pipeline.py
+index d650ed6..9b55daa 100644
+--- a/src/dsoi/pipeline.py
++++ b/src/dsoi/pipeline.py
+@@ -366,11 +366,14 @@ class Pipeline:
+             if observed is None:
+                 raise ValueError("recheck replay requires the recorded observations")
+ 
++            # the observations were recorded per constraint key, in row order
++            order = list(dict.fromkeys(k for r in inst.system.rows for k in r.keys))
++            if len(order) != len(observed):
++                raise ValueError("recheck replay is missing recorded observations")
++            by_key = dict(zip(order, observed.values(), strict=True))
++
+             def recorded_value(key):
+-                name = "|".join(map(str, key))
+-                if name not in observed:
+-                    raise ValueError(f"recheck replay is missing the observation for {name}")
+-                return observed[name]
++                return by_key[key]
+ 
+             gate = RecheckGate(recorded_value, fallback=gate.fallback, decimals=gate.decimals)
+         return gate.apply(decision.x, inst, ctx, self.formulation).released

@@ -1,0 +1,442 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l2_procedural.py": [
+   111,
+   112
+  ]
+ },
+ "import_hits": [],
+ "patch": "03-marble.patch",
+ "runs": {
+  "episodes/lot-l1-replan-same-approval": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:111",
+    "dsoi/layers/l2_procedural.py:112"
+   ],
+   "new": {
+    "full": [
+     "admission"
+    ],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {
+    "admission": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [
+         "apr-l1-am"
+        ],
+        "reason": "",
+        "uses": {
+         "apr-l1-am": 300.0
+        },
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         300.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        300.0,
+        300.0
+       ],
+       "x_released": [
+        300.0,
+        300.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "awaits authenticated approval: lot-release on x[L1] (apr-l1-am: already used)",
+        "uses": {},
+        "verdict": "queue"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         250.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": null,
+       "x_released": [
+        350.0,
+        250.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        300.0,
+        300.0
+       ],
+       [
+        300.0,
+        300.0
+       ]
+      ],
+      [
+       2,
+       [
+        350.0,
+        250.0
+       ],
+       [
+        350.0,
+        250.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [
+         "apr-l1-am"
+        ],
+        "reason": "",
+        "uses": {
+         "apr-l1-am": 300.0
+        },
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         300.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        300.0,
+        300.0
+       ],
+       "x_released": [
+        300.0,
+        300.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [
+         "apr-l1-am"
+        ],
+        "reason": "",
+        "uses": {
+         "apr-l1-am": 350.0
+        },
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         250.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": [
+        350.0,
+        250.0
+       ],
+       "x_released": [
+        350.0,
+        250.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        300.0,
+        300.0
+       ],
+       [
+        300.0,
+        300.0
+       ]
+      ],
+      [
+       2,
+       [
+        350.0,
+        250.0
+       ],
+       [
+        350.0,
+        250.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    1,
+    2
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l2-approval-only": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:111",
+    "dsoi/layers/l2_procedural.py:112"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "scenarios/03-S2-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:111",
+    "dsoi/layers/l2_procedural.py:112"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    3,
+    3
+   ],
+   "world": "fixed"
+  }
+ }
+}

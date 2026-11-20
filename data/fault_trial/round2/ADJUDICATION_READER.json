@@ -1,0 +1,31 @@
+{
+ "_reader": "Claude (Opus 5.5), the architecture role that wrote the pipeline and the checks; after unblinding, 13 Nov 2026. Not an independent or human reader.",
+ "_method": "For each effective fault the reader compared the generator's sealed intended effect (manifest.json) with the clean and patched records, replay outputs and reload comparison of the episodes the manifest names (results/ft_perrun_r2/<fault>.json, from tools/ft_perrun.py), and with which checks newly fired on which run. 'matches' means every value or outcome the manifest states was observed. Localization codes: cause = a firing check tests the mechanism the patch broke; other_run = a check fired on a different run through a side effect of the mechanism, not on the run the manifest names; diffuse = several checks across several layers fire, among them the one testing the mechanism; downstream = the fault surfaces as an exception in a later layer; missed = no check of the full configuration fired.",
+ "faults": {
+  "01-orchid.patch": {"matches": true, "observed": "span-claims releases 700, not 600, in weeks 42-44; in dc-d1 and S2 the gate passes the unprojected LP plan", "localization": "missed"},
+  "02-pewter.patch": {"matches": true, "observed": "nightly-resync: second decision releases the re-sent master 1000, not the planner's 700", "localization": "cause"},
+  "03-marble.patch": {"matches": true, "observed": "second allocation executes on the morning approval (350 drawn) instead of being queued", "localization": "cause"},
+  "04-quill.patch": {"matches": true, "observed": "reload keeps 2 of 3 ingests (same_ingests false); decisions unchanged", "localization": "cause"},
+  "05-fennel.patch": {"matches": true, "observed": "week 45 drops to 700 in nightly-resync and scope-correction", "localization": "missed"},
+  "06-harbor.patch": {"matches": true, "observed": "lot L2 releases 300, not 280", "localization": "missed"},
+  "07-cobalt.patch": {"matches": true, "observed": "replay from the store returns 700, not the released 680", "localization": "cause"},
+  "08-thistle.patch": {"matches": true, "observed": "the updated model's reading is committed (700 in weeks 42-43) instead of abstained (1000)", "localization": "missed"},
+  "09-saffron.patch": {"matches": true, "observed": "span-claims interval narrows to [650, 750] and releases 650, not 600; schema fired only on S4, where the narrowed interval excluded the point value", "localization": "other_run"},
+  "10-garnet.patch": {"matches": true, "observed": "master-correction keeps 700 instead of the correction 650", "localization": "cause"},
+  "11-ember.patch": {"matches": true, "observed": "the plan at expiry is admitted and 300 executed instead of queued", "localization": "cause"},
+  "12-willow.patch": {"matches": true, "observed": "reloaded deltas differ in content with the same count (same_deltas false)", "localization": "missed"},
+  "13-basalt.patch": {"matches": true, "observed": "dc-d1 inbound 52.7 pallets instead of 62.9", "localization": "missed"},
+  "14-juniper.patch": {"matches": true, "observed": "scope-correction: week 42 stays at 700 after the correction", "localization": "missed"},
+  "15-kestrel.patch": {"matches": true, "observed": "replaying the recheck decision raises an error; the released plan is unchanged", "localization": "diffuse"},
+  "16-lichen.patch": {"matches": true, "observed": "S2 releases 250 and the gate passes the unprojected plan", "localization": "missed"},
+  "17-meadow.patch": {"matches": true, "observed": "revised-notice keeps 750 instead of the planning office's 680", "localization": "missed"},
+  "18-nimbus.patch": {"matches": true, "observed": "the L2 approval admits the L1 release; 300 executed instead of queued", "localization": "cause"},
+  "19-oriole.patch": {"matches": true, "observed": "the reloaded log fails its hash chain", "localization": "cause"},
+  "20-pumice.patch": {"matches": true, "observed": "the t=4 decision reads contested week 45 (600) instead of deferring", "localization": "missed"},
+  "21-quartz.patch": {"matches": true, "observed": "week 45 capacity is lost; the next decision fails for missing state and releases nothing", "localization": "downstream"},
+  "22-rowan.patch": {"matches": true, "observed": "replay from the store of the first decision returns the corrected plan", "localization": "cause"},
+  "23-sorrel.patch": {"matches": true, "observed": "dc-d1 releases 68.3 instead of 62.9; in S2 the gate passes the unprojected plan", "localization": "missed"},
+  "24-tundra.patch": {"matches": true, "observed": "manager-update: the portal's 600 wins over the manager's 800", "localization": "missed"},
+  "25-umber.patch": {"matches": true, "observed": "the unauthenticated partial hold is committed; lot L2 releases 150, not 300", "localization": "missed"}
+ }
+}

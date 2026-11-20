@@ -1,0 +1,343 @@
+{
+ "arms": {
+  "calibrated_pinned": {
+   "llama3.1:8b": {
+    "coverage": {
+     "ci95": [
+      0.0122,
+      0.0648
+     ],
+     "k": 5,
+     "n": 176,
+     "rate": 0.028409090909090908
+    },
+    "error": {
+     "ci95": [
+      0.0,
+      0.0214
+     ],
+     "k": 0,
+     "n": 176,
+     "rate": 0.0
+    },
+    "mean_excess_when_released": -449.5122727272728,
+    "mean_excess_when_released_and_feasible": 5444.0,
+    "release": {
+     "ci95": [
+      0.9786,
+      1.0
+     ],
+     "k": 176,
+     "n": 176,
+     "rate": 1.0
+    },
+    "released_and_feasible": 5,
+    "violation": {
+     "ci95": [
+      0.9352,
+      0.9878
+     ],
+     "k": 171,
+     "n": 176,
+     "rate": 0.9715909090909091
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.9352,
+      0.9878
+     ],
+     "k": 171,
+     "n": 176,
+     "rate": 0.9715909090909091
+    }
+   },
+   "phi4:latest": {
+    "coverage": {
+     "ci95": [
+      0.0612,
+      0.1492
+     ],
+     "k": 17,
+     "n": 176,
+     "rate": 0.09659090909090909
+    },
+    "error": {
+     "ci95": [
+      0.0194,
+      0.0798
+     ],
+     "k": 7,
+     "n": 176,
+     "rate": 0.03977272727272727
+    },
+    "mean_excess_when_released": -315.97857988165686,
+    "mean_excess_when_released_and_feasible": 2283.7752941176473,
+    "release": {
+     "ci95": [
+      0.9202,
+      0.9806
+     ],
+     "k": 169,
+     "n": 176,
+     "rate": 0.9602272727272727
+    },
+    "released_and_feasible": 17,
+    "violation": {
+     "ci95": [
+      0.8051,
+      0.9066
+     ],
+     "k": 152,
+     "n": 176,
+     "rate": 0.8636363636363636
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.8448,
+      0.9362
+     ],
+     "k": 152,
+     "n": 169,
+     "rate": 0.8994082840236687
+    }
+   },
+   "qwen2.5:7b-instruct": {
+    "coverage": {
+     "ci95": [
+      0.0,
+      0.0214
+     ],
+     "k": 0,
+     "n": 176,
+     "rate": 0.0
+    },
+    "error": {
+     "ci95": [
+      0.0,
+      0.0214
+     ],
+     "k": 0,
+     "n": 176,
+     "rate": 0.0
+    },
+    "mean_excess_when_released": -625.6486363636363,
+    "mean_excess_when_released_and_feasible": null,
+    "release": {
+     "ci95": [
+      0.9786,
+      1.0
+     ],
+     "k": 176,
+     "n": 176,
+     "rate": 1.0
+    },
+    "released_and_feasible": 0,
+    "violation": {
+     "ci95": [
+      0.9786,
+      1.0
+     ],
+     "k": 176,
+     "n": 176,
+     "rate": 1.0
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.9786,
+      1.0
+     ],
+     "k": 176,
+     "n": 176,
+     "rate": 1.0
+    }
+   }
+  },
+  "stated_hold": {
+   "llama3.1:8b": {
+    "error": {
+     "ci95": [
+      0.0,
+      0.0214
+     ],
+     "k": 0,
+     "n": 176,
+     "rate": 0.0
+    },
+    "held": {
+     "ci95": [
+      0.7237,
+      0.8435
+     ],
+     "k": 139,
+     "n": 176,
+     "rate": 0.7897727272727273
+    },
+    "held_quiet": {
+     "ci95": [
+      0.8602,
+      0.9885
+     ],
+     "k": 46,
+     "n": 48,
+     "rate": 0.9583333333333334
+    },
+    "mean_excess_when_released": -539.9686486486486,
+    "mean_excess_when_released_and_feasible": 855.0,
+    "release": {
+     "ci95": [
+      0.1565,
+      0.2763
+     ],
+     "k": 37,
+     "n": 176,
+     "rate": 0.21022727272727273
+    },
+    "released_and_feasible": 2,
+    "violation": {
+     "ci95": [
+      0.1466,
+      0.264
+     ],
+     "k": 35,
+     "n": 176,
+     "rate": 0.19886363636363635
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.823,
+      0.985
+     ],
+     "k": 35,
+     "n": 37,
+     "rate": 0.9459459459459459
+    }
+   },
+   "phi4:latest": {
+    "error": {
+     "ci95": [
+      0.0157,
+      0.0724
+     ],
+     "k": 6,
+     "n": 176,
+     "rate": 0.03409090909090909
+    },
+    "held": {
+     "ci95": [
+      0.6156,
+      0.7514
+     ],
+     "k": 121,
+     "n": 176,
+     "rate": 0.6875
+    },
+    "held_quiet": {
+     "ci95": [
+      0.59,
+      0.8343
+     ],
+     "k": 35,
+     "n": 48,
+     "rate": 0.7291666666666666
+    },
+    "mean_excess_when_released": -493.93979591836734,
+    "mean_excess_when_released_and_feasible": 126.49399999999987,
+    "release": {
+     "ci95": [
+      0.2175,
+      0.3488
+     ],
+     "k": 49,
+     "n": 176,
+     "rate": 0.2784090909090909
+    },
+    "released_and_feasible": 5,
+    "violation": {
+     "ci95": [
+      0.1918,
+      0.3189
+     ],
+     "k": 44,
+     "n": 176,
+     "rate": 0.25
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.7824,
+      0.9556
+     ],
+     "k": 44,
+     "n": 49,
+     "rate": 0.8979591836734694
+    }
+   },
+   "qwen2.5:7b-instruct": {
+    "error": {
+     "ci95": [
+      0.0,
+      0.0214
+     ],
+     "k": 0,
+     "n": 176,
+     "rate": 0.0
+    },
+    "held": {
+     "ci95": [
+      0.943,
+      0.9911
+     ],
+     "k": 172,
+     "n": 176,
+     "rate": 0.9772727272727273
+    },
+    "held_quiet": {
+     "ci95": [
+      0.8316,
+      0.9785
+     ],
+     "k": 45,
+     "n": 48,
+     "rate": 0.9375
+    },
+    "mean_excess_when_released": -950.0,
+    "mean_excess_when_released_and_feasible": null,
+    "release": {
+     "ci95": [
+      0.0089,
+      0.057
+     ],
+     "k": 4,
+     "n": 176,
+     "rate": 0.022727272727272728
+    },
+    "released_and_feasible": 0,
+    "violation": {
+     "ci95": [
+      0.0089,
+      0.057
+     ],
+     "k": 4,
+     "n": 176,
+     "rate": 0.022727272727272728
+    },
+    "violation_given_release": {
+     "ci95": [
+      0.5101,
+      1.0
+     ],
+     "k": 4,
+     "n": 4,
+     "rate": 1.0
+    }
+   }
+  }
+ },
+ "manifest": "b964ec016ea1b1f5ae95cb1a82ff4177ad9ab29532992867d4ca0ecad97346cd",
+ "margin_q": {
+  "llama3.1:8b": 1000.0,
+  "phi4:latest": 1000.0,
+  "qwen2.5:7b-instruct": 1000.0
+ },
+ "note": "    uv run python tools/e1v2_posthoc.py        # after `dsoi-e1v2 score` The pre-registered calibrated arm (src/dsoi/experiments/e1v2_score.py) pins the pipeline to the model's interpreter version, but `widen` labels each widened reading with \"+cal<q>\", so whenever q > 0 L1's version check rejects every widened reply and the arm decides on the stale nominal state (data/e1v2/DEVIATIONS.md, item 2). That arm is reported as frozen. This script runs the arm the protocol describes: the same replies, the same margin q from results/e1v2/summary.json, the same box-robust gate, with the pipeline pinned to the widened label.",
+ "post_hoc": true
+}

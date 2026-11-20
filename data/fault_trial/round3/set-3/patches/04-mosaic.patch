@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..99512d1 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -181,7 +181,7 @@ class StateLayer:
+     # -- reads ------------------------------------------------------------------
+ 
+     def _rank(self, f: Fact) -> tuple:
+-        return (self._priority(f.prov.source_id), f.prov.authenticated, f.tt[0])
++        return (bool(f.prov.authenticated), self._priority(f.prov.source_id), f.tt[0])
+ 
+     def resolve(self, facts: list[Fact]) -> list[Fact]:
+         """One fact per (s, p): the highest-ranked, unless the supersession rule displaces it

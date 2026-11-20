@@ -1,0 +1,23 @@
+id: EP-robust-plan-reduced-week
+title: Approximate capacity reduction planned under the box-robust gate
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {"email:planner": 1}
+world:
+  plant: P1
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 950
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-p1-cut, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant P1 update: staffing shortage, capacity roughly 30% lower for weeks 42-44.",
+     fixture: fixtures/cut.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: box_robust
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

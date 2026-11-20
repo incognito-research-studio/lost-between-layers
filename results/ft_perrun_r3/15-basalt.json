@@ -1,0 +1,970 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l5_gate.py": [
+   269,
+   270
+  ]
+ },
+ "import_hits": [],
+ "patch": "15-basalt.patch",
+ "runs": {
+  "episodes/recheck-master-revision": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l5_gate.py:269",
+    "dsoi/layers/l5_gate.py:270"
+   ],
+   "new": {
+    "full": [
+     "C1",
+     "G1",
+     "R2",
+     "audit",
+     "replay_store",
+     "restart"
+    ],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {
+    "C1": "pre",
+    "G1": "pre",
+    "R2": "pre",
+    "audit": "post",
+    "replay_store": "post",
+    "restart": "post"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 700.0,
+         "plant:X|capacity|43.0": 700.0,
+         "plant:X|capacity|44.0": 700.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 700.0,
+         "plant:X|capacity|43.0": 650.0,
+         "plant:X|capacity|44.0": 700.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        650.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        650.0,
+        700.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        700.0,
+        650.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        650.0,
+        700.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 700.0,
+         "plant:X|capacity|43.0": 700.0,
+         "plant:X|capacity|44.0": 700.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        650.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        650.0,
+        700.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       "raised ValueError",
+       "raised ValueError"
+      ]
+     ]
+    }
+   },
+   "released": [
+    2,
+    2
+   ],
+   "world": "generator"
+  },
+  "scenarios/02-S1-recheck": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l5_gate.py:269",
+    "dsoi/layers/l5_gate.py:270"
+   ],
+   "new": {
+    "full": [
+     "C1",
+     "C2",
+     "G1",
+     "R2",
+     "audit",
+     "replay_store",
+     "restart"
+    ],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {
+    "C1": "pre",
+    "C2": "post",
+    "G1": "pre",
+    "R2": "pre",
+    "audit": "post",
+    "replay_store": "post",
+    "restart": "post"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 600.0,
+         "plant:X|capacity|43.0": 600.0,
+         "plant:X|capacity|44.0": 600.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 4.5,
+       "x_exec": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 500.0,
+         "plant:X|capacity|43.0": 500.0,
+         "plant:X|capacity|44.0": 500.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.5,
+       "x_exec": [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 4.5,
+       "x_exec": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "monitor": "c2",
+        "reason": "monitor c2: record 1 released another action on the same logged inputs; the change is not attributable to nu",
+        "uses": {},
+        "verdict": "reject"
+       },
+       "gate_detail": {},
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.5,
+       "x_exec": null,
+       "x_released": [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       "raised ValueError",
+       "raised ValueError"
+      ],
+      [
+       2,
+       "raised ValueError",
+       "raised ValueError"
+      ]
+     ]
+    }
+   },
+   "released": [
+    2,
+    1
+   ],
+   "world": "fixed"
+  }
+ }
+}

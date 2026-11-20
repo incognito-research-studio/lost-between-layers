@@ -1,0 +1,28 @@
+id: EP-LOT-L1-REPLAN-SAME-APPROVAL
+title: Second allocation run after an inventory adjustment, with the morning approval already used
+model: lot_allocation
+interpreter_version: "fixture:inventory-notices@1"
+source_priority: {"email:warehouse": 1}
+world:
+  period: 42
+  demand: 600
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {t: 2, kind: approval, approval_id: apr-l1-am, approval_kind: lot-release,
+     variable: "x[L1]", approver: qa.manager, source: "idp:qa-approvals"}
+  - {t: 3, kind: decide}
+  - {id: inv-adjust, t: 4, kind: record, source: "erp:inventory",
+     ops: [{op: supersede, subject: "lot:L2", predicate: qty, value: 250,
+            valid_from: 42, valid_to: 43}]}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: [{kind: lot-release, variable: "x[L1]", approvers: [qa.manager]}]
+  declared_versions: []
+  system_of_record: {}

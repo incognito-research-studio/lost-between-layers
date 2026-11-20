@@ -1,0 +1,23 @@
+id: EP-alias-model-update
+title: The interpreter alias answers with a newer model than the pinned one
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-alias, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44.",
+     fixture: fixtures/served_v2.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

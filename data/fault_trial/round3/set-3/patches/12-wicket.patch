@@ -1,0 +1,26 @@
+diff --git a/src/dsoi/layers/l1_interpreter.py b/src/dsoi/layers/l1_interpreter.py
+index 2d13bac..0678fa6 100644
+--- a/src/dsoi/layers/l1_interpreter.py
++++ b/src/dsoi/layers/l1_interpreter.py
+@@ -80,7 +80,7 @@ def parse_output(
+         return Abstain(payload.get("reason") or "interpreter abstained")
+     if payload.get("kind") != "delta":
+         return Abstain(f"unknown output kind: {payload.get('kind')!r}")
+-    ops: list[Op] = []
++    ops: dict[tuple[str, str], Op] = {}
+     for raw in payload.get("ops", []):
+         try:
+             op = _parse_op(raw, message, schema, nu_i)
+@@ -88,10 +88,10 @@ def parse_output(
+             return Abstain(f"malformed operation {raw!r}: {exc}")
+         if isinstance(op, Abstain):
+             return op
+-        ops.append(op)
++        ops[(op.s, op.p)] = op
+     if not ops:
+         return Abstain("empty delta")
+-    return Delta(tuple(ops))
++    return Delta(tuple(ops.values()))
+ 
+ 
+ def _parse_op(raw: dict, message: Message, schema: InterpreterSchema, nu_i: str) -> Op | Abstain:

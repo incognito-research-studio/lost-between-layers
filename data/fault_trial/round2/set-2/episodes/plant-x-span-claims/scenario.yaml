@@ -1,0 +1,28 @@
+id: EP-PLANT-X-SPAN-CLAIMS
+title: Planner estimate and supplier-portal figure kept as one span
+model: capacity_plan
+interpreter_version: "fixture:plant-notices@1"
+source_priority: {"email:planner-inbox": 2, "portal:supplier": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 620, 43: 620, 44: 620}
+times: {erp_load: 1}
+events:
+  - {id: msg-planner, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44.",
+     fixture: fixtures/planner.json}
+  - {id: msg-portal, t: 3, kind: message, source: "portal:supplier",
+     text: "Plant X capacity for weeks 42-44: 600 units per week.",
+     fixture: fixtures/portal.json}
+  - {t: 4, kind: decide}
+trial:
+  gate: box_robust
+  resolution: span
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/pipeline.py b/src/dsoi/pipeline.py
+index d650ed6..6841f2c 100644
+--- a/src/dsoi/pipeline.py
++++ b/src/dsoi/pipeline.py
+@@ -263,7 +263,7 @@ class Pipeline:
+         except Exception as exc:
+             self._log_unfinished(t, t_asof, theta, nu, ctx, exc)
+             raise
+-        x_exec, ack = self.executor.execute(gate.released if adm.verdict is Verdict.ADMIT
++        x_exec, ack = self.executor.execute(decision.x if adm.verdict is Verdict.ADMIT
+                                             else None)
+         record = self.audit.append(
+             t=t, decision_class=self.decision_class.name, state_hash=state_hash(ctx.state),

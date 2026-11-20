@@ -1,0 +1,26 @@
+id: EP-inspector-signoff
+title: Inspector signs off a lot release that the rule reserves for the QA manager
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 800
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {t: 2, kind: approval, approval_id: apr-insp-L1-0415, approval_kind: lot-release,
+     variable: "x[L1]", approver: qa.inspector, source: "idp:qa-approvals", expires_at: 12}
+  - {t: 3, kind: decide}
+  - {t: 4, kind: approval, approval_id: apr-mgr-L1-0415, approval_kind: lot-release,
+     variable: "x[L1]", approver: qa.manager, source: "idp:qa-approvals", expires_at: 12}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: [{kind: lot-release, variable: "x[L1]", approvers: [qa.manager]}]
+  declared_versions: []
+  system_of_record: {}

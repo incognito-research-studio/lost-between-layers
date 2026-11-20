@@ -1,0 +1,14 @@
+diff --git a/src/dsoi/layers/l6_audit.py b/src/dsoi/layers/l6_audit.py
+index 2473044..70d9e34 100644
+--- a/src/dsoi/layers/l6_audit.py
++++ b/src/dsoi/layers/l6_audit.py
+@@ -162,7 +162,8 @@ class AuditLog:
+                     for key, value in sorted(self.encodings.items())]
+         entries += [{"delta": t, "ops": [asdict(op) for op in delta.ops]}
+                     for t, delta in self.deltas]
+-        entries += [{"message": key, "value": value}
++        # message bodies stay in the mail archive; the snapshot keeps their digests
++        entries += [{"message": key, "value": {k: v for k, v in value.items() if k != "text"}}
+                     for key, value in sorted(self.messages.items())]
+         entries += [{"ingest": asdict(rec)} for rec in self.ingests]
+         entries += [{"approval": event} for event in self.approvals]

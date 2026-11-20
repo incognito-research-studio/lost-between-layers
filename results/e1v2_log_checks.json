@@ -1,0 +1,114 @@
+{
+ "fresh_model_calls": 0,
+ "inputs_sha256": {
+  "cases": "a289a93b45949841489eb425eaca11f2bad5efd15ec0905d91b268c3eaf7b16e",
+  "replies": "627f3139d4f7f41e8fcac8f252531add6355415e572d203e4ea6cabe519fc3b0"
+ },
+ "margins": {
+  "corrected": {
+   "llama3.1:8b": 861.99,
+   "phi4:latest": 1000.0,
+   "qwen2.5:7b-instruct": 1000.0
+  },
+  "historical": {
+   "llama3.1:8b": 1000.0,
+   "phi4:latest": 1000.0,
+   "qwen2.5:7b-instruct": 1000.0
+  }
+ },
+ "models": {
+  "llama3.1:8b": {
+   "corrected/gate": {
+    "case_repeats": 224,
+    "logged_abstained": 185,
+    "model_abstained": 185,
+    "shadowed": 0,
+    "version_rejected": 0
+   },
+   "corrected/relabel": {
+    "case_repeats": 224,
+    "logged_abstained": 224,
+    "model_abstained": 185,
+    "shadowed": 0,
+    "version_rejected": 44
+   },
+   "historical/gate": {
+    "case_repeats": 224,
+    "logged_abstained": 185,
+    "model_abstained": 185,
+    "shadowed": 35,
+    "version_rejected": 0
+   },
+   "historical/relabel": {
+    "case_repeats": 224,
+    "logged_abstained": 224,
+    "model_abstained": 185,
+    "shadowed": 0,
+    "version_rejected": 44
+   }
+  },
+  "phi4:latest": {
+   "corrected/gate": {
+    "case_repeats": 224,
+    "logged_abstained": 156,
+    "model_abstained": 156,
+    "shadowed": 0,
+    "version_rejected": 0
+   },
+   "corrected/relabel": {
+    "case_repeats": 224,
+    "logged_abstained": 224,
+    "model_abstained": 156,
+    "shadowed": 0,
+    "version_rejected": 76
+   },
+   "historical/gate": {
+    "case_repeats": 224,
+    "logged_abstained": 156,
+    "model_abstained": 156,
+    "shadowed": 39,
+    "version_rejected": 0
+   },
+   "historical/relabel": {
+    "case_repeats": 224,
+    "logged_abstained": 224,
+    "model_abstained": 156,
+    "shadowed": 0,
+    "version_rejected": 76
+   }
+  },
+  "qwen2.5:7b-instruct": {
+   "corrected/gate": {
+    "case_repeats": 224,
+    "logged_abstained": 217,
+    "model_abstained": 217,
+    "shadowed": 0,
+    "version_rejected": 0
+   },
+   "corrected/relabel": {
+    "case_repeats": 224,
+    "logged_abstained": 224,
+    "model_abstained": 217,
+    "shadowed": 0,
+    "version_rejected": 8
+   },
+   "historical/gate": {
+    "case_repeats": 224,
+    "logged_abstained": 217,
+    "model_abstained": 217,
+    "shadowed": 4,
+    "version_rejected": 0
+   },
+   "historical/relabel": {
+    "case_repeats": 224,
+    "logged_abstained": 224,
+    "model_abstained": 217,
+    "shadowed": 0,
+    "version_rejected": 8
+   }
+  }
+ },
+ "note": "    uv run python tools/e1v2_log_checks.py Review of 4 Nov 2026 (fourth round, point 5). A reanalysis of the stored replies; no model is called. Each case-repeat runs through the four cells of tools/e1v2_components.py, and two predicates are evaluated on the resulting audit log only, without the generator's truth:",
+ "post_hoc": true,
+ "split": "test"
+}

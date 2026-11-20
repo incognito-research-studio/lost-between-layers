@@ -1,0 +1,6 @@
+{"interpreter_version": "fixture:supplier-reader@3-candidate",
+ "output": {"kind": "delta", "ops": [
+  {"op": "supersede", "subject": "supplier:S3", "predicate": "suspended",
+   "value": 1, "lo": null, "hi": null, "unit": "",
+   "valid_from": 42, "valid_to": 43,
+   "span_text": "Supplier S3 is suspended this week"}]}}

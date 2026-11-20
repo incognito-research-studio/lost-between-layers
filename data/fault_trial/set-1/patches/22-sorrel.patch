@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/experiments/e1v2_world.py b/src/dsoi/experiments/e1v2_world.py
+index f768bfd..7435392 100644
+--- a/src/dsoi/experiments/e1v2_world.py
++++ b/src/dsoi/experiments/e1v2_world.py
+@@ -58,7 +58,7 @@ def pipeline(case: Case, gate, interpreter, nu_i: str, *, historical: bool = Fal
+     p = build_pipeline(scn, gate, interpreter, versions, resolution="span")
+     if not historical:
+         p.state.source_priority = {**p.state.source_priority, EMAIL: 1}
+-    y = [{"op": "assert", "subject": "plant:Y", "predicate": "capacity", "value": NOMINAL,
++    y = [{"op": "assert", "subject": scn.subject, "predicate": "capacity", "value": NOMINAL,
+           "unit": "units/week", "valid_from": HORIZON[0], "valid_to": HORIZON[-1] + 1}]
+     p.ingest_record(delta_from_spec(y, MASTER), T_LOAD + 0.25, MASTER)
+     p.schema = schema()

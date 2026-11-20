@@ -1,0 +1,910 @@
+{
+ "clean_runs": 700,
+ "faults": {
+  "01-orchid.patch": {
+   "activated_at_import": false,
+   "activated_runs": 670,
+   "changed_runs": 107,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 23,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 2,
+    "harmful_runs_silent": 25
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 23,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 2,
+    "harmful_runs_silent": 25
+   },
+   "harm_added": 25,
+   "harmful_runs": 25,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 23,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 2,
+    "harmful_runs_silent": 25
+   }
+  },
+  "02-pewter.patch": {
+   "activated_at_import": true,
+   "activated_runs": 700,
+   "changed_runs": 93,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 79,
+    "harmful_runs_flagged": 80,
+    "harmful_runs_flagged_pre": 80,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 79,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 80
+   },
+   "harm_added": 80,
+   "harmful_runs": 80,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 79,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 80
+   }
+  },
+  "03-marble.patch": {
+   "activated_at_import": false,
+   "activated_runs": 3,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "04-quill.patch": {
+   "activated_at_import": false,
+   "activated_runs": 700,
+   "changed_runs": 677,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "05-fennel.patch": {
+   "activated_at_import": false,
+   "activated_runs": 157,
+   "changed_runs": 150,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "06-harbor.patch": {
+   "activated_at_import": false,
+   "activated_runs": 134,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "07-cobalt.patch": {
+   "activated_at_import": false,
+   "activated_runs": 693,
+   "changed_runs": 2,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "08-thistle.patch": {
+   "activated_at_import": false,
+   "activated_runs": 697,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "09-saffron.patch": {
+   "activated_at_import": false,
+   "activated_runs": 6,
+   "changed_runs": 2,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   },
+   "generic": {
+    "detected_fixed": true,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   },
+   "harm_added": 1,
+   "harmful_runs": 1,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   }
+  },
+  "10-garnet.patch": {
+   "activated_at_import": false,
+   "activated_runs": 700,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 1,
+    "harmful_runs_flagged_pre": 1,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   },
+   "harm_added": 1,
+   "harmful_runs": 1,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   }
+  },
+  "11-ember.patch": {
+   "activated_at_import": false,
+   "activated_runs": 4,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "12-willow.patch": {
+   "activated_at_import": false,
+   "activated_runs": 700,
+   "changed_runs": 143,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "13-basalt.patch": {
+   "activated_at_import": false,
+   "activated_runs": 2,
+   "changed_runs": 2,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "14-juniper.patch": {
+   "activated_at_import": false,
+   "activated_runs": 153,
+   "changed_runs": 21,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 1,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 1
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 1,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 1
+   },
+   "harm_added": 1,
+   "harmful_runs": 1,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 1,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 1
+   }
+  },
+  "15-kestrel.patch": {
+   "activated_at_import": false,
+   "activated_runs": 3,
+   "changed_runs": 3,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "16-lichen.patch": {
+   "activated_at_import": false,
+   "activated_runs": 10,
+   "changed_runs": 10,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "17-meadow.patch": {
+   "activated_at_import": false,
+   "activated_runs": 10,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   },
+   "harm_added": 1,
+   "harmful_runs": 1,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 1,
+    "harmful_runs_silent": 1
+   }
+  },
+  "18-nimbus.patch": {
+   "activated_at_import": false,
+   "activated_runs": 4,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "19-oriole.patch": {
+   "activated_at_import": false,
+   "activated_runs": 700,
+   "changed_runs": 8,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "20-pumice.patch": {
+   "activated_at_import": false,
+   "activated_runs": 700,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "21-quartz.patch": {
+   "activated_at_import": false,
+   "activated_runs": 47,
+   "changed_runs": 35,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "22-rowan.patch": {
+   "activated_at_import": false,
+   "activated_runs": 693,
+   "changed_runs": 6,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": true,
+    "detected_generator": true,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "23-sorrel.patch": {
+   "activated_at_import": false,
+   "activated_runs": 700,
+   "changed_runs": 77,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 1,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 1
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 1,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 1
+   },
+   "harm_added": 1,
+   "harmful_runs": 1,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 1,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 1
+   }
+  },
+  "24-tundra.patch": {
+   "activated_at_import": true,
+   "activated_runs": 700,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  },
+  "25-umber.patch": {
+   "activated_at_import": false,
+   "activated_runs": 10,
+   "changed_runs": 1,
+   "changed_runs_without_hit": 0,
+   "full": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "generic": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   },
+   "harm_added": 0,
+   "harmful_runs": 0,
+   "reproduces_frozen": true,
+   "solver": {
+    "detected_fixed": false,
+    "detected_generator": false,
+    "harmful_runs_fixed": 0,
+    "harmful_runs_flagged": 0,
+    "harmful_runs_flagged_pre": 0,
+    "harmful_runs_generator": 0,
+    "harmful_runs_silent": 0
+   }
+  }
+ },
+ "fresh_model_calls": 0,
+ "frozen_source": "results/fault_trial_r2.json",
+ "note": "per-run rerun; checks still run as monitors after each run",
+ "post_hoc": true,
+ "round": 2
+}

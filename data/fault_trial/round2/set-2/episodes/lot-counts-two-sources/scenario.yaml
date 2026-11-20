@@ -1,0 +1,28 @@
+id: EP-LOT-COUNTS-TWO-SOURCES
+title: Warehouse count for lot L1 and supplier ASN for lot L2 on the same day
+model: lot_allocation
+interpreter_version: "fixture:inventory-notices@1"
+source_priority: {"email:warehouse": 2, "portal:supplier": 1}
+world:
+  period: 42
+  demand: 800
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-count-l1, t: 2, kind: message, source: "email:warehouse",
+     text: "Cycle count done: lot L1 has 450 units on hand.",
+     fixture: fixtures/count_l1.json}
+  - {id: msg-asn-l2, t: 3, kind: message, source: "portal:supplier",
+     text: "ASN 88213 update: lot L2 quantity 280 units after short shipment.",
+     fixture: fixtures/asn_l2.json}
+  - {t: 4, kind: decide}
+trial:
+  gate: nominal
+  resolution: priority
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

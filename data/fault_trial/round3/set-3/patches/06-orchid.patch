@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/store.py b/src/dsoi/store.py
+index 5c8c2cb..32db88a 100644
+--- a/src/dsoi/store.py
++++ b/src/dsoi/store.py
+@@ -59,7 +59,7 @@ class BitemporalStore:
+                 if f.vt[0] < vt[0]:
+                     remainder.append(replace(f, vt=(f.vt[0], vt[0]), tt=(t, math.inf)))
+                 if vt[1] < f.vt[1]:
+-                    remainder.append(replace(f, vt=(vt[1], f.vt[1]), tt=(t, math.inf)))
++                    remainder.append(replace(f, vt=(vt[1] - 1, f.vt[1]), tt=(t, math.inf)))
+         self._facts.extend(remainder)
+ 
+     # -- reads ------------------------------------------------------------------

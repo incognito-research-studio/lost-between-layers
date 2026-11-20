@@ -1,0 +1,36 @@
+# S8 (artifact extension, not in Table IV): uncertainty in the coefficients.
+# One interpreted quantity, units per pallet, multiplies both pallet flows in the
+# DC space row with opposite signs. The box gate treats the two coefficients as
+# independent and is conservative (Sec. VI, second caveat); the state-vertex gate
+# keeps them linked. With space_rule "exactly", the space row is an equality and
+# no plan is robust to the interval (Sec. VI, first caveat).
+id: S8
+title: Pallet configuration change
+status: implemented
+model: warehouse_flow
+interpreter_version: "fixture:s8@1"
+
+world:
+  dc: D1
+  period: 42
+  erp_source_id: "erp:wms"
+  units_per_pallet: 50     # ERP master before the change
+  free_space: 500          # units of free floor space this week
+  in_max: 100              # pallets the plant can send
+  out_max: 60              # pallets the stores can take
+  store_demand: 2400       # units the stores need
+  space_rule: at_most      # at_most | exactly
+  truth: {units_per_pallet: 46.5}   # S*: about 7% fewer, inside the reported [43, 47]
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-pallets, t: 2, kind: message, source: "email:logistics",
+     text: "From this week, the new pallet configuration holds about 10% fewer units per pallet.",
+     fixture: fixtures/correct.json}
+  - {t: 3, kind: decide}
+
+required_response: "Re-plan pallet flows; stay within DC space and cover store demand"
+analytic_measure: "Released flows satisfy the space and store rows for every value in the reported interval"
+depends_on: [L1, L4, L5, "Cor. 2", "Prop. 3(b)"]
+risk: "Conservatism from correlated coefficients; empty robust set under an equality"

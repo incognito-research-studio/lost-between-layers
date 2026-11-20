@@ -1,0 +1,40 @@
+{
+ "replies": 1260,
+ "case_repeats": 1176,
+ "snapshot_mismatches": 0,
+ "abstained_flag_mismatches_vs_rows_csv": 0,
+ "contract_reason_examples": [
+  [
+   "postcondition: point outside reported interval: {'op': 'assert', 'subject': 'plant:X', 'pr",
+   4
+  ],
+  [
+   "postcondition: span not found in message: 'plant:X currently recorded at nominal capacity ",
+   2
+  ],
+  [
+   "postcondition: span not found in message: 'Nominal capacity: 1000 units per week for each ",
+   2
+  ],
+  [
+   "postcondition: point outside reported interval: {'op': 'assert', 'subject': 'plant:Y', 'pr",
+   2
+  ],
+  [
+   "empty delta",
+   1
+  ],
+  [
+   "postcondition: span not found in message: 'Current state: plant:X currently recorded: week",
+   1
+  ],
+  [
+   "postcondition: span not found in message: 'Plant X currently recorded: week 46: 600 [580, ",
+   1
+  ],
+  [
+   "postcondition: span not found in message: 'Currently recorded at nominal capacity in every",
+   1
+  ]
+ ]
+}

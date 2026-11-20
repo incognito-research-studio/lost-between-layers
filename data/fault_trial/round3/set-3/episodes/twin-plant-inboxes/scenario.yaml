@@ -1,0 +1,27 @@
+id: EP-twin-plant-inboxes
+title: Two equally ranked plant inboxes; the later message confirms a lower figure
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {"email:plant-x-ops": 1, "email:plant-x-scheduling": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-x-ops, t: 2, kind: message, source: "email:plant-x-ops",
+     text: "Plant X: capacity about 700 units per week in weeks 42-44 while the new line is commissioned.",
+     fixture: fixtures/ops.json}
+  - {id: msg-x-sched, t: 3, kind: message, source: "email:plant-x-scheduling",
+     text: "Plant X scheduling: confirmed capacity for weeks 42-44 is 600 units per week.",
+     fixture: fixtures/scheduling.json}
+  - {t: 4, kind: decide}
+trial:
+  gate: nominal
+  resolution: priority
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

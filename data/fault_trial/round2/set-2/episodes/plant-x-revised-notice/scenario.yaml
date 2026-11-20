@@ -1,0 +1,29 @@
+id: EP-PLANT-X-REVISED-NOTICE
+title: Shift lead's estimate revised by the planning office
+model: capacity_plan
+interpreter_version: "fixture:plant-notices@1"
+source_priority: {"email:": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {43: 680, 44: 680}
+times: {erp_load: 1}
+events:
+  - {id: msg-shift, t: 2, kind: message, source: "email:shift-lead",
+     text: "Plant X: two operators out sick, I expect roughly 750 units per week in weeks 43-44.",
+     fixture: fixtures/shift.json}
+  - {t: 3, kind: decide}
+  - {id: msg-office, t: 4, kind: message, source: "email:planning-office",
+     text: "Revised figure after the staffing review: Plant X capacity for weeks 43-44 is 680 units per week.",
+     fixture: fixtures/office.json}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  resolution: priority
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,45 @@
+# A planner notice cuts Plant X weeks 42-43 by about 40%; a plan is released on it.
+# Two days later the same inbox corrects the size of the cut (about 25%, not 40%)
+# for the same weeks. The correction is legitimate: L3 supersedes the valid time the
+# first notice covered, the next cycle re-plans, and an as-of query at t = 3 still
+# returns the first notice's reading.
+id: NEG-01
+title: Late correction of the size of a capacity cut
+status: negative
+model: capacity_plan
+interpreter_version: "fixture:neg01@1"
+source_priority: {"email:planner-inbox": 1}
+
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 750, 43: 750}   # the corrected cut is the true one
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-notice, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 40% for weeks 42-43 while line 2 is retooled.",
+     fixture: fixtures/notice.json}
+  - {t: 3, kind: decide}
+  - {id: msg-correction, t: 5, kind: message, source: "email:planner-inbox",
+     text: "Correction to Monday's notice: the reduction at Plant X for weeks 42-43 is about 25%, not 40%. Line 2 keeps one shift during retooling.",
+     fixture: fixtures/correction.json}
+  - {t: 6, kind: decide}
+
+trial:
+  gate: box_robust
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}
+
+required_response: "Supersede weeks 42-43 with the corrected reading; re-plan; keep the earlier view"
+expected:
+  release_t3: {41: 1000, 42: 550, 43: 550, 44: 1000, 45: 1000}
+  release_t6: {41: 1000, 42: 700, 43: 700, 44: 1000, 45: 1000}
+  asof_t3_after_correction: {42: [600, 550, 650], 43: [600, 550, 650]}

@@ -1,0 +1,9 @@
+{
+  "interpreter_version": "fixture:inventory-notices@1",
+  "conf": 0.92,
+  "output": {"kind": "delta", "ops": [
+    {"op": "supersede", "subject": "lot:L2", "predicate": "hold",
+     "value": 0.5, "lo": null, "hi": null, "unit": "",
+     "valid_from": 42, "valid_to": 43,
+     "span_text": "half of lot L2 is on hold"}]}
+}

@@ -1,0 +1,55 @@
+{
+ "descriptive_only": true,
+ "note": "checks that newly fire on patches inert under the extended effect trace (deviation 1); not counted as detections",
+ "patches": {
+  "01-lantern.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  },
+  "03-quartz.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  },
+  "08-orchid.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  },
+  "11-walnut.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  },
+  "12-juniper.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  },
+  "15-compass.patch": {
+   "checks": [
+    "C2"
+   ],
+   "example_runs": [
+    "scenarios/02-S1-recheck"
+   ],
+   "runs_with_new_firings": 1
+  },
+  "19-garnet.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  },
+  "23-kettle.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  },
+  "24-lagoon.patch": {
+   "checks": [],
+   "example_runs": [],
+   "runs_with_new_firings": 0
+  }
+ }
+}

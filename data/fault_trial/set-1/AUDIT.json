@@ -1,0 +1,30 @@
+{
+ "absolute_paths_outside_sandbox": [],
+ "audited": "tool-call inputs of the fault-generation agent (Bash, Read, Edit, Write)",
+ "by_tool": {
+  "Bash": 69,
+  "Edit": 52,
+  "Read": 1,
+  "SubagentHandback": 1,
+  "Write": 33
+ },
+ "note": "inputs only; the agent's final report gave counts and the manifest SHA-256 only",
+ "pattern_hits": {
+  "ft_ tools": 0,
+  "home directory": 0,
+  "l5_monitors": 0,
+  "mdpi-paper": 0,
+  "parent directory": 0,
+  "project repository path": 0,
+  "properties.py": 0,
+  "replication-package": 0,
+  "results/": 0,
+  "review files": 0,
+  "tests/": 0,
+  "tools/": 0,
+  "trace.py": 0,
+  "web": 0
+ },
+ "tool_calls": 156,
+ "transcript_sha256": "03730a603d8b77b5cff46b398d4d651de2e32805f9931cf3b5b74d1caf74607b"
+}

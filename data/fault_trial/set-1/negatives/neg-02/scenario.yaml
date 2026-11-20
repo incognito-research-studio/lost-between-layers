@@ -1,0 +1,45 @@
+# A planner notice cuts Plant X weeks 42-44 by about 30%. After the plant files its
+# revised capacity, the capacity master records 650 units per week for the same weeks.
+# The planner inbox ranks above the master (source_priority), so under the rank alone
+# the notice would keep winning; this deployment declares that a newer authenticated
+# record supersedes a notice (supersession: authenticated_latest), so the master value
+# is the one planned on from t = 4.
+id: NEG-02
+title: Capacity master restates weeks a planner notice reduced
+status: negative
+model: capacity_plan
+interpreter_version: "fixture:neg02@1"
+source_priority: {"email:planner-inbox": 1}
+
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 650, 43: 650, 44: 650}
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-notice, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X update: capacity reduced by about 30% for weeks 42-44.",
+     fixture: fixtures/notice.json}
+  - {t: 3, kind: decide}
+  - {id: rec-master, t: 4, kind: record, source: "erp:capacity-master",
+     ops: [{op: assert, subject: "plant:X", predicate: capacity, value: 650,
+            unit: "units/week", valid_from: 42, valid_to: 45}]}
+  - {t: 5, kind: decide}
+
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: authenticated_latest
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}
+
+required_response: "The newer authenticated master record displaces the notice for weeks 42-44"
+expected:
+  release_t3: {41: 1000, 42: 700, 43: 700, 44: 700, 45: 1000}
+  release_t5: {41: 1000, 42: 650, 43: 650, 44: 650, 45: 1000}

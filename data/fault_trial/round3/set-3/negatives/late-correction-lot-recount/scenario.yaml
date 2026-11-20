@@ -1,0 +1,28 @@
+id: NEG-late-correction-lot-recount
+title: A lot count is corrected after the allocation was released
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 900
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-l1-count, t: 2, kind: message, source: "email:warehouse",
+     text: "Lot L1 count after picking: 450 units.",
+     fixture: fixtures/count.json}
+  - {t: 3, kind: decide}
+  - {id: msg-l1-recount, t: 5, kind: message, source: "email:warehouse",
+     text: "Correction to this morning's count: lot L1 has 470 units; one pallet was miscounted.",
+     fixture: fixtures/recount.json}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

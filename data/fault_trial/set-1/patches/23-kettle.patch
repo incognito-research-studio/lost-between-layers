@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l5_gate.py b/src/dsoi/layers/l5_gate.py
+index 12857dd..5649262 100644
+--- a/src/dsoi/layers/l5_gate.py
++++ b/src/dsoi/layers/l5_gate.py
+@@ -167,7 +167,7 @@ class StateVertexGate:
+                         formulation: Formulation) -> LPInstance:
+         keys = {k for r in inst.system.rows for k in r.keys}
+         uncertain = [(i, e) for i, e in enumerate(ctx.state)
+-                     if e[0] in keys and e[2] is not None and e[2] != e[3]]
++                     if e[0] in keys and e[2] is not None and e[1] != e[3]]
+         if len(uncertain) > self.max_keys:
+             raise ValueError(f"{len(uncertain)} interval-valued keys: 2^k vertices is too many")
+         rows = []

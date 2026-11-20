@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l1_interpreter.py b/src/dsoi/layers/l1_interpreter.py
+index 2d13bac..df0c9a9 100644
+--- a/src/dsoi/layers/l1_interpreter.py
++++ b/src/dsoi/layers/l1_interpreter.py
+@@ -113,7 +113,7 @@ def _parse_op(raw: dict, message: Message, schema: InterpreterSchema, nu_i: str)
+         span=Span(message.message_id, start, start + len(span_text)),
+     )
+     kind = OpKind(raw["op"])
+-    vt = (float(raw["valid_from"]), float(raw["valid_to"]))
++    vt = (float(raw["valid_from"]), float(raw["valid_to"]) + 1)  # valid_to names the last week
+     if not (math.isfinite(vt[0]) and vt[0] < vt[1]):
+         return Abstain(f"postcondition: empty or invalid valid time: {raw}")
+     value = None

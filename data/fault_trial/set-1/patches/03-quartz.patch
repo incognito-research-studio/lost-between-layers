@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l6_audit.py b/src/dsoi/layers/l6_audit.py
+index 2473044..784e638 100644
+--- a/src/dsoi/layers/l6_audit.py
++++ b/src/dsoi/layers/l6_audit.py
+@@ -165,7 +165,7 @@ class AuditLog:
+         entries += [{"message": key, "value": value}
+                     for key, value in sorted(self.messages.items())]
+         entries += [{"ingest": asdict(rec)} for rec in self.ingests]
+-        entries += [{"approval": event} for event in self.approvals]
++        entries += [{"approval": event} for event in self.approvals if event.get("authenticated")]
+         head = GENESIS
+         temporary = None
+         try:

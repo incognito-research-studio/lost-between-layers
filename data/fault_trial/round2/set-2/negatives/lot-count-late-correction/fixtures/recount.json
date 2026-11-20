@@ -1,0 +1,9 @@
+{
+  "interpreter_version": "fixture:inventory-notices@1",
+  "conf": 0.95,
+  "output": {"kind": "delta", "ops": [
+    {"op": "supersede", "subject": "lot:L2", "predicate": "qty",
+     "value": 290, "lo": null, "hi": null, "unit": "",
+     "valid_from": 42, "valid_to": 43,
+     "span_text": "lot L2 has 290 units"}]}
+}

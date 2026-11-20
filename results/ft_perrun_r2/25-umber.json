@@ -1,0 +1,419 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l2_procedural.py": [
+   165,
+   166
+  ]
+ },
+ "import_hits": [],
+ "patch": "25-umber.patch",
+ "runs": {
+  "episodes/lot-counts-two-sources": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l1-approval-shift-end": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l1-replan-same-approval": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l2-approval-only": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l2-partial-hold-email": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         300.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        500.0,
+        300.0
+       ],
+       "x_released": [
+        500.0,
+        300.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       1,
+       1
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        500.0,
+        300.0
+       ],
+       [
+        500.0,
+        300.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.5,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         300.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        500.0,
+        150.0
+       ],
+       "x_released": [
+        500.0,
+        150.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        500.0,
+        150.0
+       ],
+       [
+        500.0,
+        150.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/supplier-s2-probation": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "scenarios/03-S2-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    3,
+    3
+   ],
+   "world": "fixed"
+  },
+  "scenarios/04-S3-recheck": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "scenarios/05-S3-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "scenarios/08-S5-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:166"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  }
+ }
+}

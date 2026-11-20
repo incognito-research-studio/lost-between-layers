@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l6_audit.py b/src/dsoi/layers/l6_audit.py
+index 2473044..847d356 100644
+--- a/src/dsoi/layers/l6_audit.py
++++ b/src/dsoi/layers/l6_audit.py
+@@ -245,7 +245,7 @@ def _op(d: dict) -> Op:
+     o = d["o"]
+     return Op(OpKind(d["kind"]), d["s"], d["p"], tuple(d["vt"]),
+               Provenance(**{**prov, "span": None if span is None else Span(**span)}),
+-              Quantity(**o) if isinstance(o, dict) else o)
++              Quantity(float(o["value"]), unit=o.get("unit", "")) if isinstance(o, dict) else o)
+ 
+ 
+ def _tuples(v):

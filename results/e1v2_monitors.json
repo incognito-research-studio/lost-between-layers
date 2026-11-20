@@ -1,0 +1,65 @@
+{
+ "llama3.1:8b": {
+  "case_repeats": 224,
+  "monitors": {
+   "C1": 0,
+   "G1": 0,
+   "G2": 0,
+   "K-prop": 0,
+   "R2": 0,
+   "audit": 0,
+   "committed_unread": 3,
+   "exec_fidelity": 0,
+   "shadowed": 0,
+   "version_refusal": 0
+  },
+  "outcomes": {
+   "abstained": 185,
+   "crashed": 0,
+   "released": 224,
+   "violation": 145
+  }
+ },
+ "phi4:latest": {
+  "case_repeats": 224,
+  "monitors": {
+   "C1": 0,
+   "G1": 0,
+   "G2": 0,
+   "K-prop": 0,
+   "R2": 0,
+   "audit": 0,
+   "committed_unread": 22,
+   "exec_fidelity": 0,
+   "shadowed": 0,
+   "version_refusal": 0
+  },
+  "outcomes": {
+   "abstained": 156,
+   "crashed": 0,
+   "released": 217,
+   "violation": 113
+  }
+ },
+ "qwen2.5:7b-instruct": {
+  "case_repeats": 224,
+  "monitors": {
+   "C1": 0,
+   "G1": 0,
+   "G2": 0,
+   "K-prop": 0,
+   "R2": 0,
+   "audit": 0,
+   "committed_unread": 3,
+   "exec_fidelity": 0,
+   "shadowed": 0,
+   "version_refusal": 0
+  },
+  "outcomes": {
+   "abstained": 217,
+   "crashed": 0,
+   "released": 224,
+   "violation": 172
+  }
+ }
+}

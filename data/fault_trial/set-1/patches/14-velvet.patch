@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l5_gate.py b/src/dsoi/layers/l5_gate.py
+index 12857dd..c1ef1e3 100644
+--- a/src/dsoi/layers/l5_gate.py
++++ b/src/dsoi/layers/l5_gate.py
+@@ -254,7 +254,7 @@ class RecheckGate:
+         return f"{self.rung}/{self.fallback}/decimals={self.decimals}"
+ 
+     def apply(self, x, inst, ctx, formulation) -> GateResult:
+-        keys = sorted({k for r in inst.system.rows for k in r.keys})
++        keys = sorted({r.keys[0] for r in inst.system.rows if r.keys})
+         reread = {k: round(float(self.read_true(k)), self.decimals) for k in keys}
+         state = tuple(
+             (key, reread[key], None, None, unit) if key in reread else (key, v, lo, hi, unit)

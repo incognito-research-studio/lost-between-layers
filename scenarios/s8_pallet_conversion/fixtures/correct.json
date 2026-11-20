@@ -1,0 +1,20 @@
+{
+  "interpreter_version": "fixture:s8@1",
+  "output": {
+    "kind": "delta",
+    "ops": [
+      {
+        "op": "supersede",
+        "subject": "dc:D1",
+        "predicate": "units_per_pallet",
+        "value": 45,
+        "lo": 43,
+        "hi": 47,
+        "unit": "units/pallet",
+        "valid_from": 42,
+        "valid_to": 43,
+        "span_text": "holds about 10% fewer units per pallet"
+      }
+    ]
+  }
+}

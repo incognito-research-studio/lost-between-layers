@@ -1,0 +1,14 @@
+diff --git a/src/dsoi/layers/l1_interpreter.py b/src/dsoi/layers/l1_interpreter.py
+index 2d13bac..222e999 100644
+--- a/src/dsoi/layers/l1_interpreter.py
++++ b/src/dsoi/layers/l1_interpreter.py
+@@ -91,7 +91,8 @@ def parse_output(
+         ops.append(op)
+     if not ops:
+         return Abstain("empty delta")
+-    return Delta(tuple(ops))
++    unique = {(op.s, op.p): op for op in ops}  # drop repeated assertions
++    return Delta(tuple(unique.values()))
+ 
+ 
+ def _parse_op(raw: dict, message: Message, schema: InterpreterSchema, nu_i: str) -> Op | Abstain:

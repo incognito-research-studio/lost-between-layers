@@ -1,0 +1,120 @@
+{
+ "models": {
+  "llama3.1:8b": {
+   "abstained": 139,
+   "answered": 37,
+   "answered_covered": 9,
+   "coverage_stated": [
+    4,
+    12
+   ],
+   "error_stated": [
+    0,
+    0
+   ],
+   "n": 176,
+   "quiet_ok": [
+    48,
+    48,
+    48
+   ],
+   "rows_changed": {
+    "covered_stated": 8,
+    "scope_exact": 22,
+    "violation_point": 19,
+    "violation_stated": 21
+   },
+   "scope_exact": [
+    3,
+    25
+   ],
+   "snapshot_mismatches": 0,
+   "violation_point": [
+    171,
+    152
+   ],
+   "violation_stated": [
+    171,
+    150
+   ]
+  },
+  "phi4:latest": {
+   "abstained": 121,
+   "answered": 55,
+   "answered_covered": 38,
+   "coverage_stated": [
+    9,
+    42
+   ],
+   "error_stated": [
+    7,
+    7
+   ],
+   "n": 176,
+   "quiet_ok": [
+    48,
+    48,
+    48
+   ],
+   "rows_changed": {
+    "covered_stated": 33,
+    "scope_exact": 38,
+    "violation_point": 33,
+    "violation_stated": 34
+   },
+   "scope_exact": [
+    21,
+    59
+   ],
+   "snapshot_mismatches": 0,
+   "violation_point": [
+    161,
+    128
+   ],
+   "violation_stated": [
+    160,
+    126
+   ]
+  },
+  "qwen2.5:7b-instruct": {
+   "abstained": 172,
+   "answered": 4,
+   "answered_covered": 4,
+   "coverage_stated": [
+    0,
+    4
+   ],
+   "error_stated": [
+    0,
+    0
+   ],
+   "n": 176,
+   "quiet_ok": [
+    48,
+    48,
+    48
+   ],
+   "rows_changed": {
+    "covered_stated": 4,
+    "scope_exact": 4,
+    "violation_point": 4,
+    "violation_stated": 4
+   },
+   "scope_exact": [
+    0,
+    4
+   ],
+   "snapshot_mismatches": 0,
+   "violation_point": [
+    176,
+    172
+   ],
+   "violation_stated": [
+    176,
+    172
+   ]
+  }
+ },
+ "note": "    uv run python tools/e1v2_shadowing.py Found on 3 Nov 2026 (data/e1v2/DEVIATIONS.md, item 6). A single-source notice reaches L3 from `email:e1`, which has no entry in the study's source priorities, so it ranks 0, as does the authenticated capacity master. An interpreted `assert` adds a fact beside the master's without closing it (Definition 3), and L3's `resolve` then prefers the authenticated master: the reading is committed but never read. Only `supersede`, or `retract` before `assert`, replaces the master's value, and the prompt does not say so. Conflict cases are unaffected, since their sources rank 1 and 2.",
+ "post_hoc": true
+}

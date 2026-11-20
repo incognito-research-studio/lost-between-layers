@@ -1,0 +1,13 @@
+# S4: the planner's estimate (point + interval) and the supplier portal's exact
+# figure contradict each other. The portal is sometimes outdated: it then reports
+# an older, smaller cut. Arrival order is random. Illustrative parameters.
+name: sim_s4
+scenario: S4
+seed: 4
+runs: 300
+true_reduction: [0.20, 0.40]
+portal_stale_reduction: [0.0, 0.15]
+grid:
+  portal_error_rate: [0.0, 0.05, 0.1, 0.2, 0.3]
+  planner_sd: [0.02, 0.05]
+  planner_half_width: [0.05]

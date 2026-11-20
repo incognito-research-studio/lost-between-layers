@@ -1,0 +1,27 @@
+id: EP-approval-lapsed-before-replan
+title: Lot release approval lapses before the plan is re-run
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 700
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 400, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {t: 2, kind: decide}
+  - {t: 3, kind: approval, approval_id: apr-qa-L1-0412, approval_kind: lot-release,
+     variable: "x[L1]", approver: qa.manager, source: "idp:qa-approvals", expires_at: 5}
+  - {id: msg-l2-recount, t: 5.5, kind: message, source: "email:warehouse",
+     text: "Recount of lot L2 after the pallet damage: 280 units usable.",
+     fixture: fixtures/recount.json}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: [{kind: lot-release, variable: "x[L1]", approvers: [qa.manager]}]
+  declared_versions: []
+  system_of_record: {}

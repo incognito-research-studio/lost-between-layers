@@ -1,0 +1,7 @@
+{
+  "interpreter_version": "fixture:s3@1",
+  "output": {
+    "kind": "abstain",
+    "reason": "no state change recognized"
+  }
+}

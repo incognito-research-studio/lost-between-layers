@@ -1,0 +1,321 @@
+item,message,snapshot,reason,code,misread (yes/no),notes
+1,The cafeteria at the Northfield plant closes early on Friday.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide any information about the capacity of the plant. Closing the cafeteria early on Friday does not directly impact the production capacity of the plant in terms of units per week, so no relevant state change can be asserted based on the given message and ruleset. There is a",,,
+2,The Northfield plant capacity is reduced by 30% for weeks 44 to 47.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",Cannot determine scope of message (Northfield or Riverside plant?),,,
+3,The Northfield plant can produce at most 850 units per week for weeks 45 to 48.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies a maximum production capacity, but the schema allows only for asserting 'capacity' as a current state, not a limit or maximum. The message does not align with the type of capacity assertion allowed in the schema, which requires a definitive value without conditions or limits. A",,,
+4,Supplier portal: confirmed capacity at the Northfield plant for weeks 44 to 47 is 730 units per week.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","Message does not explicitly state scope of 'the Northfield plant', which could refer to 'plant:X' or 'plant:Y' (both are called Northfield). Please clarify the scope in the message.",,,
+5,Plant X's parking lot will be resurfaced in week 46.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",Message does not mention capacity or any allowed predicates,,,
+6,Expect some disruption at the Northfield plant soon; details to follow.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide specific changes to capacity or other quantifiable state changes. It only mentions an expectation of disruption without details, so no predicates can be asserted accurately based on the given information.",,,
+7,Plant X capacity will fall by at least 35% for the four weeks starting week 45.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",Unable to determine capacity change for plant:Y as it is not mentioned in the message,,,
+8,Plant X capacity will fall by at least 15% for weeks 44 through 46.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","Message mentions 'Plant X' but also 'Plant X capacity', which could refer to either the plant or its capacity. The allowed subjects are 'plant:X' or 'plant:Y'.",,,
+9,The Northfield plant update: capacity reduced by roughly 25% for weeks 46 through 48.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","Unable to determine scope of plant update; assuming Northfield plant refers to plant:X. If incorrect, please verify.",,,
+10,"This is week 40. Starting next week, the Northfield plant will run 15% below normal capacity for 3 weeks.","- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies a capacity reduction for the Northfield plant starting in week 41. However, it does not provide a specific capacity value or interval for the reduction, nor does it specify the exact weeks other than 'starting next week for 3 weeks'. The message also does not clarify if the 15%",,,
+11,Supplier portal: confirmed capacity at Plant X for week 45 is 650 units per week.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",Unable to determine subject from message,,,
+12,Reminder: safety training for all Plant X staff is due by week 46.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide information related to the allowed predicates ('capacity') or subjects ('plant:X', 'plant:Y'). It only mentions a safety training deadline for Plant X staff, which is outside the scope of capacity changes for the planning system.",,,
+13,Supplier portal: confirmed capacity at the Northfield plant for weeks 43 to 46 is 830 units per week.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded: week 40: 1000 [1000, 1000]; week 41: 1000 [1000, 1000]; week 42: 1000 [1000, 1000]; week 43: 850 [800, 900]; week 44: 850 [800, 900]; week 45: 850 [800, 900]; week 46: 850 [800, 900]; week 47: 1000 [1000, 1000]; week 48: 1000 [1000, 1000]; week 49: 1000 [1000, 1000]; other weeks nominal.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies a capacity change for the Northfield plant, which corresponds to plant:X, but does not provide an interval [lo, hi]. The change is a fixed value of 830 units per week, which does not allow for the creation of an interval as required by the rules. Furthermore, the current state,",,,
+14,Capacity at the Northfield plant will be somewhat lower in the coming weeks.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide specific quantitative details or a defined time frame for the change in capacity at the Northfield plant. Without a precise value or range for the capacity reduction or a specific planning week interval, it's not possible to assert a state change for plant:X within the 7",,,
+15,Plant X output drops by 80 units per working day for W47 (five working days per week).,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","Message mentions specific days, not planning weeks. Need more context to translate to planning weeks.",,,
+16,Plant X output drops by 30 units per working day for the four weeks starting week 45 (five working days per week).,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message provides a daily reduction in output, but the current state only includes weekly capacity values. To convert the daily reduction to a weekly reduction, we need to multiply by the number of working days per week. The message specifies a reduction of 30 units per working day for a five-day",,,
+17,Reminder: safety training for all the Northfield plant staff is due by week 45.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide any information about capacity changes or state transitions that can be directly translated into a typed state change. It only mentions a reminder for safety training, which is outside the scope of capacity changes in the planning system context provided here.",,,
+18,The cafeteria at Plant X closes early on Friday.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",The message does not provide any information relevant to the capacity of the plants. Closing the cafeteria early on Friday is an operational detail that does not impact the production capacity recorded in the planning system for weeks 40-49 for both Plant X and Plant Y. There is no predicate or data,,,
+19,The cafeteria at the Northfield plant closes early on Friday.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide any information about the capacity of the plant. Closing the cafeteria early on Friday is an operational detail and does not affect the production capacity of the plant for planning purposes. Therefore, no state change can be asserted based on this message alone.",,,
+20,The cafeteria at the Northfield plant closes early on Friday.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide any information relevant to the capacity of the plant. Closing the cafeteria early on Friday does not affect the production capacity of the plant in terms of units per week, and therefore does not constitute a state change that can be asserted in the planning system. The",,,
+21,Expect some disruption at Plant X soon; details to follow.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide specific details or quantifiable information regarding the capacity change at Plant X. It only mentions an expectation of disruption without specifying the nature or extent of the impact on capacity. Therefore, it is not possible to assert any changes to the 'capacity'. ",,,
+22,Reminder: safety training for all Plant X staff is due by week 43.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",The message pertains to safety training and does not provide information relevant to the capacity of plant:X or plant:Y. No capacity-related data is available to assert changes in the planning system's state.,,,
+23,Reminder: safety training for all Plant X staff is due by week 46.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide any information that can be directly translated into a capacity change. It is a reminder for safety training and does not impact the production capacity of the plants in the given scope and timeframe. Therefore, no action can be inferred from the provided text according,",,,
+24,Plant X output drops by 30 units per working day for week 43 (five working days per week).,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",Unknown capacity reduction mechanism and no explicit capacity reduction value provided,,,
+25,The Northfield plant output drops by 30 units per working day for W42 (five working days per week).,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies a daily reduction in output, but the current state records capacity on a weekly basis. The conversion from daily to weekly units requires assumptions about the number of working days per week, which is not explicitly stated in the current state. Without this information, the bi",,,
+26,Expect some disruption at the Northfield plant soon; details to follow.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",The message does not provide specific changes to the capacity or any exact dates and details that could be converted into state changes. It only mentions an expectation of disruption without giving a clear scope or timeframe for the change in capacity or operations at the Northfield plant (plant:X).,,,
+27,Plant X output drops by 40 units per working day for W47 (five working days per week).,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies a drop in output by units per working day, but the system records capacity in units per week. The conversion from daily to weekly units requires additional information about the exact days involved and the assumption that all weeks have the same number of working days. Without ",,,
+28,Planner note: Plant X will be around 40% down for week 45.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",Unable to determine subject of the message. Please specify 'plant:X' or 'plant:Y'.,,,
+29,Expect some disruption at Plant X soon; details to follow.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide specific information about capacity changes or details regarding the time frame of the disruption at Plant X. Without explicit data on the extent or timing of the capacity change, it is not possible to assert a state change in the planning system for plant:X or plant:Y.\",,,
+30,"Correction to the earlier notice: the 20% capacity cut at Plant X applies to weeks 41-43, not weeks 46 to 48.","- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message corrects a previous notice about a capacity change but does not provide specific new values or intervals for the capacity change at Plant X for weeks 41-43. Without explicit values, I cannot accurately assert the capacity change in the requested format. The message only specifies the rec",,,
+31,Plant X capacity is reduced by 10% for W45-W46; Plant Y loses 10% for W43-W46.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies capacity reductions for specific weeks, but the current state is only valid for planning weeks 40-49. The message does not provide specific values or intervals for the reductions, making it difficult to assert precise changes without further information. Additionally, the exact",,,
+32,Expect some disruption at Plant X soon; details to follow.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide specific details about changes in capacity or timing, only a general notice of expected disruption without quantifiable information or a defined time period. Therefore, it's not possible to assert changes to the 'capacity' predicate for 'plant:X' without further details.",,,
+33,Plant X output drops by 20 units per working day for the three weeks starting week 42 (five working days per week).,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies a drop in output in units per working day, but the system requires capacity changes in units per week. The message does not provide enough information to convert this change accurately to a weekly capacity change without assumptions about the number of working days per week or,",,,
+34,Reminder: safety training for all the Northfield plant staff is due by week 45.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide any information about capacity changes or state transitions that can be directly converted into typed state changes. It only mentions a reminder for safety training, which does not impact the operational capacity of the plant as per the allowed predicates and subjects in",,,
+35,The Northfield plant capacity is reduced by 25% for weeks 41 through 44.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message mentions a specific reduction percentage but does not provide a base capacity for the Northfield plant. The reduction should be calculated from the nominal capacity or a specified different capacity, but without that explicit information, the operation cannot be accurately executed. The ",,,
+36,The cafeteria at Plant X closes early on Friday.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not provide any information about capacity changes. The cafeteria closing early on Friday does not directly relate to the production capacity of the plant for manufacturing purposes within the given scope of the allowed subjects and predicates. Therefore, no state change can be made",,,
+37,The Northfield plant output drops by 40 units per working day for W41-W43 (five working days per week).,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.",Unable to determine plant identifier from text 'The Northfield plant'. Use subject 'plant:X' instead of name 'The Northfield plant'.,,,
+38,Expect some disruption at the Northfield plant soon; details to follow.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message indicates an expected disruption at the Northfield plant but does not provide specific details on how the capacity will be affected, including the magnitude or timing of the disruption. Without these details, it is not possible to assert a change in the capacity state for plant:X. The 'f",,,
+39,The Northfield plant capacity is reduced by 30% for weeks 44-47; the Riverside plant loses 20% for weeks 43 through 45.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message specifies capacity reductions for specific plants over specific weeks, but it does not explicitly state the new capacity values. Without the exact new capacity values, it is not possible to assert the capacity predicates with certainty. The message also does not provide a clear basis for",,,
+40,The Northfield plant can produce at most 650 units per week for weeks 47 to 48.,"- plant:X is Plant X, also called the Northfield plant.
+- plant:Y is Plant Y, also called the Riverside plant.
+- Nominal capacity: 1000 units per week for each plant; planning weeks 40-49.
+- plant:X currently recorded at nominal capacity in every week.
+- plant:Y currently recorded at nominal capacity in every week.
+- Use the subject identifiers above for the plants a message names, by code or by name.
+- Capacity values are units per week: convert percentages and per-day figures to units per week, from the capacity recorded for those weeks.
+- Weeks are planning weeks; weeks a to b means valid_from a and valid_to b + 1.","The message does not explicitly mention 'plant:X' or 'plant:Y', but it seems to refer to 'The Northfield plant'. I will assume it is 'plant:X' as per the allowed subjects, but this is an interpretation and not certain.",,,

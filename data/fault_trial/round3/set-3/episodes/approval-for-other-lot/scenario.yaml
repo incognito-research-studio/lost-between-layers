@@ -1,0 +1,27 @@
+id: EP-approval-for-other-lot
+title: Both lots need release approval; only lot L2 has one
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 800
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {t: 2, kind: approval, approval_id: apr-qa-L2-0414, approval_kind: lot-release,
+     variable: "x[L2]", approver: qa.manager, source: "idp:qa-approvals", expires_at: 10}
+  - {t: 3, kind: decide}
+  - {t: 4, kind: approval, approval_id: apr-qa-L1-0414, approval_kind: lot-release,
+     variable: "x[L1]", approver: qa.manager, source: "idp:qa-approvals", expires_at: 10}
+  - {t: 5, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: [{kind: lot-release, variable: "x[L1]", approvers: [qa.manager]},
+                    {kind: lot-release, variable: "x[L2]", approvers: [qa.manager]}]
+  declared_versions: []
+  system_of_record: {}

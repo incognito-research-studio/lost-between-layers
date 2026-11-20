@@ -1,0 +1,29 @@
+id: EP-PLANT-X-SCOPE-CORRECTION
+title: Planner corrects the week range of a notice after the plan was released
+model: capacity_plan
+interpreter_version: "fixture:plant-notices@1"
+source_priority: {"email:planner-inbox": 1}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {43: 700, 44: 700, 45: 700}
+times: {erp_load: 1}
+events:
+  - {id: msg-outage, t: 2, kind: message, source: "email:planner-inbox",
+     text: "Plant X: the paint shop runs one shift only, capacity about 700 units per week for weeks 42-44.",
+     fixture: fixtures/outage.json}
+  - {t: 3, kind: decide}
+  - {id: msg-outage-corr, t: 5, kind: message, source: "email:planner-inbox",
+     text: "Correction: the single-shift period is weeks 43-45, not 42-44. Week 42 runs at full capacity.",
+     fixture: fixtures/correction.json}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

@@ -1,0 +1,28 @@
+id: EP-PLANT-X-MANAGER-UPDATE
+title: Plant manager's figure against the supplier portal
+model: capacity_plan
+interpreter_version: "fixture:plant-notices@1"
+source_priority: {"email:": 1, "email:plant-x-manager": 3, "portal:supplier": 2}
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  true_capacity: {42: 800, 43: 800, 44: 800}
+times: {erp_load: 1}
+events:
+  - {id: msg-portal, t: 2, kind: message, source: "portal:supplier",
+     text: "Plant X capacity for weeks 42-44: 600 units per week.",
+     fixture: fixtures/portal.json}
+  - {id: msg-manager, t: 3, kind: message, source: "email:plant-x-manager",
+     text: "Line 3 is back after the repair, so Plant X can run 800 units per week in weeks 42-44.",
+     fixture: fixtures/manager.json}
+  - {t: 4, kind: decide}
+trial:
+  gate: nominal
+  resolution: priority
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

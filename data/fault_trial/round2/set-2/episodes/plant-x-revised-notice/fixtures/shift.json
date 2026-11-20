@@ -1,0 +1,9 @@
+{
+  "interpreter_version": "fixture:plant-notices@1",
+  "conf": 0.75,
+  "output": {"kind": "delta", "ops": [
+    {"op": "supersede", "subject": "plant:X", "predicate": "capacity",
+     "value": 750, "lo": 700, "hi": 800, "unit": "units/week",
+     "valid_from": 43, "valid_to": 45,
+     "span_text": "roughly 750 units per week in weeks 43-44"}]}
+}

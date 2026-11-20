@@ -1,0 +1,40 @@
+# E1 v3: phase 3 prospective study (data/e1v3/PREREGISTRATION.md).
+# Frozen by `dsoi-e1v3 freeze` before any study call; `run-claude` and `run` refuse to start
+# if a frozen file has changed since. The pilot (`run-claude --pilot`) uses its own cases,
+# drawn from the token "pilot", and its own store, so it cannot touch the study's cases.
+name: e1v3
+seed_token: DECIDE             # fixed after registration (e.g. the registration's DOI); see PREREGISTRATION.md
+calibration_per_category: 5    # 19 categories -> 95 calibration cases
+test_per_category: 8           # -> 152 test cases
+alpha: 0.1                     # split-conformal target
+arms: [ref, noabs, nosnap, neither]   # 2 x 2: abstain instruction x state snapshot; ref = e1v2's interface
+replicate_share: 0.1           # share of cases sent a second time to single-repeat models (nondeterminism)
+max_attempts: 3                # an errored or expired request is retried up to this many times
+claude:
+  models: [claude-haiku-5-5, claude-sonnet-5-5, claude-opus-5-5]   # cheapest first
+  effort: medium               # decided 8 Nov 2026; part of nu_I
+  max_tokens: 4096             # DECIDE after the pilot: measured output tokens plus margin
+  cache_ttl: 1h
+  budget_usd: 40.0             # DECIDE: the credit available (under $50, 8 Nov 2026)
+  batch_size: 500              # requests per batch; the budget guard checks each batch against real spend
+  repeats:                     # interpreter arms; temperature cannot be set on these models
+    claude-haiku-5-5: 2
+    claude-sonnet-5-5: 2
+    claude-opus-5-5: 1
+  baseline_repeats:            # LLM decides, test cases only
+    claude-haiku-5-5: 2
+    claude-sonnet-5-5: 2
+    claude-opus-5-5: 1
+  variant_repeats:             # equivalent-input variants, reference arm and baseline only
+    claude-haiku-5-5: 1
+    claude-sonnet-5-5: 1
+    claude-opus-5-5: 1
+  prices_usd_per_mtok:         # Claude API reference cached 2026-10-06; confirm before the run
+    claude-haiku-5-5: {input: 0.10, output: 0.50, cache_read: 0.01}
+    claude-sonnet-5-5: {input: 2.00, output: 10.00, cache_read: 0.20}
+    claude-opus-5-5: {input: 4.00, output: 20.00, cache_read: 0.20}
+local:                         # run later on a machine with cooling headroom; no expiry
+  models: [qwen2.5:7b-instruct, llama3.1:8b, phi4:latest]
+  temperature: 0.0
+  repeats: 1                   # plus the replicate share
+  max_tokens: 1024

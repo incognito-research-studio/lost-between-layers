@@ -1,0 +1,133 @@
+{
+ "post_hoc": true,
+ "fresh_model_calls": 0,
+ "split": {
+  "qwen2.5:7b-instruct": {
+   "model_abstention": 172,
+   "l1_rejection_only": 0
+  },
+  "llama3.1:8b": {
+   "model_abstention": 136,
+   "l1_rejection_only": 3
+  },
+  "phi4:latest": {
+   "model_abstention": 116,
+   "l1_rejection_only": 5
+  }
+ },
+ "patterns": {
+  "out_of_scope": "out of scope|outside the scope|not in scope",
+  "ambiguous_scope": "ambiguous about scope|scope is ambiguous|scope of the message is ambiguous",
+  "plant_name_or_subject_list": "northfield|riverside|subject identifier|allowed subjects|not listed as a subject"
+ },
+ "reasons": {
+  "qwen2.5:7b-instruct": {
+   "out_of_scope": 81,
+   "ambiguous_scope": 0,
+   "plant_name_or_subject_list": 33
+  },
+  "llama3.1:8b": {
+   "out_of_scope": 29,
+   "ambiguous_scope": 43,
+   "plant_name_or_subject_list": 46
+  },
+  "phi4:latest": {
+   "out_of_scope": 7,
+   "ambiguous_scope": 2,
+   "plant_name_or_subject_list": 31
+  }
+ },
+ "truth_cells": {
+  "total": 462,
+  "below_nominal": 462,
+  "by_expect_plant": {
+   "change/plant:X": 395,
+   "change/plant:Y": 31,
+   "no_change/plant:Y": 36
+  }
+ },
+ "standing_vs_keep": {
+  "qwen2.5:7b-instruct": [],
+  "llama3.1:8b": [
+   {
+    "case_id": "conflict-003",
+    "repeat": 2,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   },
+   {
+    "case_id": "conflict-005",
+    "repeat": 2,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   },
+   {
+    "case_id": "conflict-006",
+    "repeat": 2,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   }
+  ],
+  "phi4:latest": [
+   {
+    "case_id": "conflict-000",
+    "repeat": 1,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   },
+   {
+    "case_id": "conflict-002",
+    "repeat": 2,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   },
+   {
+    "case_id": "conflict-003",
+    "repeat": 1,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   },
+   {
+    "case_id": "conflict-005",
+    "repeat": 1,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   },
+   {
+    "case_id": "conflict-006",
+    "repeat": 1,
+    "category": "conflict",
+    "abstentions": 1,
+    "rejections": 0,
+    "keep_violates": false,
+    "standing_violates": true
+   }
+  ]
+ },
+ "checks": {
+  "solver": 1,
+  "generic": 4,
+  "full": 13
+ }
+}

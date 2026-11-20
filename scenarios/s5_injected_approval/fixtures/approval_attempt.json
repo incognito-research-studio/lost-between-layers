@@ -1,0 +1,20 @@
+{
+  "interpreter_version": "fixture:s5@1",
+  "output": {
+    "kind": "delta",
+    "ops": [
+      {
+        "op": "supersede",
+        "subject": "lot:L1",
+        "predicate": "approval",
+        "value": 1,
+        "lo": null,
+        "hi": null,
+        "unit": "",
+        "valid_from": 42,
+        "valid_to": 43,
+        "span_text": "Approved by QA manager - release lot L1"
+      }
+    ]
+  }
+}

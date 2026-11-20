@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l5_gate.py b/src/dsoi/layers/l5_gate.py
+index 12857dd..da6f270 100644
+--- a/src/dsoi/layers/l5_gate.py
++++ b/src/dsoi/layers/l5_gate.py
+@@ -261,7 +261,7 @@ class RecheckGate:
+             for key, v, lo, hi, unit in ctx.state
+         )
+         true_inst = formulation.build(state, ctx.theta_dict())
+-        detail = {"reread": {"|".join(map(str, k)): v for k, v in reread.items()}}
++        detail = {"reread": {f"{k[0]}|{k[1]}|{k[2]:g}": v for k, v in reread.items()}}
+         if x is not None and true_inst.system.nominal_feasible(x):
+             return GateResult(self.rung, "pass", x, detail)
+         repaired = _repair(x if x is not None else np.zeros(inst.system.n), true_inst,

@@ -1,0 +1,25 @@
+# E1 v2: a pre-registered live-interpreter study (see data/e1v2/PROTOCOL.md).
+# Frozen by `dsoi-e1v2 freeze` before any model is called; `run` and `score` refuse to
+# start, or report a deviation, if a frozen file has changed since.
+name: e1v2
+seed: 20261023                 # case generation; the split uses seed + 1
+cases_per_category: 14         # 14 categories -> 196 cases, 210 messages
+calibration_share: 0.4         # stratified by category: 84 calibration, 112 test cases
+alpha: 0.1                     # split-conformal target: 90% coverage of the changed weeks
+repeats: 2                     # per case and model, seeds derived from case id and repeat
+temperature: 0.7               # local models; nonzero so repeats measure variability
+workers: 1                     # cases sent to the local server at once (4 until qwen2.5 finished; then 1, for heat)
+local_models:                  # three families, served by Ollama on the author's machine
+  - qwen2.5:7b-instruct        # Alibaba
+  - llama3.1:8b                # Meta
+  - phi4:latest                # Microsoft
+claude:                        # added 23 Oct after the authors approved the budget
+  models: [claude-haiku-5-5, claude-sonnet-5-5, claude-opus-5-5]   # cheapest first
+  effort: medium               # pinned for every model (part of nu_I)
+  max_tokens: 4096             # a truncated reply is an abstention under the L1 contract
+  cache_ttl: 1h                # shared prefix cached across a batch
+  budget_usd: 25.0             # a batch is sent only if its worst case fits in what is left
+  prices_usd_per_mtok:         # Claude API reference cached 2026-10-06; confirm before the run
+    claude-haiku-5-5: {input: 0.10, output: 0.50, cache_read: 0.01}
+    claude-sonnet-5-5: {input: 2.00, output: 10.00, cache_read: 0.20}
+    claude-opus-5-5: {input: 4.00, output: 20.00, cache_read: 0.20}

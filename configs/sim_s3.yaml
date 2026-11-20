@@ -1,0 +1,12 @@
+# S3: a suspension notice is missed by L1 (p_miss) and the vendor master may be
+# stale. The recheck fails only when both happen. When news reaches e-mail before
+# the master is updated, staleness is correlated with the notice: raise
+# p_stale_given_miss to model that. Illustrative parameters.
+name: sim_s3
+scenario: S3
+seed: 3
+runs: 2000
+cells:
+  - {p_miss: 0.1, p_stale_given_miss: 0.1, p_stale_given_detected: 0.1}   # independent
+  - {p_miss: 0.1, p_stale_given_miss: 0.5, p_stale_given_detected: 0.1}
+  - {p_miss: 0.1, p_stale_given_miss: 0.9, p_stale_given_detected: 0.1}   # correlated

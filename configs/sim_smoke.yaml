@@ -1,0 +1,14 @@
+# Small run used by the test suite.
+name: sim_smoke
+scenario: S1
+seed: 7
+runs: 40
+weeks: [42, 44]
+true_reduction: {low: 0.20, high: 0.40}
+interpreter:
+  point_sd: 0.03
+  bias: 0.0
+  half_width: 0.05
+  scope_misread_prob: 0.1
+  abstain_prob: 0.05
+gates: [nominal, box_robust, recheck]

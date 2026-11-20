@@ -1,0 +1,298 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l2_procedural.py": [
+   108,
+   109
+  ]
+ },
+ "import_hits": [],
+ "patch": "11-ember.patch",
+ "runs": {
+  "episodes/lot-l1-approval-shift-end": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:109"
+   ],
+   "new": {
+    "full": [
+     "admission"
+    ],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {
+    "admission": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "awaits authenticated approval: lot-release on x[L1] (apr-l1-early: expired at 6)",
+        "uses": {},
+        "verdict": "queue"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         450.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         300.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 6.0,
+       "x_exec": null,
+       "x_released": [
+        300.0,
+        300.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        300.0,
+        300.0
+       ],
+       [
+        300.0,
+        300.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [
+         "apr-l1-early"
+        ],
+        "reason": "",
+        "uses": {
+         "apr-l1-early": 300.0
+        },
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "lot:L1",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L1",
+          "qty",
+          42.0
+         ],
+         450.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "hold",
+          42.0
+         ],
+         0.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "lot:L2",
+          "qty",
+          42.0
+         ],
+         300.0,
+         null,
+         null,
+         ""
+        ]
+       ],
+       "t": 6.0,
+       "x_exec": [
+        300.0,
+        300.0
+       ],
+       "x_released": [
+        300.0,
+        300.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        300.0,
+        300.0
+       ],
+       [
+        300.0,
+        300.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    0,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l1-replan-same-approval": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:109"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l2-approval-only": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:109"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "scenarios/03-S2-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l2_procedural.py:109"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    3,
+    3
+   ],
+   "world": "fixed"
+  }
+ }
+}

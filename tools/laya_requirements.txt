@@ -1,0 +1,10 @@
+# Pinned environment for tools/laya_conformance.py (15 Nov 2026), separate from the main
+# environment so that uv.lock and the frozen instruments are unchanged:
+#   uv venv .venv-laya --python 3.12 && uv pip install -p .venv-laya -r tools/laya_requirements.txt
+laya==0.4.1
+torch==2.14.1
+transformers==5.20.2
+numpy==2.5.4
+safetensors==0.8.0
+tokenizers==0.23.3
+huggingface-hub==2.3.0

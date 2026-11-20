@@ -1,0 +1,359 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/layers/l4_decision.py": [
+   251,
+   252
+  ]
+ },
+ "import_hits": [],
+ "patch": "13-basalt.patch",
+ "runs": {
+  "episodes/dc-d1-pallet-change": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:252"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "projected",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "dc:D1",
+          "free_space",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "dc:D1",
+          "units_per_pallet",
+          42.0
+         ],
+         45.0,
+         44.0,
+         48.0,
+         "units/pallet"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        62.916666666666664,
+        60.0
+       ],
+       "x_released": [
+        62.916666666666664,
+        60.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        62.916667,
+        60.0
+       ],
+       [
+        62.916667,
+        60.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "projected",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "dc:D1",
+          "free_space",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "dc:D1",
+          "units_per_pallet",
+          42.0
+         ],
+         45.0,
+         44.0,
+         48.0,
+         "units/pallet"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        52.73148148148148,
+        60.0
+       ],
+       "x_released": [
+        52.73148148148148,
+        60.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        52.731481,
+        60.0
+       ],
+       [
+        52.731481,
+        60.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "scenarios/11-S8-vertex": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/layers/l4_decision.py:252"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "resolved",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "dc:D1",
+          "free_space",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "dc:D1",
+          "units_per_pallet",
+          42.0
+         ],
+         45.0,
+         43.0,
+         47.0,
+         "units/pallet"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        70.63829787234043,
+        60.0
+       ],
+       "x_released": [
+        70.63829787234043,
+        60.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        70.638298,
+        60.0
+       ],
+       [
+        70.638298,
+        60.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "resolved",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "dc:D1",
+          "free_space",
+          42.0
+         ],
+         500.0,
+         null,
+         null,
+         ""
+        ],
+        [
+         [
+          "dc:D1",
+          "units_per_pallet",
+          42.0
+         ],
+         45.0,
+         43.0,
+         47.0,
+         "units/pallet"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        60.22634676324129,
+        60.0
+       ],
+       "x_released": [
+        60.22634676324129,
+        60.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        60.226347,
+        60.0
+       ],
+       [
+        60.226347,
+        60.0
+       ]
+      ]
+     ]
+    }
+   },
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  }
+ }
+}

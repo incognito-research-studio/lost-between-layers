@@ -1,0 +1,14 @@
+# Declared L3 authority for the fault trial's e1v2 world (data, not code: no patch can
+# change it). It states the benchmark's intended policy (Section 9.5, "When a notice may
+# outrank the master"): a supplier's portal figure outranks a planner's estimate, either
+# outranks the authenticated capacity master loaded before any notice (rank 0 by default),
+# and the e1v2 world declares no supersession rule. The `precedence` check compares the fact
+# each decision read with the fact this policy selects. Scenario-world episodes and
+# negative cases declare their policy in their own scenario files instead.
+e1v2:
+  priority:
+    "portal:supplier": 2
+    "email:planner": 1
+    "email:e1": 1
+  supersession: none
+  declared_versions: []   # the model's own nu_I is added per run

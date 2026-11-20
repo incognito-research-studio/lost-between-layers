@@ -1,0 +1,6 @@
+{"interpreter_version": "fixture:supplier-reader@1",
+ "output": {"kind": "delta", "ops": [
+  {"op": "supersede", "subject": "supplier:S2", "predicate": "suspended",
+   "value": 0, "lo": 0, "hi": 1, "unit": "",
+   "valid_from": 42, "valid_to": 43,
+   "span_text": "Supplier S2 may resume deliveries this week"}]}}

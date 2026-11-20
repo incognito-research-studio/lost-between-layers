@@ -1,0 +1,28 @@
+id: EP-cycle-count-two-lots
+title: Warehouse portal and QA inbox report quantities for different lots
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {"portal:warehouse": 2, "email:qa-inbox": 1}
+world:
+  period: 42
+  demand: 800
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-l1-count, t: 2, kind: message, source: "portal:warehouse",
+     text: "Cycle count for lot L1: 450 units on hand.",
+     fixture: fixtures/count_l1.json}
+  - {id: msg-l2-scrap, t: 3, kind: message, source: "email:qa-inbox",
+     text: "QA: 50 units of lot L2 scrapped after inspection; 250 units remain.",
+     fixture: fixtures/scrap_l2.json}
+  - {t: 4, kind: decide}
+trial:
+  gate: nominal
+  resolution: priority
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

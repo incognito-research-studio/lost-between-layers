@@ -1,0 +1,32 @@
+{
+  "interpreter_version": "fixture:s7@1",
+  "output": {
+    "kind": "delta",
+    "ops": [
+      {
+        "op": "supersede",
+        "subject": "plant:X",
+        "predicate": "capacity",
+        "value": 1000,
+        "lo": null,
+        "hi": null,
+        "unit": "units/week",
+        "valid_from": 42,
+        "valid_to": 43,
+        "span_text": "Week 42 runs at full capacity"
+      },
+      {
+        "op": "supersede",
+        "subject": "plant:X",
+        "predicate": "capacity",
+        "value": 700,
+        "lo": 650,
+        "hi": 750,
+        "unit": "units/week",
+        "valid_from": 43,
+        "valid_to": 46,
+        "span_text": "the reduction applies to weeks 43-45"
+      }
+    ]
+  }
+}

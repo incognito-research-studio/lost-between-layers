@@ -1,0 +1,15 @@
+diff --git a/src/dsoi/layers/l1_interpreter.py b/src/dsoi/layers/l1_interpreter.py
+index 2d13bac..dc21df6 100644
+--- a/src/dsoi/layers/l1_interpreter.py
++++ b/src/dsoi/layers/l1_interpreter.py
+@@ -121,8 +121,8 @@ def _parse_op(raw: dict, message: Message, schema: InterpreterSchema, nu_i: str)
+         lo, hi = raw.get("lo"), raw.get("hi")
+         if (lo is None) != (hi is None):
+             return Abstain(f"postcondition: interval needs both bounds: {raw}")
+-        value = Quantity(float(raw["value"]), None if lo is None else float(lo),
+-                         None if hi is None else float(hi), raw.get("unit", ""))
++        value = Quantity(float(raw["value"]), float(lo) if lo else None,
++                         float(hi) if hi else None, raw.get("unit", ""))
+         bounds = [b for b in (value.value, value.lo, value.hi) if b is not None]
+         if not all(math.isfinite(b) for b in bounds):
+             return Abstain(f"postcondition: non-finite value: {raw}")

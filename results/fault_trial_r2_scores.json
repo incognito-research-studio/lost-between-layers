@@ -1,0 +1,1354 @@
+{
+ "by_family": {
+  "audit_restart": {
+   "effective": 3,
+   "full": {
+    "detected": 2,
+    "wilson95": [
+     0.2077,
+     0.9385
+    ]
+   },
+   "generic": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   }
+  },
+  "dropped_week_entity": {
+   "effective": 3,
+   "full": {
+    "detected": 1,
+    "wilson95": [
+     0.0615,
+     0.7923
+    ]
+   },
+   "generic": {
+    "detected": 1,
+    "wilson95": [
+     0.0615,
+     0.7923
+    ]
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   }
+  },
+  "other": {
+   "effective": 2,
+   "full": {
+    "detected": 0,
+    "wilson95": null
+   },
+   "generic": {
+    "detected": 0,
+    "wilson95": null
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": null
+   }
+  },
+  "precedence_supersession": {
+   "effective": 4,
+   "full": {
+    "detected": 2,
+    "wilson95": [
+     0.15,
+     0.85
+    ]
+   },
+   "generic": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.4899
+    ]
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.4899
+    ]
+   }
+  },
+  "replay_observations": {
+   "effective": 3,
+   "full": {
+    "detected": 3,
+    "wilson95": [
+     0.4385,
+     1.0
+    ]
+   },
+   "generic": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   }
+  },
+  "stale_approval": {
+   "effective": 3,
+   "full": {
+    "detected": 3,
+    "wilson95": [
+     0.4385,
+     1.0
+    ]
+   },
+   "generic": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   }
+  },
+  "uncertainty_lost": {
+   "effective": 4,
+   "full": {
+    "detected": 1,
+    "wilson95": [
+     0.0456,
+     0.6994
+    ]
+   },
+   "generic": {
+    "detected": 1,
+    "wilson95": [
+     0.0456,
+     0.6994
+    ]
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.4899
+    ]
+   }
+  },
+  "unit_calendar": {
+   "effective": 3,
+   "full": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   },
+   "generic": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   },
+   "solver": {
+    "detected": 0,
+    "wilson95": [
+     0.0,
+     0.5615
+    ]
+   }
+  }
+ },
+ "configs": {
+  "full": {
+   "detected": 12,
+   "detected_pre_execution": 8,
+   "effective": 25,
+   "faults_with_silent_violations": 5,
+   "localization_rate": 0.9166666666666666,
+   "localized": 11,
+   "pre_rate_wilson95": [
+    0.1721,
+    0.5159
+   ],
+   "rate": 0.48,
+   "wilson95": [
+    0.3003,
+    0.665
+   ]
+  },
+  "generic": {
+   "detected": 2,
+   "detected_pre_execution": 2,
+   "effective": 25,
+   "faults_with_silent_violations": 7,
+   "localization_rate": 0.5,
+   "localized": 1,
+   "pre_rate_wilson95": [
+    0.0222,
+    0.2497
+   ],
+   "rate": 0.08,
+   "wilson95": [
+    0.0222,
+    0.2497
+   ]
+  },
+  "solver": {
+   "detected": 0,
+   "detected_pre_execution": 0,
+   "effective": 25,
+   "faults_with_silent_violations": 7,
+   "localization_rate": null,
+   "localized": 0,
+   "pre_rate_wilson95": [
+    0.0,
+    0.1332
+   ],
+   "rate": 0.0,
+   "wilson95": [
+    0.0,
+    0.1332
+   ]
+  }
+ },
+ "faults_total": 25,
+ "manifest_sha256": "c954a3c04c388c14cef2b78d3df4a938b9913e27a35ae12b69ab37676909103d",
+ "mcnemar": {
+  "generic_vs_full": {
+   "only_full": 10,
+   "only_generic": 0,
+   "p_exact": 0.001953125
+  },
+  "solver_vs_full": {
+   "only_full": 12,
+   "only_solver": 0,
+   "p_exact": 0.00048828125
+  },
+  "solver_vs_generic": {
+   "only_generic": 2,
+   "only_solver": 0,
+   "p_exact": 0.5
+  }
+ },
+ "negatives": {
+  "full": {
+   "false_alarms": 0,
+   "wilson95": [
+    0.0,
+    0.3903
+   ]
+  },
+  "generic": {
+   "false_alarms": 0,
+   "wilson95": [
+    0.0,
+    0.3903
+   ]
+  },
+  "n": 6,
+  "per_case": {
+   "dc-pallet-late-correction": {
+    "full": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "generic": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "kind": "valid_late_correction",
+    "solver": {
+     "checks": [],
+     "false_alarm": false
+    }
+   },
+   "inventory-count-master-override": {
+    "full": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "generic": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "kind": "authorized_master_override",
+    "solver": {
+     "checks": [],
+     "false_alarm": false
+    }
+   },
+   "lot-count-late-correction": {
+    "full": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "generic": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "kind": "valid_late_correction",
+    "solver": {
+     "checks": [],
+     "false_alarm": false
+    }
+   },
+   "plant-x-candidate-model-refused": {
+    "full": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "generic": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "kind": "deliberate_version_rejection",
+    "solver": {
+     "checks": [],
+     "false_alarm": false
+    }
+   },
+   "supplier-candidate-model-refused": {
+    "full": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "generic": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "kind": "deliberate_version_rejection",
+    "solver": {
+     "checks": [],
+     "false_alarm": false
+    }
+   },
+   "wms-pallet-master-override": {
+    "full": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "generic": {
+     "checks": [],
+     "false_alarm": false
+    },
+    "kind": "authorized_master_override",
+    "solver": {
+     "checks": [],
+     "false_alarm": false
+    }
+   }
+  },
+  "solver": {
+   "false_alarms": 0,
+   "wilson95": [
+    0.0,
+    0.3903
+   ]
+  }
+ },
+ "per_fault": {
+  "01-orchid.patch": {
+   "family": "uncertainty_lost",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 25
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 25
+   },
+   "intended_effect": "The box-robust gate tests a candidate against the point values instead of the lower ends of the reported intervals, so a nominal plan passes unchanged: plant-x-span-claims releases 700 instead of 600 in weeks 42-44, dc-d1-pallet-change and supplier-s2-probation release the unprojected LP plan.",
+   "layer": "L5",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 107,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 25
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    463
+   ]
+  },
+  "02-pewter.patch": {
+   "family": "precedence_supersession",
+   "full": {
+    "checks": [
+     "committed_unread",
+     "precedence"
+    ],
+    "detected": true,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 80
+   },
+   "intended_effect": "Reads rank authenticated facts above source priority, so in plant-x-nightly-resync the re-sent master value (1000) displaces the higher-ranked planner notice (700) in the second decision.",
+   "layer": "L3",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 93,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 80
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    518
+   ]
+  },
+  "03-marble.patch": {
+   "family": "stale_approval",
+   "full": {
+    "checks": [
+     "admission"
+    ],
+    "detected": true,
+    "layers": [
+     "L2"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "An approval without a quantity cap is no longer consumed by its first executed action, so in lot-l1-replan-same-approval the second allocation is admitted and executed on the morning approval instead of being queued.",
+   "layer": "L2",
+   "releases": [
+    699,
+    700
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "04-quill.patch": {
+   "family": "audit_restart",
+   "full": {
+    "checks": [
+     "restart"
+    ],
+    "detected": true,
+    "layers": [
+     "L6"
+    ],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "The saved log keeps one disposition per input id, so repeated records from the same source (the ERP baseline and later ERP records) lose their earlier dispositions on reload; same_ingests becomes false in plant-x-nightly-resync and others.",
+   "layer": "L6",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 677,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "05-fennel.patch": {
+   "family": "unit_calendar",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Interpreted valid times treat the half-open end week as inclusive and extend each range by one week, so a notice for weeks 42-44 also changes week 45 (plant-x-nightly-resync, plant-x-scope-correction and other capacity episodes).",
+   "layer": "L1",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 150,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    425
+   ]
+  },
+  "06-harbor.patch": {
+   "family": "dropped_week_entity",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Contradiction detection ignores the subject, so under the priority policy the supplier ASN for lot L2 is taken as contradicting the warehouse count for lot L1 and is overridden in lot-counts-two-sources (L2 stays at 300 instead of 280).",
+   "layer": "L3",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "07-cobalt.patch": {
+   "family": "replay_observations",
+   "full": {
+    "checks": [
+     "replay_store"
+    ],
+    "detected": true,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Replay from the store uses the live system-of-record reader instead of the recorded re-read values, so in plant-x-recheck-mes replay_from_store returns the plan for the later MES rate (700) instead of the released 680.",
+   "layer": "pipeline",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 2,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "08-thistle.patch": {
+   "family": "other",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "The interpreter version check compares only the model family before '@', so in plant-x-alias-update the answer from the silently updated model is committed instead of abstained.",
+   "layer": "pipeline",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "09-saffron.patch": {
+   "family": "uncertainty_lost",
+   "full": {
+    "checks": [
+     "schema"
+    ],
+    "detected": true,
+    "layers": [
+     "L1",
+     "L3"
+    ],
+    "pre": true,
+    "silent_violation_runs": 1
+   },
+   "generic": {
+    "checks": [
+     "schema"
+    ],
+    "detected": true,
+    "layers": [
+     "L1",
+     "L3"
+    ],
+    "pre": true,
+    "silent_violation_runs": 1
+   },
+   "intended_effect": "The span policy builds the interval only from claims that carry explicit bounds, so an exact rival value is left out of the span; in plant-x-span-claims the interval narrows from [600, 750] to [650, 750] and the box gate releases 650 instead of 600.",
+   "layer": "L3",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 2,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    439
+   ]
+  },
+  "10-garnet.patch": {
+   "family": "precedence_supersession",
+   "full": {
+    "checks": [
+     "precedence"
+    ],
+    "detected": true,
+    "layers": [
+     "L3"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "intended_effect": "The supersession rule name is misspelled in the read path, so authenticated_latest never applies and in plant-x-master-correction the master correction (650) is ignored in favour of the earlier notice (700).",
+   "layer": "L3",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    439
+   ]
+  },
+  "11-ember.patch": {
+   "family": "stale_approval",
+   "full": {
+    "checks": [
+     "admission"
+    ],
+    "detected": true,
+    "layers": [
+     "L2"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Approval expiry becomes inclusive, so an approval is still valid at its expiry time; in lot-l1-approval-shift-end the plan run exactly at expiry is admitted and executed instead of queued.",
+   "layer": "L2",
+   "releases": [
+    699,
+    700
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "12-willow.patch": {
+   "family": "audit_restart",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Reloading logged deltas drops the lo/hi bounds of interval values, so committed changes differ after a save and reload (same_deltas false) in every episode with an interval-valued delta.",
+   "layer": "L6",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 143,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "13-basalt.patch": {
+   "family": "unit_calendar",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "The warehouse formulation divides free floor space (units) by units per pallet while the space row is in units, so in dc-d1-pallet-change the inbound pallets are limited far more than the space allows.",
+   "layer": "L4",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 2,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "14-juniper.patch": {
+   "family": "dropped_week_entity",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "intended_effect": "Parsed deltas keep one operation per subject and predicate, so a correction with two week ranges loses one; in plant-x-scope-correction week 42 stays at 700 instead of returning to full capacity.",
+   "layer": "L1",
+   "releases": [
+    699,
+    701
+   ],
+   "runs_changed": 21,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    439
+   ]
+  },
+  "15-kestrel.patch": {
+   "family": "replay_observations",
+   "full": {
+    "checks": [
+     "C1",
+     "G1",
+     "R2",
+     "audit",
+     "replay_store",
+     "restart"
+    ],
+    "detected": true,
+    "layers": [
+     "L1",
+     "L3",
+     "L4",
+     "L5",
+     "L6"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "The recheck gate records its re-read values under week labels formatted differently from the keys replay looks up, so replaying a recheck decision fails for missing observations in plant-x-recheck-mes.",
+   "layer": "L5",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 3,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "16-lichen.patch": {
+   "family": "uncertainty_lost",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "The robust lower bound of usable capacity takes the bottom of the restriction flag's interval instead of the top, so in supplier-s2-probation the box gate treats the possible full suspension of S2 as a half suspension and releases 250 from S2.",
+   "layer": "L4",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 10,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "17-meadow.patch": {
+   "family": "precedence_supersession",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "intended_effect": "Under the priority policy an incoming claim must strictly outrank its rival, so a newer claim from an equally ranked source no longer displaces the older one; in plant-x-revised-notice the planning office's 680 is overridden and the plan keeps 750.",
+   "layer": "L3",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    439
+   ]
+  },
+  "18-nimbus.patch": {
+   "family": "stale_approval",
+   "full": {
+    "checks": [
+     "admission"
+    ],
+    "detected": true,
+    "layers": [
+     "L2"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Threshold admission matches approval events by kind only, not by variable, so in lot-l2-approval-only the approval for lot L2 also admits the release of lot L1 and the action executes instead of being queued.",
+   "layer": "L2",
+   "releases": [
+    699,
+    700
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "19-oriole.patch": {
+   "family": "audit_restart",
+   "full": {
+    "checks": [
+     "restart"
+    ],
+    "detected": true,
+    "layers": [
+     "L6"
+    ],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Saving the log writes only decided records, so a deferred cycle's record is lost and the reload of plant-x-contested-week45 fails its hash chain.",
+   "layer": "L6",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 8,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "20-pumice.patch": {
+   "family": "unit_calendar",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "The blocked-conflict check excludes the first week of the blocked range, so in plant-x-contested-week45 the decision at t=4 reads the contested week 45 instead of being deferred.",
+   "layer": "L3",
+   "releases": [
+    699,
+    700
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "21-quartz.patch": {
+   "family": "dropped_week_entity",
+   "full": {
+    "checks": [
+     "exception"
+    ],
+    "detected": true,
+    "layers": [
+     "L4"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [
+     "exception"
+    ],
+    "detected": true,
+    "layers": [
+     "L4"
+    ],
+    "pre": true,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "When a change covers the inside of an existing fact's range, the store re-inserts only the part before it, so the master capacity for the weeks after the change is lost and the next decision fails for missing state (plant-x-nightly-resync and other capacity episodes).",
+   "layer": "L3",
+   "releases": [
+    699,
+    668
+   ],
+   "runs_changed": 35,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    431
+   ]
+  },
+  "22-rowan.patch": {
+   "family": "replay_observations",
+   "full": {
+    "checks": [
+     "replay_store"
+    ],
+    "detected": true,
+    "layers": [
+     "L3",
+     "L4"
+    ],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Replay from the store reads the store as of the latest transaction instead of the decision's as-of time, so in plant-x-scope-correction replay_from_store of the first decision returns the corrected plan.",
+   "layer": "pipeline",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 6,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "23-sorrel.patch": {
+   "family": "uncertainty_lost",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "intended_effect": "The canonical state copies an interval's lower bound into its upper bound, so the top of reported intervals is lost before L4 and L5: the box gate under-protects in dc-d1-pallet-change and supplier-s2-probation.",
+   "layer": "L3",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 77,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 1
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    439
+   ]
+  },
+  "24-tundra.patch": {
+   "family": "precedence_supersession",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Source priority takes the first matching prefix instead of the highest, so in plant-x-manager-update the plant manager's e-mail ranks as a generic e-mail and the portal figure (600) wins over 800.",
+   "layer": "L3",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  },
+  "25-umber.patch": {
+   "family": "other",
+   "full": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "generic": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "intended_effect": "Any restriction value above zero is treated as restrictive, so a partial hold from an unauthenticated e-mail is admitted; in lot-l2-partial-hold-email the hold of 0.5 on lot L2 is committed instead of rejected.",
+   "layer": "L2",
+   "releases": [
+    699,
+    699
+   ],
+   "runs_changed": 1,
+   "solver": {
+    "checks": [],
+    "detected": false,
+    "layers": [],
+    "pre": false,
+    "silent_violation_runs": 0
+   },
+   "status": "effective",
+   "violations": [
+    438,
+    438
+   ]
+  }
+ },
+ "status": {
+  "broken": 0,
+  "effective": 25,
+  "inert": 0,
+  "rejected": 0
+ }
+}

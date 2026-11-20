@@ -1,0 +1,53 @@
+# S2 (Table IV): quality hold on a lot, then release.
+# A hold from any source is admitted (it only restricts). Lifting it is
+# authority-bearing: L2 admits it only from the authenticated approval service,
+# the one source authorized to lift a quality hold (`lift_issuers`).
+id: S2
+title: Quality hold on lot L1, then release
+status: implemented
+model: lot_allocation
+interpreter_version: "fixture:s2@1"
+
+world:
+  period: 42
+  demand: 600
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+
+lift_issuers: {hold: ["idp:qa-approvals"]}
+
+# The SOP graph for a lot under hold (Table 2, L2): held -> inspected -> released. A lift
+# is admitted only for a case at "inspected"; L2 persists the case's node in L3.
+sop:
+  - name: lot-release
+    steps: [[hold, 1, held], [inspection_passed, 1, inspected], [hold, 0, released]]
+    requires: {released: inspected}
+
+times: {erp_load: 1}
+
+events:
+  - {id: msg-hold, t: 2, kind: message, source: "email:qa-inbox",
+     text: "QA notice: quality hold on lot L1 pending inspection.",
+     fixture: fixtures/hold.json}
+  - {t: 3, kind: decide}
+  # An e-mail claiming the release: well typed, but unauthenticated.
+  - {id: msg-release-claim, t: 4, kind: message, source: "email:qa-inbox",
+     text: "Update: lot L1 passed inspection and is released for allocation.",
+     fixture: fixtures/release_claim.json}
+  - {t: 5, kind: decide}
+  # The quality system records the passed inspection (the SOP's precondition for release).
+  - {id: qms-inspection, t: 5.5, kind: record, source: "qms:inspection",
+     ops: [{op: assert, subject: "lot:L1", predicate: inspection_passed, value: 1,
+            valid_from: 42, valid_to: 43}]}
+  # The authenticated approval event from the identity/approval service.
+  - {id: qa-approval, t: 6, kind: record, source: "idp:qa-approvals",
+     ops: [{op: supersede, subject: "lot:L1", predicate: hold, value: 0,
+            valid_from: 42, valid_to: 43}]}
+  - {t: 7, kind: decide}
+
+required_response: "Hold blocks allocation; release requires authenticated QA approval"
+analytic_measure: "No execution path without an approval event"
+depends_on: [L1 invariant, L2]
+risk: "Over-blocking"

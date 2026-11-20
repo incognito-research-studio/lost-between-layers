@@ -1,0 +1,15 @@
+{
+ "files": {
+  "data/e1v2/cases.jsonl": "a289a93b45949841489eb425eaca11f2bad5efd15ec0905d91b268c3eaf7b16e",
+  "data/laya/PROTOCOL.md": "552aa1d92b84c1c48e6e04f086c1e0092e5749da3f7b67c887f95c9c6365f49e",
+  "tools/laya_conformance.py": "645746273988f8de7b2a3f52410669d8d13c5119d31f7ec94606e51c639dd22c",
+  "tools/laya_requirements.txt": "42b404ff00534c6ece06d6df68c0ea2905a63297f5569c56a224f72ad10aa3d8"
+ },
+ "frozen": "2026-11-15",
+ "reader": {
+  "package": "laya==0.4.1",
+  "repo": "convaiinnovations/laya",
+  "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+  "subfolder": "typed-decisions"
+ }
+}

@@ -1,0 +1,6 @@
+{"interpreter_version": "fixture:capacity-reader@1",
+ "output": {"kind": "delta", "ops": [
+  {"op": "assert", "subject": "plant:P5", "predicate": "capacity",
+   "value": 750, "lo": null, "hi": null, "unit": "units/week",
+   "valid_from": 42, "valid_to": 45,
+   "span_text": "weeks 42-44: 750 units per week"}]}}

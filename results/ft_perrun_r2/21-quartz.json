@@ -1,0 +1,3945 @@
+{
+ "between_hits": [],
+ "hit_lines": {
+  "dsoi/store.py": [
+   60,
+   61
+  ]
+ },
+ "import_hits": [],
+ "patch": "21-quartz.patch",
+ "runs": {
+  "e1v2/llama3.1:8b/conflict-003/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 47.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/llama3.1:8b/conflict-005/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/atleast_pct-001/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 49.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/atleast_pct-003/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 46.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/atleast_pct-008/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 41.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/atleast_pct-012/r2": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 40.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/atleast_pct-013/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/conflict-006/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 44.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/conflict-010/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 49.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/conflict-011/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 48.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/exact_pct-005/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/exact_pct-006/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 48.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/hedged_pct-010/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 42.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/hedged_pct-010/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/hedged_pct-011/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 46.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/hedged_pct-011/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 46.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/other_entity-002/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/other_entity-003/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/other_entity-013/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/other_entity-013/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/scope_relative-003/r2": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/scope_relative-010/r1": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 40.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "fixed"
+  },
+  "e1v2/phi4:latest/upto_pct-003/r1": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 46.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "episodes/dc-d1-pallet-change": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-counts-two-sources": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l1-approval-shift-end": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    0,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/lot-l1-replan-same-approval": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-contested-week45": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-manager-update": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         800.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         800.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         800.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 4.0,
+       "x_exec": [
+        1000.0,
+        800.0,
+        800.0,
+        800.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        800.0,
+        800.0,
+        800.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        800.0,
+        800.0,
+        800.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        800.0,
+        800.0,
+        800.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 4.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-master-correction": {
+   "changed": true,
+   "crashed": false,
+   "dviol": -1,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         650.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         650.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         650.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 6.0,
+       "x_exec": [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    2,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-nightly-resync": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    2,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-recheck-mes": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 680.0,
+         "plant:X|capacity|43.0": 680.0,
+         "plant:X|capacity|44.0": 680.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        680.0,
+        680.0,
+        680.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        680.0,
+        680.0,
+        680.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        680.0,
+        680.0,
+        680.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        680.0,
+        680.0,
+        680.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-revised-notice": {
+   "changed": true,
+   "crashed": false,
+   "dviol": -1,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         750.0,
+         700.0,
+         800.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         680.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         680.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        750.0,
+        750.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        680.0,
+        680.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    2,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-scope-correction": {
+   "changed": true,
+   "crashed": false,
+   "dviol": -1,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ]
+       ],
+       "t": 6.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    2,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/plant-x-span-claims": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "projected",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         600.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         600.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         600.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 4.0,
+       "x_exec": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 4.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "generator"
+  },
+  "episodes/supplier-s2-probation": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "generator"
+  },
+  "scenarios/00-S1-nominal": {
+   "changed": true,
+   "crashed": false,
+   "dviol": -1,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "scenarios/01-S1-box_robust": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "projected",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        650.0,
+        650.0,
+        650.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "scenarios/02-S1-recheck": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 600.0,
+         "plant:X|capacity|43.0": 600.0,
+         "plant:X|capacity|44.0": 600.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 4.5,
+       "x_exec": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {
+        "reread": {
+         "plant:X|capacity|41.0": 1000.0,
+         "plant:X|capacity|42.0": 500.0,
+         "plant:X|capacity|43.0": 500.0,
+         "plant:X|capacity|44.0": 500.0,
+         "plant:X|capacity|45.0": 1000.0
+        }
+       },
+       "gate_outcome": "fallback",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 5.5,
+       "x_exec": [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        500.0,
+        500.0,
+        500.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 4.5,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    2,
+    0
+   ],
+   "world": "fixed"
+  },
+  "scenarios/03-S2-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    3,
+    3
+   ],
+   "world": "fixed"
+  },
+  "scenarios/04-S3-recheck": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "scenarios/05-S3-nominal": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  },
+  "scenarios/06-S4-box_robust": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         600.0,
+         600.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         600.0,
+         600.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         600.0,
+         600.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 4.0,
+       "x_exec": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 4.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "scenarios/07-S4-nominal": {
+   "changed": true,
+   "crashed": false,
+   "dviol": 0,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60",
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         600.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         600.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         600.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 4.0,
+       "x_exec": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        600.0,
+        600.0,
+        600.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 4.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "scenarios/09-S6-nominal": {
+   "changed": true,
+   "crashed": false,
+   "dviol": -1,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    1,
+    0
+   ],
+   "world": "fixed"
+  },
+  "scenarios/10-S7-nominal": {
+   "changed": true,
+   "crashed": false,
+   "dviol": -2,
+   "exception": "MissingState: ('plant:X', 'capacity', 45.0)",
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:60"
+   ],
+   "new": {
+    "full": [
+     "exception"
+    ],
+    "generic": [
+     "exception"
+    ],
+    "solver": []
+   },
+   "new_timing": {
+    "exception": "pre"
+   },
+   "records": {
+    "clean": {
+     "records": [
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ]
+       ],
+       "t": 3.0,
+       "x_exec": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       "x_released": [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      },
+      {
+       "admission": {
+        "approvals": [],
+        "reason": "",
+        "uses": {},
+        "verdict": "admit"
+       },
+       "gate_detail": {},
+       "gate_outcome": "pass",
+       "outcome": "decided",
+       "state": [
+        [
+         [
+          "plant:X",
+          "capacity",
+          41.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          42.0
+         ],
+         1000.0,
+         null,
+         null,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          43.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          44.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ],
+        [
+         [
+          "plant:X",
+          "capacity",
+          45.0
+         ],
+         700.0,
+         650.0,
+         750.0,
+         "units/week"
+        ]
+       ],
+       "t": 6.0,
+       "x_exec": [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ],
+       "x_released": [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ]
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       3,
+       3
+      ],
+      "n_ingests": [
+       3,
+       3
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": [
+      [
+       1,
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ],
+       [
+        1000.0,
+        700.0,
+        700.0,
+        700.0,
+        1000.0
+       ]
+      ],
+      [
+       2,
+       [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ],
+       [
+        1000.0,
+        1000.0,
+        700.0,
+        700.0,
+        700.0
+       ]
+      ]
+     ]
+    },
+    "patched": {
+     "records": [
+      {
+       "admission": null,
+       "gate_detail": {
+        "error": "MissingState",
+        "reason": "('plant:X', 'capacity', 45.0)"
+       },
+       "gate_outcome": "not run",
+       "outcome": "error",
+       "state": null,
+       "t": 3.0,
+       "x_exec": null,
+       "x_released": null
+      }
+     ],
+     "reload": {
+      "n_deltas": [
+       2,
+       2
+      ],
+      "n_ingests": [
+       2,
+       2
+      ],
+      "ok": true,
+      "same_deltas": true,
+      "same_ingests": true,
+      "same_records": true
+     },
+     "replays": []
+    }
+   },
+   "released": [
+    2,
+    0
+   ],
+   "world": "fixed"
+  },
+  "scenarios/11-S8-vertex": {
+   "changed": false,
+   "crashed": false,
+   "dviol": 0,
+   "exception": null,
+   "hit": true,
+   "hits": [
+    "dsoi/store.py:61"
+   ],
+   "new": {
+    "full": [],
+    "generic": [],
+    "solver": []
+   },
+   "new_timing": {},
+   "released": [
+    1,
+    1
+   ],
+   "world": "fixed"
+  }
+ }
+}

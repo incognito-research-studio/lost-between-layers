@@ -1,0 +1,24 @@
+id: NEG-full-hold-from-email
+title: An unauthenticated QA e-mail puts a lot on full hold before allocation
+model: lot_allocation
+interpreter_version: "fixture:lot-reader@1"
+source_priority: {}
+world:
+  period: 42
+  demand: 700
+  erp_source_id: "erp:inventory"
+  lots:
+    L1: {qty: 500, hold: 0}
+    L2: {qty: 300, hold: 0}
+times: {erp_load: 1}
+events:
+  - {id: msg-l2-hold, t: 2, kind: message, source: "email:qa-inbox",
+     text: "QA notice: full quality hold on lot L2 until the swab results are back.",
+     fixture: fixtures/hold.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: nominal
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

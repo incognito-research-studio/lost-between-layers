@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/types.py b/src/dsoi/types.py
+index 18f542f..5f3afae 100644
+--- a/src/dsoi/types.py
++++ b/src/dsoi/types.py
+@@ -16,7 +16,7 @@ def overlaps(a: Interval, b: Interval) -> bool:
+ 
+ 
+ def contains(iv: Interval, point: float) -> bool:
+-    return iv[0] <= point < iv[1]
++    return iv[0] <= point <= iv[1]
+ 
+ 
+ @dataclass(frozen=True)

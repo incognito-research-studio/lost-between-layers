@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/experiments/e1v2_world.py b/src/dsoi/experiments/e1v2_world.py
+index f768bfd..2f8ecc3 100644
+--- a/src/dsoi/experiments/e1v2_world.py
++++ b/src/dsoi/experiments/e1v2_world.py
+@@ -56,7 +56,7 @@ def pipeline(case: Case, gate, interpreter, nu_i: str, *, historical: bool = Fal
+     scn = scenario(case)
+     versions = VersionVector.load(VERSIONS_FILE).bump(interpreter=nu_i)
+     p = build_pipeline(scn, gate, interpreter, versions, resolution="span")
+-    if not historical:
++    if historical:
+         p.state.source_priority = {**p.state.source_priority, EMAIL: 1}
+     y = [{"op": "assert", "subject": "plant:Y", "predicate": "capacity", "value": NOMINAL,
+           "unit": "units/week", "valid_from": HORIZON[0], "valid_to": HORIZON[-1] + 1}]

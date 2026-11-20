@@ -1,0 +1,1184 @@
+{
+ "class_sizes": {
+  "identical": 8,
+  "none": 9,
+  "same_line": 9
+ },
+ "families": {
+  "raw_reply": [
+   "span_cover",
+   "commit_precedence",
+   "l1_reference",
+   "blocked_read"
+  ],
+  "repaired_new": [
+   "blocked_read",
+   "commit_precedence",
+   "interval_store",
+   "l1_reference",
+   "l2_authority",
+   "recheck_complete",
+   "restart_content",
+   "robust_release",
+   "span_cover",
+   "unit_declared",
+   "version_pinned"
+  ],
+  "second_impl": [
+   "span_cover",
+   "commit_precedence",
+   "l1_reference"
+  ]
+ },
+ "faults": 26,
+ "fresh_model_calls": 0,
+ "per_fault": {
+  "01-quartz": {
+   "checks": [
+    "admission"
+   ],
+   "class": "identical",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "02-lantern": {
+   "checks": [
+    "l1_reference"
+   ],
+   "class": "identical",
+   "only_raw_reply": true,
+   "only_second_impl": true
+  },
+  "03-heron": {
+   "checks": [
+    "restart"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "04-mosaic": {
+   "checks": [
+    "committed_unread",
+    "precedence"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "05-thimble": {
+   "checks": [],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "06-orchid": {
+   "checks": [
+    "committed_unread",
+    "span_cover"
+   ],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "07-pylon": {
+   "checks": [
+    "C1",
+    "restart"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "08-saffron": {
+   "checks": [
+    "version_pinned"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "09-tundra": {
+   "checks": [],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "10-gable": {
+   "checks": [
+    "committed_unread",
+    "l1_reference"
+   ],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "11-ferrule": {
+   "checks": [
+    "admission"
+   ],
+   "class": "identical",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "12-wicket": {
+   "checks": [
+    "commit_precedence",
+    "l1_reference"
+   ],
+   "class": "same_line",
+   "only_raw_reply": true,
+   "only_second_impl": true
+  },
+  "13-cinder": {
+   "checks": [
+    "restart",
+    "restart_content"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "14-marlin": {
+   "checks": [
+    "commit_precedence",
+    "l1_reference"
+   ],
+   "class": "none",
+   "only_raw_reply": true,
+   "only_second_impl": true
+  },
+  "15-basalt": {
+   "checks": [
+    "C1",
+    "C2",
+    "G1",
+    "R2",
+    "audit",
+    "recheck_complete",
+    "replay_store",
+    "restart"
+   ],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "16-juniper": {
+   "checks": [
+    "commit_precedence"
+   ],
+   "class": "identical",
+   "only_raw_reply": true,
+   "only_second_impl": true
+  },
+  "17-kestrel": {
+   "checks": [
+    "robust_release"
+   ],
+   "class": "identical",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "18-nimbus": {
+   "checks": [
+    "admission"
+   ],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "19-pewter": {
+   "checks": [
+    "blocked_read"
+   ],
+   "class": "identical",
+   "only_raw_reply": true,
+   "only_second_impl": false
+  },
+  "20-almond": {
+   "checks": [
+    "commit_precedence"
+   ],
+   "class": "identical",
+   "only_raw_reply": true,
+   "only_second_impl": true
+  },
+  "21-velour": {
+   "checks": [
+    "restart"
+   ],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "22-sorrel": {
+   "checks": [
+    "precedence"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "23-dynamo": {
+   "checks": [
+    "schema",
+    "span_cover"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "24-ripple": {
+   "checks": [
+    "admission"
+   ],
+   "class": "none",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "25-ochre": {
+   "checks": [
+    "replay_store"
+   ],
+   "class": "identical",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  },
+  "26-tamarack": {
+   "checks": [
+    "l2_authority"
+   ],
+   "class": "same_line",
+   "only_raw_reply": false,
+   "only_second_impl": false
+  }
+ },
+ "post_hoc": true,
+ "variants": {
+  "full": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 15,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 0
+   }
+  },
+  "full_plus_blocked_read": {
+   "by_class": {
+    "identical": 4,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 16,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "19-pewter",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 1
+   }
+  },
+  "full_plus_commit_precedence": {
+   "by_class": {
+    "identical": 5,
+    "none": 7,
+    "same_line": 7
+   },
+   "detected": 19,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "18-nimbus",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 81,
+   "vs_full": {
+    "mcnemar_p": 0.125,
+    "only_full": 0,
+    "only_this": 4
+   }
+  },
+  "full_plus_interval_store": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 15,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 0
+   }
+  },
+  "full_plus_l1_reference": {
+   "by_class": {
+    "identical": 4,
+    "none": 7,
+    "same_line": 7
+   },
+   "detected": 18,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 81,
+   "vs_full": {
+    "mcnemar_p": 0.25,
+    "only_full": 0,
+    "only_this": 3
+   }
+  },
+  "full_plus_l2_authority": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 7
+   },
+   "detected": 16,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 81,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 1
+   }
+  },
+  "full_plus_recheck_complete": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 15,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 0
+   }
+  },
+  "full_plus_restart_content": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 15,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 0
+   }
+  },
+  "full_plus_robust_release": {
+   "by_class": {
+    "identical": 4,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 16,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "17-kestrel",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 103,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 1
+   }
+  },
+  "full_plus_span_cover": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 15,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 0
+   }
+  },
+  "full_plus_unit_declared": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 6
+   },
+   "detected": 15,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 0
+   }
+  },
+  "full_plus_version_pinned": {
+   "by_class": {
+    "identical": 3,
+    "none": 6,
+    "same_line": 7
+   },
+   "detected": 16,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 80,
+   "vs_full": {
+    "mcnemar_p": 1.0,
+    "only_full": 0,
+    "only_this": 1
+   }
+  },
+  "repaired": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 24,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.00390625,
+    "only_full": 0,
+    "only_this": 9
+   }
+  },
+  "without_blocked_read": {
+   "by_class": {
+    "identical": 7,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 23,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.0078125,
+    "only_full": 0,
+    "only_this": 8
+   }
+  },
+  "without_commit_precedence": {
+   "by_class": {
+    "identical": 6,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 22,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.015625,
+    "only_full": 0,
+    "only_this": 7
+   }
+  },
+  "without_interval_store": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 24,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.00390625,
+    "only_full": 0,
+    "only_this": 9
+   }
+  },
+  "without_l1_reference": {
+   "by_class": {
+    "identical": 7,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 23,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.0078125,
+    "only_full": 0,
+    "only_this": 8
+   }
+  },
+  "without_l2_authority": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 8
+   },
+   "detected": 23,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre"
+   ],
+   "harmful_runs_flagged": 104,
+   "vs_full": {
+    "mcnemar_p": 0.0078125,
+    "only_full": 0,
+    "only_this": 8
+   }
+  },
+  "without_raw_reply": {
+   "by_class": {
+    "identical": 4,
+    "none": 6,
+    "same_line": 8
+   },
+   "detected": 18,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "17-kestrel",
+    "18-nimbus",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 104,
+   "vs_full": {
+    "mcnemar_p": 0.25,
+    "only_full": 0,
+    "only_this": 3
+   }
+  },
+  "without_recheck_complete": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 24,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.00390625,
+    "only_full": 0,
+    "only_this": 9
+   }
+  },
+  "without_restart_content": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 24,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.00390625,
+    "only_full": 0,
+    "only_this": 9
+   }
+  },
+  "without_robust_release": {
+   "by_class": {
+    "identical": 7,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 23,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 82,
+   "vs_full": {
+    "mcnemar_p": 0.0078125,
+    "only_full": 0,
+    "only_this": 8
+   }
+  },
+  "without_second_impl": {
+   "by_class": {
+    "identical": 5,
+    "none": 6,
+    "same_line": 8
+   },
+   "detected": 19,
+   "faults": [
+    "01-quartz",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "13-cinder",
+    "15-basalt",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 104,
+   "vs_full": {
+    "mcnemar_p": 0.125,
+    "only_full": 0,
+    "only_this": 4
+   }
+  },
+  "without_span_cover": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 24,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.00390625,
+    "only_full": 0,
+    "only_this": 9
+   }
+  },
+  "without_unit_declared": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 9
+   },
+   "detected": 24,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "08-saffron",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.00390625,
+    "only_full": 0,
+    "only_this": 9
+   }
+  },
+  "without_version_pinned": {
+   "by_class": {
+    "identical": 8,
+    "none": 7,
+    "same_line": 8
+   },
+   "detected": 23,
+   "faults": [
+    "01-quartz",
+    "02-lantern",
+    "03-heron",
+    "04-mosaic",
+    "06-orchid",
+    "07-pylon",
+    "10-gable",
+    "11-ferrule",
+    "12-wicket",
+    "13-cinder",
+    "14-marlin",
+    "15-basalt",
+    "16-juniper",
+    "17-kestrel",
+    "18-nimbus",
+    "19-pewter",
+    "20-almond",
+    "21-velour",
+    "22-sorrel",
+    "23-dynamo",
+    "24-ripple",
+    "25-ochre",
+    "26-tamarack"
+   ],
+   "harmful_runs_flagged": 105,
+   "vs_full": {
+    "mcnemar_p": 0.0078125,
+    "only_full": 0,
+    "only_this": 8
+   }
+  }
+ }
+}

@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l2_procedural.py b/src/dsoi/layers/l2_procedural.py
+index 1b8d658..e3c184a 100644
+--- a/src/dsoi/layers/l2_procedural.py
++++ b/src/dsoi/layers/l2_procedural.py
+@@ -106,7 +106,7 @@ class ApprovalEvent:
+             return "unauthenticated"
+         if self.t > t:
+             return "issued later"
+-        if self.expires_at is not None and t >= self.expires_at:
++        if self.expires_at is not None and self.t >= self.expires_at:
+             return f"expired at {self.expires_at:g}"
+         if self.max_quantity is None:
+             return "already used" if used else None

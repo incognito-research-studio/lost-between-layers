@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l5_gate.py b/src/dsoi/layers/l5_gate.py
+index 12857dd..f6c0e42 100644
+--- a/src/dsoi/layers/l5_gate.py
++++ b/src/dsoi/layers/l5_gate.py
+@@ -172,7 +172,7 @@ class StateVertexGate:
+             raise ValueError(f"{len(uncertain)} interval-valued keys: 2^k vertices is too many")
+         rows = []
+         theta = ctx.theta_dict()
+-        for corner in itertools.product(*[(e[2], e[3]) for _, e in uncertain]):
++        for corner in itertools.product(*[(e[1], e[3]) for _idx, e in uncertain]):
+             state = list(ctx.state)
+             for (i, (key, _v, _lo, _hi, unit)), value in zip(uncertain, corner, strict=True):
+                 state[i] = (key, value, None, None, unit)

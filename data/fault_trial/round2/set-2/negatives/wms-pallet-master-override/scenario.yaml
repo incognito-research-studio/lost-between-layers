@@ -1,0 +1,34 @@
+id: NEG-WMS-PALLET-MASTER-OVERRIDE
+title: WMS master records the measured pallet factor after a logistics notice
+model: warehouse_flow
+interpreter_version: "fixture:logistics-notices@1"
+source_priority: {"email:logistics": 2, "erp:wms": 1}
+world:
+  dc: D1
+  period: 42
+  erp_source_id: "erp:wms"
+  units_per_pallet: 50
+  free_space: 500
+  in_max: 100
+  out_max: 60
+  store_demand: 2400
+  space_rule: at_most
+  truth: {units_per_pallet: 46}
+times: {erp_load: 1}
+events:
+  - {id: msg-pallet, t: 2, kind: message, source: "email:logistics",
+     text: "From this week, the new pallet configuration holds about 10% fewer units per pallet.",
+     fixture: fixtures/pallet.json}
+  - {t: 3, kind: decide}
+  # Receiving measures the first inbound pallets and the WMS master is updated.
+  - {id: wms-measured, t: 5, kind: record, source: "erp:wms",
+     ops: [{op: assert, subject: "dc:D1", predicate: units_per_pallet, value: 46,
+            unit: "units/pallet", valid_from: 42, valid_to: 43}]}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: authenticated_latest
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

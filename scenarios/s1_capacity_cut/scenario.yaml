@@ -1,0 +1,38 @@
+# S1 (Table IV) and the illustrative walk-through of Sec. VII-B.
+# The numbers are illustrative, not measured.
+id: S1
+title: Capacity reduction notice
+status: implemented
+
+stimulus:
+  message_id: msg-s1
+  source_id: "email:planner-inbox"
+  text: "Plant X update: capacity reduced by about 30% for weeks 42-44."
+
+world:
+  plant: X
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 1000
+  demand_per_week: 1000
+  erp_source_id: "erp:capacity-master"
+  # S*: the true reduction is 35%, so the true capacity is 650 in weeks 42-44.
+  true_capacity: {42: 650, 43: 650, 44: 650}
+
+times: {erp_load: 1, message: 2, decide: 3}
+
+fixtures:
+  correct: fixtures/interpret_correct.json            # weeks 42-44, 700 in [650, 750]
+  scope_misread: fixtures/interpret_scope_misread.json  # weeks 42-43 only
+  scope_hedged: fixtures/interpret_scope_hedged.json    # weeks 42-43, plus week 44 as 1000 in [650, 1000]
+
+required_response: "Supersede facts with valid time 42-44; re-plan"
+analytic_measure: "Replay reproduces the plan; change attributable to a logged delta"
+depends_on: [L1, L3, L4, L6, P1, P4]
+risk: "Misread weeks => Prop. 3(c)"
+
+# Walk-through values checked by tests/scenarios/test_s1.py
+expected:
+  nominal_release: 700
+  box_robust_release: 650
+  misread_week44_release: 1000
+  hedged_week44_release: 650

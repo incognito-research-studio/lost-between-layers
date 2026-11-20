@@ -1,0 +1,23 @@
+id: EP-compressor-failure-week43
+title: Compressor failure leaves week 43 output uncertain down to zero
+model: capacity_plan
+interpreter_version: "fixture:capacity-reader@1"
+source_priority: {"email:plant-p3": 1}
+world:
+  plant: P3
+  horizon: [41, 42, 43, 44, 45]
+  nominal_capacity: 600
+  demand_per_week: 550
+  erp_source_id: "erp:capacity-master"
+times: {erp_load: 1}
+events:
+  - {id: msg-p3-compressor, t: 2, kind: message, source: "email:plant-p3-maintenance",
+     text: "Line 1 compressor failure at P3: week 43 output somewhere between 0 and 400 units, best estimate 250, depending on when the spare arrives.",
+     fixture: fixtures/compressor.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: box_robust
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

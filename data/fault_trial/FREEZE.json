@@ -1,0 +1,15 @@
+{
+ "frozen_at": "2026-11-08T22:01:38.775922+00:00",
+ "note": "instruments frozen before any fault or negative case was written (data/fault_trial/PROTOCOL.md)",
+ "sha256": {
+  "data/fault_trial/FAULT_BRIEF.md": "0f8cb5f743983039490820275d88af0c0e40712fa7c68ab76c15c86fd690e56d",
+  "data/fault_trial/NEGATIVE_FORMAT.md": "7599209797ab66afe2f8a6c505d80713dfff713942ad7e5a90e67920e780ac66",
+  "data/fault_trial/PROTOCOL.md": "cc56d4f292fc39714f1294a10d494483d926208e9046a51d6587c3b37decf600",
+  "data/fault_trial/authority.yaml": "f830b3dd12f95c5bcc0900f6369943b27725375a5e07a20f50d522b9196b6cda",
+  "src/dsoi/properties.py": "07160ef534a956d9aad79961637095fabfb94492296190004484b5b226a9f175",
+  "tools/ft_harness.py": "bb7bcc79cc9071084587258443c7d916ef3dff3f6fdbffc7da554c1f4711101f",
+  "tools/ft_sandbox.py": "3db9d41790bae020950a4cab58af2e9fe55b3ab043d5915524a5b7092eea4540",
+  "tools/ft_score.py": "9a298da05c57112bf0fd579bc377abde8b10c2e8105e4f58da52a8956d343587",
+  "tools/ft_trial.py": "056feecdb0757863bd8806b79be82e9876dec28172a8c9db45e8756be6a421ac"
+ }
+}

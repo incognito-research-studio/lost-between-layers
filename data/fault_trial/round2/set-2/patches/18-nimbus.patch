@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l2_procedural.py b/src/dsoi/layers/l2_procedural.py
+index 1b8d658..1d707be 100644
+--- a/src/dsoi/layers/l2_procedural.py
++++ b/src/dsoi/layers/l2_procedural.py
+@@ -243,7 +243,7 @@ class ProceduralLayer:
+             quantity = action.get(rule.variable, 0.0)
+             if quantity <= rule.above + tol:
+                 continue
+-            events = [e for e in approvals if e.kind == rule.kind and e.variable == rule.variable]
++            events = [e for e in approvals if e.kind == rule.kind]
+             why = {e.id: (e.covers(quantity, t, tol, consumed.get(e.id, ()))
+                           if e.approver in rule.approvers
+                           else f"approver {e.approver} not authorized for {rule.kind}")

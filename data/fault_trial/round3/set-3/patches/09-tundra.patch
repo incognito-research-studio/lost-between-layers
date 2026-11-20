@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..add994c 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -127,7 +127,7 @@ class StateLayer:
+         for op in delta.ops:
+             if op.prov.authenticated:
+                 self.blocked = [b for b in self.blocked
+-                                if not (b[0] == op.s and b[1] == op.p and overlaps(b[2], op.vt))]
++                                if not (b[0] == op.s and b[1] == op.p and b[2] == op.vt)]
+         return self.store.commit(delta, t)
+ 
+     def _priority(self, source_id: str) -> int:

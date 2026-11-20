@@ -1,0 +1,14 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..5fa593f 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -194,7 +194,8 @@ class StateLayer:
+     def _winner(self, facts: list[Fact]) -> Fact:
+         top = max(facts, key=self._rank)
+         if self.supersession == "authenticated_latest":
+-            newer = [f for f in facts if f.prov.authenticated and f.tt[0] > top.tt[0]]
++            newer = [f for f in facts if f.prov.authenticated and f.tt[0] > top.tt[0]
++                     and self._priority(f.prov.source_id) >= self._priority(top.prov.source_id)]
+             if newer:
+                 return max(newer, key=lambda f: (f.tt[0], self._rank(f)))
+         return top

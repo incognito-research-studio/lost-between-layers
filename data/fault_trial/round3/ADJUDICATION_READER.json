@@ -1,0 +1,136 @@
+{
+ "_reader": "Claude (Opus 5.5), the architecture role that wrote the pipeline, the frozen checks and the repaired checks; after unblinding round 3, 13 Nov 2026. Not an independent or human reader.",
+ "_method": "As in round 2 (data/fault_trial/round2/ADJUDICATION_READER.json), against round 3's per-run rerun (results/ft_perrun_r3/) and the repaired configuration's per-run firings (results/fault_trial_r3.json, per_run). The episodes a fault exercises are those the manifest lists for it. Localization refers to the repaired configuration: cause = a firing check tests the mechanism the patch broke, on an episode the fault exercises; other_run = repaired checks fired only on other runs; diffuse = several checks across layers, the mechanism's among them; missed = no repaired check fired (frozen instrument; see DEVIATIONS.md for fault 05).",
+ "faults": {
+  "01-quartz.patch": {
+   "matches": true,
+   "observed": "approval-for-other-lot: first decision admitted and executed on the L2 approval instead of queued",
+   "localization": "cause"
+  },
+  "02-lantern.patch": {
+   "matches": true,
+   "observed": "every listed capacity episode plans one more changed week (e.g. press-line-maintenance week 45: 900 instead of 1100)",
+   "localization": "cause"
+  },
+  "03-heron.patch": {
+   "matches": true,
+   "observed": "alias-model-update: the reloaded log has 1 of 2 ingest dispositions (same_ingests false)",
+   "localization": "cause"
+  },
+  "04-mosaic.patch": {
+   "matches": true,
+   "observed": "portal-capacity-declaration: weeks 42-44 planned at 900 (master) instead of 750",
+   "localization": "cause"
+  },
+  "05-thimble.patch": {
+   "matches": true,
+   "observed": "vertex-plan-reduced-week: the gate passes 720 instead of resolving to 680; no violation of the true constraints",
+   "localization": "missed"
+  },
+  "06-orchid.patch": {
+   "matches": true,
+   "observed": "the last week of each reduction reverts to the master value on the listed episodes (e.g. press-line-maintenance week 44: 1100 instead of 900); no repaired check fired on them; span_cover fired on span episodes, where the re-inserted remainder overlaps the new claim",
+   "localization": "other_run"
+  },
+  "07-pylon.patch": {
+   "matches": true,
+   "observed": "recheck-master-revision: replay of decision 1 from the logged state returns 650 in week 43 after the master revision, not the released 700",
+   "localization": "cause"
+  },
+  "08-saffron.patch": {
+   "matches": true,
+   "observed": "alias-model-update: the updated model's answer is committed and weeks 43-44 are planned at 700",
+   "localization": "cause"
+  },
+  "09-tundra.patch": {
+   "matches": true,
+   "observed": "blocked-dispute-weekly-erp: the second decision stays deferred after the weekly ERP records",
+   "localization": "missed"
+  },
+  "10-gable.patch": {
+   "matches": true,
+   "observed": "compressor-failure-week43: the box gate releases 250 in week 43 instead of 0",
+   "localization": "cause"
+  },
+  "11-ferrule.patch": {
+   "matches": true,
+   "observed": "approval-lapsed-before-replan: the decision after expiry is admitted on the expired approval",
+   "localization": "cause"
+  },
+  "12-wicket.patch": {
+   "matches": true,
+   "observed": "furnace-relining-moved: the correction's week-42 restore is dropped (500 instead of 800 in week 43 of the plan vector)",
+   "localization": "cause"
+  },
+  "13-cinder.patch": {
+   "matches": true,
+   "observed": "on both blocked episodes the saved log fails its hash chain on reload",
+   "localization": "cause"
+  },
+  "14-marlin.patch": {
+   "matches": true,
+   "observed": "adjacent-week-notices: the weeks 44-45 notice is overridden and planned at 1000 instead of 800",
+   "localization": "cause"
+  },
+  "15-basalt.patch": {
+   "matches": true,
+   "observed": "recheck-master-revision: replay of the repaired recheck decision raises instead of reproducing the release",
+   "localization": "diffuse"
+  },
+  "16-juniper.patch": {
+   "matches": true,
+   "observed": "twin-plant-inboxes: the plan keeps 700 instead of 600",
+   "localization": "cause"
+  },
+  "17-kestrel.patch": {
+   "matches": true,
+   "observed": "box-gate releases at the point values: 250 in compressor week 43, 700 in robust-plan and span episodes, instead of the lower bounds",
+   "localization": "cause"
+  },
+  "18-nimbus.patch": {
+   "matches": true,
+   "observed": "approval-second-release: the re-plan is admitted on the already used approval (uses recorded under x[L1])",
+   "localization": "cause"
+  },
+  "19-pewter.patch": {
+   "matches": true,
+   "observed": "stocktake-week-dispute: the first decision is decided (800 in week 44) instead of deferred",
+   "localization": "cause"
+  },
+  "20-almond.patch": {
+   "matches": true,
+   "observed": "cycle-count-two-lots: the update to lot L2 is overridden and L2 stays at 300 instead of 250",
+   "localization": "cause"
+  },
+  "21-velour.patch": {
+   "matches": true,
+   "observed": "relayed-approval-email: the reload differs while deltas, dispositions and records reload unchanged; the restart check, which compares approvals, fires (same_approvals is not traced, so inferred)",
+   "localization": "cause"
+  },
+  "22-sorrel.patch": {
+   "matches": true,
+   "observed": "master-correction-after-notice: the second plan keeps 700 instead of 650",
+   "localization": "cause"
+  },
+  "23-dynamo.patch": {
+   "matches": true,
+   "observed": "span-planner-and-portal: releases 650 instead of 600 in weeks 42-44",
+   "localization": "cause"
+  },
+  "24-ripple.patch": {
+   "matches": true,
+   "observed": "inspector-signoff: the inspector's approval admits the first decision",
+   "localization": "cause"
+  },
+  "25-ochre.patch": {
+   "matches": true,
+   "observed": "replay from the store of decision 1 returns the later plan on the four listed episodes",
+   "localization": "cause"
+  },
+  "26-tamarack.patch": {
+   "matches": true,
+   "observed": "supplier-may-resume: the hedged unauthenticated notice is committed and 500 is ordered from S2, a violation of the true constraints",
+   "localization": "cause"
+  }
+ }
+}

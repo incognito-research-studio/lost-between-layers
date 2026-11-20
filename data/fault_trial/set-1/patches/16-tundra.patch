@@ -1,0 +1,15 @@
+diff --git a/src/dsoi/layers/l6_audit.py b/src/dsoi/layers/l6_audit.py
+index 2473044..4d46862 100644
+--- a/src/dsoi/layers/l6_audit.py
++++ b/src/dsoi/layers/l6_audit.py
+@@ -164,7 +164,9 @@ class AuditLog:
+                     for t, delta in self.deltas]
+         entries += [{"message": key, "value": value}
+                     for key, value in sorted(self.messages.items())]
+-        entries += [{"ingest": asdict(rec)} for rec in self.ingests]
++        # one disposition per message: a retried message keeps its final outcome
++        latest = {rec.message_id: rec for rec in self.ingests}
++        entries += [{"ingest": asdict(rec)} for rec in latest.values()]
+         entries += [{"approval": event} for event in self.approvals]
+         head = GENESIS
+         temporary = None

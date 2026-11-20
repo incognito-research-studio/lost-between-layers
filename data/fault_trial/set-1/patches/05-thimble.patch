@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/experiments/e1v2_corrected.py b/src/dsoi/experiments/e1v2_corrected.py
+index a7477b4..2662408 100644
+--- a/src/dsoi/experiments/e1v2_corrected.py
++++ b/src/dsoi/experiments/e1v2_corrected.py
+@@ -48,7 +48,7 @@ class MarginGate(BoxRobustGate):
+     def apply(self, x, inst, ctx, formulation):
+         ctx = replace(ctx, state=widen_state(ctx.state, self.margin))
+         widened = formulation.build(ctx.state, ctx.theta_dict())
+-        result = super().apply(x, widened, ctx, formulation)
++        result = super().apply(x, inst, ctx, formulation)
+         return replace(result, detail={**result.detail, "reported_margin": self.margin})
+ 
+ 

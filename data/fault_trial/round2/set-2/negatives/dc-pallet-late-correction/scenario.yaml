@@ -1,0 +1,33 @@
+id: NEG-DC-PALLET-LATE-CORRECTION
+title: Logistics corrects the pallet factor after the flow plan was released
+model: warehouse_flow
+interpreter_version: "fixture:logistics-notices@1"
+source_priority: {"email:logistics": 1}
+world:
+  dc: D1
+  period: 42
+  erp_source_id: "erp:wms"
+  units_per_pallet: 50
+  free_space: 500
+  in_max: 100
+  out_max: 60
+  store_demand: 2400
+  space_rule: at_most
+  truth: {units_per_pallet: 48}
+times: {erp_load: 1}
+events:
+  - {id: msg-pallet, t: 2, kind: message, source: "email:logistics",
+     text: "From this week, the new pallet configuration holds about 10% fewer units per pallet.",
+     fixture: fixtures/pallet.json}
+  - {t: 3, kind: decide}
+  - {id: msg-pallet-corr, t: 5, kind: message, source: "email:logistics",
+     text: "Correction: the new pallet holds 48 units, the 10% figure was for the old carton.",
+     fixture: fixtures/correction.json}
+  - {t: 6, kind: decide}
+trial:
+  gate: nominal
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

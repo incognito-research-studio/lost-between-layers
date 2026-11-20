@@ -1,0 +1,29 @@
+id: EP-DC-D1-PALLET-CHANGE
+title: New pallet configuration at DC D1 under the box gate
+model: warehouse_flow
+interpreter_version: "fixture:logistics-notices@1"
+source_priority: {"email:logistics": 1}
+world:
+  dc: D1
+  period: 42
+  erp_source_id: "erp:wms"
+  units_per_pallet: 50
+  free_space: 500
+  in_max: 100
+  out_max: 60
+  store_demand: 2400
+  space_rule: at_most
+  truth: {units_per_pallet: 46}
+times: {erp_load: 1}
+events:
+  - {id: msg-pallet-cfg, t: 2, kind: message, source: "email:logistics",
+     text: "From week 42 the supplier ships on the new pallet: 45 units per pallet, at least 44 and at most 48 depending on carton size.",
+     fixture: fixtures/pallet.json}
+  - {t: 3, kind: decide}
+trial:
+  gate: box_robust
+  resolution: latest
+  supersession: none
+  threshold_rules: []
+  declared_versions: []
+  system_of_record: {}

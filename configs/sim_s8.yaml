@@ -1,0 +1,11 @@
+# S8: units per pallet cut by r* ~ U(0, 0.2) of 50; the notice states it rounded
+# to 5% ("about 10%"); the interpreter reads it with error point_sd and reports
+# +-half_width. Illustrative parameters.
+name: sim_s8
+scenario: S8
+seed: 8
+runs: 300
+true_reduction: [0.0, 0.20]
+grid:
+  point_sd: [0.01, 0.03]
+  half_width: [0.03, 0.05]

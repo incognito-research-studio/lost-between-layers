@@ -1,0 +1,13 @@
+diff --git a/src/dsoi/layers/l3_state.py b/src/dsoi/layers/l3_state.py
+index e02dd2a..0b555ad 100644
+--- a/src/dsoi/layers/l3_state.py
++++ b/src/dsoi/layers/l3_state.py
+@@ -171,7 +171,7 @@ class StateLayer:
+             winner_q, winner_prov = (op.o, op.prov) if incoming_wins else (rival.o, rival.prov)
+             lows = [q.interval()[0] for q in (op.o, rival.o)]
+             highs = [q.interval()[1] for q in (op.o, rival.o)]
+-            spanned = Quantity(winner_q.value, min(lows), max(highs), winner_q.unit)
++            spanned = Quantity(winner_q.value, max(*lows), max(highs), winner_q.unit)
+             ops.append(replace(op, kind=OpKind.SUPERSEDE, o=spanned, prov=winner_prov))
+         if not ops:
+             return CommitOutcome("overridden", "lower-priority claim: " + "; ".join(notes))
