@@ -5,7 +5,7 @@
  "files": 502,
  "sha256": {
   "LICENSE": "72a98d1df827f62b6252367acacdc0ddf98fb52aae9888bc58daf37249f6c455",
-  "README.md": "12791e59a4eacf97f72b577f068a939b0b72604da8ae7aa49d2a5ab51bd4f0bc",
+  "README.md": "128dc16128eb5e857b2c7104e143eec91a29d3437fbfe6d43260ef164c06200f",
   "configs/e1.yaml": "405a5f3afbb6b7d32ce24b0feedddfc31b9f68551bce6d293396d50e1537d750",
   "configs/e1v2.yaml": "989deb338ef91429ec0c4734feadf4df253e37340e8b99107cad7f52bc70d1d8",
   "configs/e1v3.yaml": "3a656702701b4c676f0a6315d72eda58670db3bd74aacee02dd8c373c72b3438",
@@ -507,5 +507,5 @@
   "tools/reproduce_ai4factory.py": "a40674f68aa43fae8cf52418129610948b353a1a2f18035765adc645b29e8aa8",
   "uv.lock": "25cfa0e62f6ad20b2e9f7a0fea2895e70b1678d0bb4bcddaa01d52fbeade2304"
  },
- "note": "Replication package for 'Lost Between Layers' (AI4Factory Workshop at AAAI 2027)."
+ "note": "Replication package for 'Lost Between Layers' (submitted to the AI4Factory Workshop at AAAI 2027)."
 }

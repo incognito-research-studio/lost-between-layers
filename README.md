@@ -3,7 +3,7 @@
 This package contains the code, data and stored results for the paper
 
 > *Lost Between Layers: Where Runtime Guarantees Break When Language Models Read the Factory.*
-> AI4Factory Workshop at AAAI 2027.
+> Submitted to the AI4Factory Workshop at AAAI 2027.
 
 The paper asks what a release gate can guarantee when a language model turns supplier, maintenance
 and capacity notices into the state that a production planner optimizes over. It states the
@@ -116,9 +116,9 @@ MIT. See `LICENSE`.
 ## Citation
 
 ```bibtex
-@inproceedings{lostbetweenlayers2027,
-  title     = {Lost Between Layers: Where Runtime Guarantees Break When Language Models Read the Factory},
-  booktitle = {AI4Factory Workshop at the AAAI Conference on Artificial Intelligence},
-  year      = {2027}
+@unpublished{lostbetweenlayers2027,
+  title = {Lost Between Layers: Where Runtime Guarantees Break When Language Models Read the Factory},
+  note  = {Submitted to the AI4Factory Workshop at the AAAI Conference on Artificial Intelligence},
+  year  = {2026}
 }
 ```
